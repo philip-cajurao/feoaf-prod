@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 import CompanyStory from "../components/CompanyStory";
 import MissionVision from "../components/MissionVision";
-import story from "../assets/latest_events/story.jpeg";
+import story from "../assets/latest_events/story.jpg";
 import Image from "next/image";
 
 export const metadata: Metadata = {

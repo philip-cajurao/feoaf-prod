@@ -4,7 +4,7 @@ import Image from "next/image";
 import image1 from "../assets/latest_events/program.jpg";
 import image2 from "../assets/latest_events/create.jpg";
 import image3 from "../assets/latest_events/plan.jpg";
-import image4 from "../assets/latest_events/present.jpeg";
+import image4 from "../assets/latest_events/present.jpg";
 
 export const metadata: Metadata = {
   title: "Services | Future Entrepreneurs Of America Foundation",

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Services from "./services/page";
 import Events from "./events/page";
 import RecentSponsors from "./components/RecentSponsors";
-import who from "./assets/latest_events/we.jpeg";
+import who from "./assets/latest_events/we.jpg";
 import Image from "next/image";
 
 export const metadata: Metadata = {

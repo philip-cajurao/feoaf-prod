@@ -1,11 +1,12 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Drawer from "./components/Drawer";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({
@@ -15,12 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className} relative antialiased`}
-      >
-        <NavBar />
-        {children}
-        <Footer />
+      <link rel="preconnect" href="https://api.leadconnectorhq.com" />
+      <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+
+      <body className={`${poppins.className} relative antialiased`}>
+        <Drawer>
+          {children}
+          <Footer />
+        </Drawer>
+        <Script
+          src="https://link.msgsndr.com/js/form_embed.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

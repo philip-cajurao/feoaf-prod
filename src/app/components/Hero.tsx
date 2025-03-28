@@ -1,34 +1,123 @@
+"use client";
+
+import Image from "next/image";
 import React from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Fade from "embla-carousel-fade";
+import Autoplay from "embla-carousel-autoplay";
+import image1 from "../assets/latest_events/FE1.jpg";
+import image2 from "../assets/latest_events/FE2.jpg";
+import image3 from "../assets/latest_events/FE3.jpg";
+import image4 from "../assets/latest_events/fe.jpg";
+import image5 from "../assets/latest_events/fe4.jpg";
+import image6 from "../assets/latest_events/fe5.jpg";
+import image7 from "../assets/latest_events/fe6.jpg";
+import Link from "next/link";
 
 function Hero() {
+  const plugin = React.useRef([
+    Autoplay({ delay: 5000, stopOnInteraction: true }),
+    Fade(),
+  ]);
   return (
-    <div className="h-[calc(100svh-4rem)] relative">
-      {/* <ul>
-            <li>Image</li>
-            <li>Image</li>
-            <li>Image</li>
-        </ul> */}
-      {/* <svg
-      className="absolute bottom-0 w-full rotate-180 origin-bottom"
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-        width="3000"
-        height="250"
-        preserveAspectRatio="none"
-        viewBox="0 0 3000 560"
+    <div className="h-svh relative">
+      {/* <span className="bg-linear-to-b from-base-300 to-transparent absolute top-0 h-2/3 w-full" /> */}
+      <Carousel
+        plugins={plugin.current}
+        opts={{
+          align: "start",
+          loop: true,
+          duration: 70,
+        }}
+        className="h-full w-full absolute top-0 left-0 -z-10"
       >
-        <g mask='url("#SvgjsMask1078")' fill="none">
-          <path
-            d="M 0,384 C 120,324.6 360,70 600,87 C 840,104 960,434.8 1200,469 C 1440,503.2 1560,288.6 1800,258 C 2040,227.4 2160,342.6 2400,316 C 2640,289.4 2880,163.2 3000,125L3000 560L0 560z"
-            className="fill-base-100"
-          ></path>
-        </g>
-        <defs>
-          <mask id="SvgjsMask1078">
-            <rect width="3000" height="560" fill="#ffffff"></rect>
-          </mask>
-        </defs>
-      </svg> */}
+        <CarouselContent>
+          <CarouselItem>
+            <Image
+              alt="test"
+              src={image1}
+              className="object-cover object-center h-full brightness-30 blur-[3px]"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              alt="test"
+              src={image2}
+              className="object-cover object-center h-full brightness-30 blur-[3px]"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              alt="test"
+              src={image3}
+              className="object-cover object-center h-full brightness-30 blur-[3px]"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              alt="test"
+              src={image4}
+              className="object-cover object-center h-full brightness-30 blur-[3px]"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              alt="test"
+              src={image5}
+              className="object-cover object-right-bottom h-full brightness-30 blur-[3px]"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              alt="test"
+              src={image6}
+              className="object-cover object-left-top h-full brightness-30 blur-[3px]"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              alt="test"
+              src={image7}
+              className="object-cover object-center h-full brightness-30 blur-[3px]"
+            />
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel>
+
+      <div className="absolute w-full h-full flex justify-center items-center">
+        <div className="max-w-2xl flex flex-col items-center">
+          <h2 className="text-center text-5xl/18 font-bold">
+            Dream{" "}
+            <span className="bg-primary px-2 border-2 text-primary-content rounded-lg">
+              Big,
+            </span>{" "}
+            Learn{" "}
+            <span className="bg-secondary px-2 border-2 text-primary-content rounded-lg">
+              Bigger
+            </span>{" "}
+            &nbsp; Inspire The{" "}
+            <span className="bg-success px-2 border-2 text-primary-content rounded-lg">
+              Entrepreneurs
+            </span>{" "}
+            Of Tomorrow
+          </h2>
+          <p className="text-center mt-2 max-w-md">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            autem.
+          </p>
+
+          <Link href="/join">
+            <button className="rounded-md relative cursor-pointer group hover:border-black font-bold border-2 text-accent hover:text-black transform-all duration-300 px-8 py-4 overflow-hidden mt-8 border">
+              <span className="absolute h-[calc(100%+2rem)] w-[calc(100%+2rem)] bg-accent rounded-full -z-10 -top-3 -left-3 -translate-x-full group-hover:translate-x-0 transform-all duration-300" />
+              Join now
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

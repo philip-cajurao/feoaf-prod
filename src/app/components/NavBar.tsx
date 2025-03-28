@@ -1,14 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
-import feoaf from "../assets/feoaf.png";
+import feoaf from "../assets/2.png";
+import feoafsm from "../assets/feoaf.png";
 import React from "react";
 
 function NavBar() {
   return (
-    <div className="navbar h-16 top-0">
-      <div className="navbar-start">
-        <div className="dropdown lg:hidden">
-          <div tabIndex={0} role="button" className="btn btn-ghost">
+    <div className="navbar absolute top-0 h-16 py-0 z-10">
+      <nav className="navbar-start">
+        <Link href="/" className="mx-2 md:hidden">
+          <Image
+            alt="FEOAF logo"
+            src={feoafsm}
+            height={50}
+            width={50}
+            priority
+          />
+        </Link>
+        <Link href="/" className="hidden md:flex mx-6">
+          <Image
+            alt="FEOAF logo"
+            src={feoaf}
+            height={210}
+            width={210}
+            priority
+          />
+        </Link>
+      </nav>
+
+      <div className="navbar-end h-full">
+        <div className="dropdown md:hidden">
+          <label
+            htmlFor="my-drawer-3"
+            aria-label="open sidebar"
+            className="btn"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -20,60 +46,38 @@ function NavBar() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 d="M4 6h16M4 12h8m-8 6h16"
               />{" "}
             </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/services">Services</Link>
-            </li>
-            <li>
-              <Link href="/events">Events</Link>
-            </li>
-            <li>
-              <Link href="/sponsors">Sponsors</Link>
-            </li>
-            {/* <li>
-              <Link href="/contacts">Contact Us</Link>
-            </li> */}
-          </ul>
+          </label>
         </div>
-        <Link href="/" className="hidden lg:flex mx-2">
-          <Image alt="FEOAF logo" src={feoaf} height={50} width={50} priority />
-        </Link>
-      </div>
-      <div className="navbar-center">
-        <Link href="/" className="lg:hidden mx-2">
-          <Image alt="FEOAF logo" src={feoaf} height={50} width={50} priority />
-        </Link>
-        <ul className="menu menu-horizontal px-1 hidden lg:flex">
+
+        <ul className="menu menu-horizontal flex-nowrap px-1 hidden md:flex">
           <li>
-            <Link href="/about">About</Link>
+            <Link className="h-full flex items-center" href="/about">
+              About
+            </Link>
           </li>
           <li>
-            <Link href="/services">Services</Link>
+            <Link className="h-full flex items-center" href="/services">
+              Services
+            </Link>
           </li>
           <li>
-            <Link href="/events">Events</Link>
+            <Link className="h-full flex items-center" href="/events">
+              Events
+            </Link>
           </li>
           <li>
-            <Link href="/sponsors">Sponsors</Link>
+            <Link className="h-full flex items-center" href="/sponsors">
+              Sponsors
+            </Link>
           </li>
           {/* <li>
             <Link href="/contacts">Contact Us</Link>
           </li> */}
         </ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn btn-accent">Join Us</a>
       </div>
     </div>
   );

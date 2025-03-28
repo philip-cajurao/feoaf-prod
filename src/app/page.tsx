@@ -1,53 +1,57 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
 import { Metadata } from "next";
-import flyer from "./assets/latest_events/flyer.png"
-import image1 from "./assets/latest_events/FE1.jpg"
-import image2 from "./assets/latest_events/FE2.jpg"
-import image3 from "./assets/latest_events/FE3.jpg"
-import image4 from "./assets/latest_events/fe.jpg"
-import image5 from "./assets/latest_events/fe4.jpg"
-import image6 from "./assets/latest_events/fe5.jpg"
-import image7 from "./assets/latest_events/fe6.jpg"
+import Services from "./services/page";
+import Events from "./events/page";
+import RecentSponsors from "./components/RecentSponsors";
+import who from "./assets/latest_events/we.jpeg";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: 'Future Entrepreneurs Of America Foundation',
-  description: '...',
-}
+  title: "Future Entrepreneurs Of America Foundation",
+  description: "...",
+};
 
 export default function Home() {
   return (
-    <div >
-      
+    <div>
       <Hero />
-      
-      <div className="grid grid-cols-2 place-items-center gap-10 p-10">
+
+      {/* Sections */}
+      <div>
+        <div className="flex flex-col items-center py-24">
+          <h2 className="font-bold text-2xl p-2 bg-primary text-primary-content mb-4 w-full text-center">
+            Who we are?
+          </h2>
+          <p className="max-w-4xl text-center mb-12">
+            At Future Entrepreneurs Of America Foundation, we focus on building
+            and creating young entrepreneurs by providing age-appropriate
+            business training, guidance and funding for young kids, 9-17 years
+            old.
+          </p>
+          <Image alt="Test" src={who} className="w-auto h-96 mx-auto rounded-xl" />
+        </div>
+
         <div>
-          <Image alt="alt img to be put" placeholder="blur" src={flyer} height={500} width={500} />
+          <Services />
         </div>
         <div>
-          <Image alt="alt img to be put" placeholder="blur" src={image1} height={500} width={500} />
+          <div
+            className={`flex items-center justify-center relative h-screen mb-12 bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
+          >
+            <div className="absolute top-0 left-0 h-full w-full backdrop-brightness-25 backdrop-blur-md">
+              <div className="absolute top-0">
+                <Events />
+              </div>
+            </div>
+          </div>
         </div>
         <div>
-          <Image alt="alt img to be put" placeholder="blur" src={image2} height={500} width={500} />
-        </div>
-        <div>
-          <Image alt="alt img to be put" placeholder="blur" src={image3} height={500} width={500} />
-        </div>
-        <div>
-          <Image alt="alt img to be put" placeholder="blur" src={image4} height={500} width={500} />
-        </div>
-        <div>
-          <Image alt="alt img to be put" placeholder="blur" src={image5} height={500} width={500} />
-        </div>
-        <div>
-          <Image alt="alt img to be put" placeholder="blur" src={image6} height={500} width={500} />
-        </div>
-        <div>
-          <Image alt="alt img to be put" placeholder="blur" src={image7} height={500} width={500} />
+          <h2 className="text-center text-2xl font-bold bg-success p-4 text-success-content mb-4">
+            Sponsors
+          </h2>
+          <RecentSponsors />
         </div>
       </div>
-
     </div>
   );
 }

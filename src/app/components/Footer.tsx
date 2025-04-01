@@ -39,7 +39,7 @@ const Footer = () => {
           </Link>
         </nav>
       </footer>
-      <footer className="footer flex justify-between items-center text-base-content border-base-300 border-t px-10 py-4">
+      <footer className="footer flex flex-col sm:flex-row bg-neutral text-neutral-content justify-between items-center text-base-content border-t px-10 py-4">
         <nav className="grid-flow-col items-center">
           <Image alt="feoaf logo" src={logo} width={200} />
         </nav>

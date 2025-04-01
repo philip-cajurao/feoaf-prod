@@ -16,7 +16,7 @@ export default function Card({
   action,
 }: CardTypes) {
   return (
-    <div className={`card ${customStyle} text-primary-content w-96`}>
+    <div className={`card ${customStyle} w-96`}>
       {image ? <figure>{image}</figure> : null}
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

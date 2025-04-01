@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function DonateQR() {
   return (
-    <div className="flex flex-col text-center items-center space-y-4">
+    <div className="flex flex-col text-center items-center space-y-4 py-16">
       <p>
         Make a difference in each child’s future. <br /> Be one of our sponsors.
       </p>

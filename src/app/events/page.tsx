@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function Events() {
   return (
-    <div className="flex justify-center my-24">
+    <div className="flex justify-center h-full">
       <div className="grid md:grid-cols-2 items-center w-full">
-        <div className="h-full flex flex-col justify-center px-10">
-          <h2 className="font-bold text-4xl mb-4 p-2 bg-accent border-2 border-black rounded-lg text-primary-content">
+        <div className="h-full flex flex-col justify-center p-10 bg-accent">
+          <h2 className="font-bold text-4xl mb-4 p-2 text-primary-content">
             Spring Gala Event
           </h2>
           <p className="text-xl">
@@ -25,7 +25,7 @@ export default function Events() {
         </div>
         <div className="p-10 flex justify-center items-center">
           <Image
-            className="rounded-xl"
+            className="rounded-xl border"
             alt="alt img to be put"
             placeholder="blur"
             src={flyer}

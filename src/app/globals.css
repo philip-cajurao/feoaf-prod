@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
-@plugin "daisyui/theme" {
+/* @plugin "daisyui/theme" {
   name: "kids";
   default: true;
   prefersdark: true;
@@ -34,7 +34,44 @@
   --border: 1px;
   --depth: 0;
   --noise: 0;
-};
+}; */
+
+
+@plugin "daisyui/theme" {
+  name: "feoaf";
+  default: true;
+  prefersdark: true;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0 0);
+  --color-base-200: oklch(96% 0.001 286.375);
+  --color-base-300: oklch(92% 0.004 286.32);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: oklch(62% 0.214 259.815);
+  --color-primary-content: oklch(97% 0.014 254.604);
+  --color-secondary: oklch(63% 0.237 25.331);
+  --color-secondary-content: oklch(97% 0.013 17.38);
+  --color-accent: oklch(79% 0.184 86.047);
+  --color-accent-content: oklch(98% 0.026 102.212);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(98% 0 0);
+  --color-info: oklch(62% 0.214 259.815);
+  --color-info-content: oklch(97% 0.014 254.604);
+  --color-success: oklch(72% 0.219 149.579);
+  --color-success-content: oklch(98% 0.018 155.826);
+  --color-warning: oklch(76% 0.188 70.08);
+  --color-warning-content: oklch(98% 0.022 95.277);
+  --color-error: oklch(63% 0.237 25.331);
+  --color-error-content: oklch(97% 0.013 17.38);
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
+}
+
 
 body {
   font-family: Poppins, Arial, Helvetica, sans-serif;

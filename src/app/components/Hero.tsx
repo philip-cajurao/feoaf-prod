@@ -24,7 +24,7 @@ function Hero() {
     Fade(),
   ]);
   return (
-    <div className="h-svh relative">
+    <div className="h-[calc(100svh-4rem)] relative">
       {/* <span className="bg-linear-to-b from-base-300 to-transparent absolute top-0 h-2/3 w-full" /> */}
       <Carousel
         plugins={plugin.current}
@@ -40,49 +40,49 @@ function Hero() {
             <Image
               alt="test"
               src={image1}
-              className="object-cover object-center h-full brightness-30 blur-[3px]"
+              className="object-cover object-center h-full brightness-25"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image2}
-              className="object-cover object-center h-full brightness-30 blur-[3px]"
+              className="object-cover object-center h-full brightness-25"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image3}
-              className="object-cover object-center h-full brightness-30 blur-[3px]"
+              className="object-cover object-center h-full brightness-25"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image4}
-              className="object-cover object-center h-full brightness-30 blur-[3px]"
+              className="object-cover object-center h-full brightness-25"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image5}
-              className="object-cover object-right-bottom h-full brightness-30 blur-[3px]"
+              className="object-cover object-right-bottom h-full brightness-25"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image6}
-              className="object-cover object-left-top h-full brightness-30 blur-[3px]"
+              className="object-cover object-left-top h-full brightness-25"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image7}
-              className="object-cover object-center h-full brightness-30 blur-[3px]"
+              className="object-cover object-center h-full brightness-70"
             />
           </CarouselItem>
         </CarouselContent>
@@ -90,29 +90,29 @@ function Hero() {
 
       <div className="absolute w-full h-full flex justify-center items-center">
         <div className="max-w-2xl flex flex-col items-center">
-          <h2 className="text-center text-5xl/18 font-bold">
+          <h2 className="text-center text-primary-content px-10 text-3xl/14 sm:text-5xl/20 font-bold">
             Dream{" "}
-            <span className="bg-primary px-2 border-2 text-primary-content rounded-lg">
+            <span className="bg-primary px-2 border text-primary-content">
               Big,
             </span>{" "}
             Learn{" "}
-            <span className="bg-secondary px-2 border-2 text-primary-content rounded-lg">
-              Bigger
+            <span className="bg-secondary px-2 border text-primary-content">
+              Bigger.
             </span>{" "}
             &nbsp; Inspire The{" "}
-            <span className="bg-success px-2 border-2 text-primary-content rounded-lg">
+            <span className="bg-success px-2 border text-primary-content">
               Entrepreneurs
             </span>{" "}
             Of Tomorrow
           </h2>
-          <p className="text-center mt-2 max-w-md">
+          <p className="text-center max-w-md px-10 text-primary-content">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
             autem.
           </p>
 
           <Link href="/join">
-            <button className="rounded-md relative cursor-pointer group hover:border-black font-bold border-2 text-accent hover:text-black transform-all duration-300 px-8 py-4 overflow-hidden mt-8 border">
-              <span className="absolute h-[calc(100%+2rem)] w-[calc(100%+2rem)] bg-accent rounded-full -z-10 -top-3 -left-3 -translate-x-full group-hover:translate-x-0 transform-all duration-300" />
+            <button className="btn btn-accent btn-xl mt-8">
+              {/* <span className="absolute h-[calc(100%+2rem)] w-[calc(100%+2rem)] bg-accent rounded-full -z-10 -top-3 -left-3 -translate-x-full group-hover:translate-x-0 transform-all duration-300" /> */}
               Join now
             </button>
           </Link>

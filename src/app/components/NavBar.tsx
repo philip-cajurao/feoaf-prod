@@ -6,7 +6,7 @@ import React from "react";
 
 function NavBar() {
   return (
-    <div className="navbar absolute top-0 h-16 py-0 z-10">
+    <div className="navbar sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-10">
       <nav className="navbar-start">
         <Link href="/" className="mx-2 md:hidden">
           <Image
@@ -33,7 +33,7 @@ function NavBar() {
           <label
             htmlFor="my-drawer-3"
             aria-label="open sidebar"
-            className="btn"
+            className="btn btn-lg btn-link text-neutral-content"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

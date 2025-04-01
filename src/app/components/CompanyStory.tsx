@@ -3,12 +3,9 @@ import React from "react";
 export default function CompanyStory() {
   return (
     <div className="pr-4">
-      <div className="font-bold w-full p-4 text-2xl mb-4 text-secondary-content bg-accent">
-        <h2 className="w-full max-w-4xl mx-auto">Our Story</h2>
-      </div>
-      <div className="max-w-4xl w-full mx-auto text-sm space-y-2">
+      <div className="max-w-4xl px-10 w-full mx-auto space-y-2">
         <p>
-          Future Entrepreneurs of America Foundation was founded in December
+          <span className="font-bold">Future Entrepreneurs of America Foundation</span> was founded in December
           2021, originally known as FHT’s Future Entrepreneurs. During the hype
           of the pandemic, children were learning virtually, their physical
           education became a struggle, and after school activities were all shut
@@ -26,8 +23,7 @@ export default function CompanyStory() {
           here to help the future of this country become successful and create a
           legacy.
           <br /><br />
-          We are so happy and proud to introduce FUTURE ENTREPRENEURS OF AMERICA
-          FOUNDATION. The organization focuses on building and creating young
+          We are so happy and proud to introduce <span className="font-bold">FUTURE ENTREPRENEURS OF AMERICA FOUNDATION.</span> The organization focuses on building and creating young
           entrepreneurs by providing age-appropriate business training, guidance
           and funding for young kids, 9-17 years old.
         </p>

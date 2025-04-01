@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Sponsors() {
   return (
-    <div className="py-24 mx-2">
+    <div className="mx-2">
       <RecentSponsors />
 
       <DonateQR />

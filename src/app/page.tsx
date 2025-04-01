@@ -18,17 +18,25 @@ export default function Home() {
 
       {/* Sections */}
       <div>
-        <div className="flex flex-col items-center py-24">
-          <h2 className="font-bold text-2xl p-2 bg-primary text-primary-content mb-4 w-full text-center">
-            Who we are?
-          </h2>
-          <p className="max-w-4xl text-center mb-12">
-            At Future Entrepreneurs Of America Foundation, we focus on building
-            and creating young entrepreneurs by providing age-appropriate
-            business training, guidance and funding for young kids, 9-17 years
-            old.
-          </p>
-          <Image alt="Test" src={who} className="w-auto h-96 mx-auto rounded-xl" />
+        <div className="grid md:grid-cols-2">
+          <div className="flex flex-col items-center justify-center bg-primary py-24 px-10">
+            <h2 className="font-bold text-4xl p-2 text-primary-content mb-4 w-full">
+              Who we are?
+            </h2>
+            <p className="max-w-4xl mb-12 text-xl">
+              At Future Entrepreneurs Of America Foundation, we focus on
+              building and creating young entrepreneurs by providing
+              age-appropriate business training, guidance and funding for young
+              kids, 9-17 years old.
+            </p>
+          </div>
+          <div className="py-24 px-4 sm:px-8">
+            <Image
+              alt="Test"
+              src={who}
+              className="w-auto h-auto mx-auto rounded-xl"
+            />
+          </div>
         </div>
 
         <div>
@@ -36,19 +44,16 @@ export default function Home() {
         </div>
         <div>
           <div
-            className={`flex items-center justify-center relative h-screen mb-12 bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
+            className={`flex items-center justify-center relative h-[calc(100svh*2)] md:h-svh bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
-            <div className="absolute top-0 left-0 h-full w-full backdrop-brightness-25 backdrop-blur-md">
-              <div className="absolute top-0">
+            <div className="absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
+              <div className="absolute top-0 h-full">
                 <Events />
               </div>
             </div>
           </div>
         </div>
         <div>
-          <h2 className="text-center text-2xl font-bold bg-success p-4 text-success-content mb-4">
-            Sponsors
-          </h2>
           <RecentSponsors />
         </div>
       </div>

@@ -3,10 +3,11 @@ import Link from "next/link";
 import feoaf from "../assets/2.png";
 import feoafsm from "../assets/feoaf.png";
 import React from "react";
+import ThemeController from "./ThemeController";
 
 function NavBar() {
   return (
-    <div className="navbar sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-10">
+    <div className="navbar border-b sm:border-none sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-10">
       <nav className="navbar-start">
         <Link href="/" className="mx-2 md:hidden">
           <Image
@@ -53,23 +54,23 @@ function NavBar() {
           </label>
         </div>
 
-        <ul className="menu menu-horizontal flex-nowrap px-1 hidden md:flex">
-          <li>
+        <ul className="flex flex-nowrap px-1 hidden md:flex">
+          <li className="px-3">
             <Link className="h-full flex items-center" href="/about">
               About
             </Link>
           </li>
-          <li>
+          <li className="px-3">
             <Link className="h-full flex items-center" href="/services">
               Services
             </Link>
           </li>
-          <li>
+          <li className="px-3">
             <Link className="h-full flex items-center" href="/events">
               Events
             </Link>
           </li>
-          <li>
+          <li className="px-3">
             <Link className="h-full flex items-center" href="/sponsors">
               Sponsors
             </Link>
@@ -77,6 +78,9 @@ function NavBar() {
           {/* <li>
             <Link href="/contacts">Contact Us</Link>
           </li> */}
+          <li className="px-3">
+            <ThemeController />
+          </li>
         </ul>
       </div>
     </div>

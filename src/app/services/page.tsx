@@ -127,7 +127,7 @@ export default function Services() {
             <Image alt="Test" src={image1} className="h-52 object-cover" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-xl font-bold flex items-center h-full text-primary-content">
+            <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
               Programs
             </h2>
             <p>
@@ -144,7 +144,7 @@ export default function Services() {
             <Image alt="Test" src={image2} className="h-52 object-cover" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-xl font-bold flex items-center h-full text-primary-content">
+            <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
               Creating Exciting New Business
             </h2>
             <p>
@@ -161,7 +161,7 @@ export default function Services() {
             <Image alt="Test" src={image3} className="h-52 object-cover" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-xl font-bold flex items-center h-full text-primary-content">
+            <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
               Planning on how to market your products/services
             </h2>
             <p>
@@ -178,7 +178,7 @@ export default function Services() {
             <Image alt="Test" src={image4} className="h-52 object-cover" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-xl font-bold flex items-center h-full text-primary-content">
+            <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
               Present your business to real investors
             </h2>
             <p>

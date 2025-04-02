@@ -3,11 +3,21 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import Drawer from "./components/Drawer";
 import Script from "next/script";
+import { Metadata } from "next";
+import PreResources from "@/lib/preresources";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+
+export const metadata: Metadata = {
+  title: "Future Entrepreneurs Of America Foundation",
+  description: "...",
+  icons: {
+    icon: ["./favicon.ico"],
+  },
+};
 
 export default function RootLayout({
   children,
@@ -16,19 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="preconnect" href="https://api.leadconnectorhq.com" />
-      <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+      {/* <link rel="icon" href="/favicon.ico" sizes="any" /> */}
+
+      <PreResources />
 
       <body className={`${poppins.className} relative antialiased`}>
         <Drawer>
           {children}
           <Footer />
         </Drawer>
-        <Script
-          src="https://link.msgsndr.com/js/form_embed.js"
-          strategy="lazyOnload"
-        />
       </body>
+
+      <Script src="https://link.msgsndr.com/js/form_embed.js" />
+      
     </html>
   );
 }

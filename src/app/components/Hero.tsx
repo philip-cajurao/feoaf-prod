@@ -40,49 +40,49 @@ function Hero() {
             <Image
               alt="test"
               src={image1}
-              className="object-cover object-center h-full brightness-25"
+              className="object-cover object-center h-full brightness-50"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image2}
-              className="object-cover object-center h-full brightness-25"
+              className="object-cover object-center h-full brightness-50"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image3}
-              className="object-cover object-center h-full brightness-25"
+              className="object-cover object-center h-full brightness-50"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image4}
-              className="object-cover object-center h-full brightness-25"
+              className="object-cover object-center h-full brightness-50"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image5}
-              className="object-cover object-right-bottom h-full brightness-25"
+              className="object-cover object-right-bottom h-full brightness-50"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image6}
-              className="object-cover object-left-top h-full brightness-25"
+              className="object-cover object-left-top h-full brightness-50"
             />
           </CarouselItem>
           <CarouselItem>
             <Image
               alt="test"
               src={image7}
-              className="object-cover object-center h-full brightness-70"
+              className="object-cover object-center h-full brightness-50"
             />
           </CarouselItem>
         </CarouselContent>

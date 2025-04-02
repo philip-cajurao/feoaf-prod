@@ -13,7 +13,7 @@ export default function Events() {
     <div className="flex justify-center h-full">
       <div className="grid md:grid-cols-2 items-center w-full">
         <div className="h-full flex flex-col justify-center p-10 bg-accent">
-          <h2 className="font-bold text-4xl mb-4 p-2 text-primary-content">
+          <h2 className="font-bold text-4xl mb-4 p-2 text-primary-content dark:text-neutral-content">
             Spring Gala Event
           </h2>
           <p className="text-xl">
@@ -24,14 +24,15 @@ export default function Events() {
           </p>
         </div>
         <div className="p-10 flex justify-center items-center">
-          <Image
-            className="rounded-xl border"
-            alt="alt img to be put"
-            placeholder="blur"
-            src={flyer}
-            height={400}
-            width={400}
-          />
+          <div className="rounded-xl overflow-hidden dark:border-2">
+            <Image
+              alt="alt img to be put"
+              placeholder="blur"
+              src={flyer}
+              height={400}
+              width={400}
+            />
+          </div>
         </div>
       </div>
     </div>

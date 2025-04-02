@@ -9,6 +9,9 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Future Entrepreneurs Of America Foundation",
   description: "...",
+  // icons: {
+  //   icon: ["./favicon.ico"]
+  // }
 };
 
 export default function Home() {
@@ -20,7 +23,7 @@ export default function Home() {
       <div>
         <div className="grid md:grid-cols-2">
           <div className="flex flex-col items-center justify-center bg-primary py-24 px-10">
-            <h2 className="font-bold text-4xl p-2 text-primary-content mb-4 w-full">
+            <h2 className="font-bold dark:text-neutral-content text-4xl p-2 text-primary-content mb-4 w-full">
               Who we are?
             </h2>
             <p className="max-w-4xl mb-12 text-xl">

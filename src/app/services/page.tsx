@@ -17,7 +17,7 @@ export default function Services() {
       <div className="grid place-items-center">
         <div>
           <p className="font-bold text-2xl">Our</p>
-          <h2 className="font-bold text-4xl ml-4">Services</h2>
+          <h2 className="font-bold text-5xl ml-4">Services</h2>
         </div>
       </div>
       <svg
@@ -116,15 +116,16 @@ export default function Services() {
         ></path>{" "}
       </svg>
 
-
-
-
-
-
-      <div className="py-10 px-4 grid lg:grid-cols-2 place-items-center place-content-center gap-10">
-        <div className="card card-sm border border-2 bg-secondary max-w-96">
+      <div className="py-10 px-4 grid lg:grid-cols-2 place-items-center gap-10">
+        <div className="card card-sm border border-2 bg-secondary max-w-96 lg:justify-self-end">
           <figure>
-            <Image alt="Test" src={image1} className="h-52 object-cover" />
+            <Image
+              alt="Test"
+              placeholder="blur"
+              loading="lazy"
+              src={image1}
+              className="h-52 object-cover"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
@@ -139,9 +140,15 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="card card-sm border border-2 bg-accent max-w-96">
+        <div className="card card-sm border border-2 bg-accent max-w-96 lg:justify-self-start">
           <figure>
-            <Image alt="Test" src={image2} className="h-52 object-cover" />
+            <Image
+              alt="Test"
+              placeholder="blur"
+              loading="lazy"
+              src={image2}
+              className="h-52 object-cover"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
@@ -156,9 +163,15 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="card card-sm border border-2 bg-primary max-w-96">
+        <div className="card card-sm border border-2 bg-primary max-w-96 lg:justify-self-end">
           <figure>
-            <Image alt="Test" src={image3} className="h-52 object-cover" />
+            <Image
+              alt="Test"
+              placeholder="blur"
+              loading="lazy"
+              src={image3}
+              className="h-52 object-cover"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
@@ -173,9 +186,15 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="card card-sm border border-2 bg-success max-w-96">
+        <div className="card card-sm border border-2 bg-success max-w-96 lg:justify-self-start">
           <figure>
-            <Image alt="Test" src={image4} className="h-52 object-cover" />
+            <Image
+              alt="Test"
+              placeholder="blur"
+              loading="lazy"
+              src={image4}
+              className="h-52 object-cover"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">

@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Link from "next/link";
-import ThemeController from "./ThemeController";
+// import ThemeController from "./ThemeController";
 
 export default function Drawer({
   children,
@@ -26,12 +26,12 @@ export default function Drawer({
         <ul className="menu relative bg-neutral text-primary-content border-r-2 min-h-full w-80 p-4">
           <li>
             <Link className="py-4 text-xl" href="/about">
-              About
+              About Us
             </Link>
           </li>
           <li>
             <Link className="py-4 text-xl" href="/services">
-              Services
+              Our Services
             </Link>
           </li>
           <li>
@@ -44,9 +44,9 @@ export default function Drawer({
               Sponsors
             </Link>
           </li>
-          <li className="absolute bottom-2 left-2">
+          {/* <li className="absolute bottom-2 left-2">
             <ThemeController />
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

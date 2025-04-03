@@ -4,7 +4,7 @@ export default function CompanyStory() {
   return (
     <div className="pr-4">
       <div className="max-w-4xl px-10 w-full mx-auto space-y-2">
-        <p>
+        <p className="text-justify">
           <span className="font-bold">Future Entrepreneurs of America Foundation</span> was founded in December
           2021, originally known as FHT’s Future Entrepreneurs. During the hype
           of the pandemic, children were learning virtually, their physical

@@ -36,6 +36,8 @@ export default function Home() {
           <div className="py-24 px-4 sm:px-8">
             <Image
               alt="Test"
+              placeholder="blur"
+              loading="lazy"
               src={who}
               className="w-auto h-auto mx-auto rounded-xl"
             />

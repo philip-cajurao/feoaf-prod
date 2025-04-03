@@ -20,7 +20,7 @@ import Link from "next/link";
 
 function Hero() {
   const plugin = React.useRef([
-    Autoplay({ delay: 5000, stopOnInteraction: true }),
+    Autoplay({ delay: 7000, stopOnInteraction: true }),
     Fade(),
   ]);
   return (
@@ -31,7 +31,7 @@ function Hero() {
         opts={{
           align: "start",
           loop: true,
-          duration: 70,
+          duration: 50,
         }}
         className="h-full w-full absolute top-0 left-0 -z-10"
       >
@@ -39,6 +39,8 @@ function Hero() {
           <CarouselItem>
             <Image
               alt="test"
+              placeholder="blur"
+              priority={true}
               src={image1}
               className="object-cover object-center h-full brightness-50"
             />
@@ -46,6 +48,7 @@ function Hero() {
           <CarouselItem>
             <Image
               alt="test"
+              placeholder="blur"
               src={image2}
               className="object-cover object-center h-full brightness-50"
             />
@@ -53,6 +56,7 @@ function Hero() {
           <CarouselItem>
             <Image
               alt="test"
+              placeholder="blur"
               src={image3}
               className="object-cover object-center h-full brightness-50"
             />
@@ -60,6 +64,7 @@ function Hero() {
           <CarouselItem>
             <Image
               alt="test"
+              placeholder="blur"
               src={image4}
               className="object-cover object-center h-full brightness-50"
             />
@@ -67,6 +72,7 @@ function Hero() {
           <CarouselItem>
             <Image
               alt="test"
+              placeholder="blur"
               src={image5}
               className="object-cover object-right-bottom h-full brightness-50"
             />
@@ -74,6 +80,7 @@ function Hero() {
           <CarouselItem>
             <Image
               alt="test"
+              placeholder="blur"
               src={image6}
               className="object-cover object-left-top h-full brightness-50"
             />
@@ -81,6 +88,7 @@ function Hero() {
           <CarouselItem>
             <Image
               alt="test"
+              placeholder="blur"
               src={image7}
               className="object-cover object-center h-full brightness-50"
             />

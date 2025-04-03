@@ -3,6 +3,12 @@ import React from "react";
 export default function Join() {
   return (
     <div className="h-[1000px] relative overflow-hidden">
+
+      {/* <div className="fixed m-8">
+        Back
+      </div> */}
+
+      <h2 className="text-4xl font-bold text-center mt-20">Member Registration</h2>
       <svg
         className="absolute w-52 -z-50"
         viewBox="0 0 100 100"

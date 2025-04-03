@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import feoaf from "../assets/2.png";
-import feoafsm from "../assets/feoaf.png";
+// import feoafsm from "../assets/feoaf.png";
 import React from "react";
-import ThemeController from "./ThemeController";
+// import ThemeController from "./ThemeController";
 
 function NavBar() {
   return (
-    <div className="navbar border-b sm:border-none sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-10">
+    <div className="navbar shadow-md sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-10">
       <nav className="navbar-start">
-        <Link href="/" className="mx-2 md:hidden">
+        {/* <Link href="/" className="mx-2 md:hidden">
           <Image
             alt="FEOAF logo"
             src={feoafsm}
@@ -17,8 +17,8 @@ function NavBar() {
             width={50}
             priority
           />
-        </Link>
-        <Link href="/" className="hidden md:flex mx-6">
+        </Link> */}
+        <Link href="/" className="flex mx-6">
           <Image
             alt="FEOAF logo"
             src={feoaf}
@@ -57,12 +57,12 @@ function NavBar() {
         <ul className="flex flex-nowrap px-1 hidden md:flex">
           <li className="px-3">
             <Link className="h-full flex items-center" href="/about">
-              About
+              About Us
             </Link>
           </li>
           <li className="px-3">
             <Link className="h-full flex items-center" href="/services">
-              Services
+              Our Services
             </Link>
           </li>
           <li className="px-3">
@@ -78,9 +78,9 @@ function NavBar() {
           {/* <li>
             <Link href="/contacts">Contact Us</Link>
           </li> */}
-          <li className="px-3">
+          {/* <li className="px-3">
             <ThemeController />
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

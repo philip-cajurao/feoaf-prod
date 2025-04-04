@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function RecentSponsors() {
   return (
     <div className="pt-24">
-      <div className="flex flex-col items-center justify-center mb-8">
+      <div className="flex flex-col items-center justify-center mb-24">
         {/* <h2 className="text-4xl font-bold mb-4 text-accent text-center">
           Sponsors
         </h2> */}

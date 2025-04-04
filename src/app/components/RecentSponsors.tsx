@@ -2,39 +2,62 @@ import Image from "next/image";
 import React from "react";
 import fhc from "../assets/sponsors/FHC.png";
 import pmi from "../assets/sponsors/PMI.png";
+import fts from "../assets/sponsors/FTS.png";
+import Link from "next/link";
 
 export default function RecentSponsors() {
   return (
-    <div className="grid md:grid-cols-2 place-content-center">
-      <div className="px-4 sm:px-10 md:py-32 pt-32 pb-10 flex flex-col justify-center">
-        <h2 className="text-4xl font-bold mb-4 text-accent">Sponsors</h2>
-        <p className="text-xl max-w-2xl">
+    <div className="py-24">
+      <div className="flex flex-col items-center justify-center mb-8">
+        <h2 className="text-4xl font-bold mb-4 text-accent text-center">
+          Sponsors
+        </h2>
+        <p className="text-xl max-w-2xl text-center">
           Thank you to our Spring 2025 Gala Event - The Launch of Future
           Entrepreneurs Foundation.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3">
-        <div></div>
-        <div className="grid grid-cols-2 sm:grid-cols-1 w-full md:py-32 pb-32 bg-success items-center justify-center gap-20 p-10">
+      <div className="flex w-full bg-neutral items-center justify-center gap-20">
+        <Link
+          href="https://fortunehomesconstruction.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Image
-            className="w-auto h-auto mx-auto"
             alt="Fortune Homes Construction logo"
             src={fhc}
             placeholder="blur"
             loading="lazy"
-            width={100}
+            width={120}
           />
+        </Link>
+        <Link
+          href="https://www.fairfaxpropertymanagementinc.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Image
-            className="w-auto h-auto mx-auto"
             alt="PMI of Fairfax logo"
             src={pmi}
             placeholder="blur"
             loading="lazy"
-            width={100}
+            width={120}
           />
-        </div>
-        <div></div>
+        </Link>
+        <Link
+          href="https://www.fortunetechsolutions.net/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            alt="Fortune Tech Solutions logo"
+            src={fts}
+            placeholder="blur"
+            loading="lazy"
+            width={120}
+          />
+        </Link>
       </div>
     </div>
   );

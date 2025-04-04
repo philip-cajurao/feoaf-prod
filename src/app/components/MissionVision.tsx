@@ -7,7 +7,7 @@ export default function MissionVision() {
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-start">
             <p className="font-bold text-xl">Our</p>
-            <h2 className="font-bold text-2xl ml-1 px-4 bg-primary -ml-2 border">Mission</h2>
+            <h2 className="font-bold text-3xl ml-1 px-4 -ml-2">Mission</h2>
           </div>
           <p className="mt-2 text-center">
             Our mission is to develop the next generation of entrepreneurs by
@@ -21,7 +21,7 @@ export default function MissionVision() {
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-start">
             <p className="font-bold text-xl">Our</p>
-            <h2 className="font-bold text-2xl ml-1 px-4 bg-success -ml-2 border">Vision</h2>
+            <h2 className="font-bold text-3xl ml-1 px-4 -ml-2">Vision</h2>
           </div>
           <p className="mt-2 text-center">
             As we continue to grow, our commitment remains steadfast in keeping

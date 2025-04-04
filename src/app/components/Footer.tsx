@@ -16,21 +16,18 @@ const Footer = () => {
           <Link href="/join" className="link link-hover">
             Join
           </Link>
-          <Link href="/sponsors/be-a-sponsor" className="link link-hover text-accent">
+          <Link
+            href="/sponsors/be-a-sponsor"
+            className="link link-hover text-accent"
+          >
             Be a sponsor
           </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Contacts</h6>
-          <Link href="/services" className="link link-hover">
-            919-769-9623
-          </Link>
-          <Link href="/services" className="link link-hover">
-            email@gmail.com
-          </Link>
-          <Link href="/services" className="link link-hover">
-            Haymarket, Virginia
-          </Link>
+          <p>919-769-9623</p>
+          <p>email@gmail.com</p>
+          <p>Haymarket, Virginia</p>
         </nav>
         <nav>
           <h6 className="footer-title">Donate</h6>
@@ -58,7 +55,10 @@ const Footer = () => {
         </nav>
         <nav className="">
           <div className="grid grid-flow-col gap-4">
-            <Link href="https://www.facebook.com/people/Future-Entrepreneurs-of-America-Foundation/61573876332746/" className="font-bold text-lg hover:underline">
+            <Link
+              href="https://www.facebook.com/people/Future-Entrepreneurs-of-America-Foundation/61573876332746/"
+              className="font-bold text-lg hover:underline"
+            >
               facebook
             </Link>
           </div>

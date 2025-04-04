@@ -62,7 +62,7 @@ function NavBar() {
           </li>
           <li className="px-3">
             <Link className="h-full flex items-center" href="/services">
-              Our Services
+              Services
             </Link>
           </li>
           <li className="px-3">

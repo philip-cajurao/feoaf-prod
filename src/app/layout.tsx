@@ -30,7 +30,7 @@ export default function RootLayout({
 
       <PreResources />
 
-      <body className={`${poppins.className} relative antialiased`}>
+      <body className={`${poppins.className} antialiased`}>
         <Drawer>
           {children}
           <Footer />
@@ -38,7 +38,6 @@ export default function RootLayout({
       </body>
 
       <Script src="https://link.msgsndr.com/js/form_embed.js" />
-      
     </html>
   );
 }

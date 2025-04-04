@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/2.png";
-import qr from "../assets/qr.png";
+import qr from "../assets/qr/donateQR.png";
 import React from "react";
 
 const Footer = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
         <nav>
           <h6 className="footer-title">Contacts</h6>
           <p>919-769-9623</p>
-          <p>email@gmail.com</p>
+          <p>feoafoundation@gmail.com</p>
           <p>Haymarket, Virginia</p>
         </nav>
         <nav>

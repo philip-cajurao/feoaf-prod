@@ -7,11 +7,11 @@ import Link from "next/link";
 
 export default function RecentSponsors() {
   return (
-    <div className="py-24">
+    <div className="pt-24">
       <div className="flex flex-col items-center justify-center mb-8">
-        <h2 className="text-4xl font-bold mb-4 text-accent text-center">
+        {/* <h2 className="text-4xl font-bold mb-4 text-accent text-center">
           Sponsors
-        </h2>
+        </h2> */}
         <p className="text-xl max-w-2xl text-center">
           Thank you to our Spring 2025 Gala Event - The Launch of Future
           Entrepreneurs Foundation.
@@ -27,7 +27,7 @@ export default function RecentSponsors() {
           <Image
             alt="Fortune Homes Construction logo"
             src={fhc}
-            placeholder="blur"
+            // placeholder="blur"
             loading="lazy"
             width={120}
           />
@@ -40,7 +40,7 @@ export default function RecentSponsors() {
           <Image
             alt="PMI of Fairfax logo"
             src={pmi}
-            placeholder="blur"
+            // placeholder="blur"
             loading="lazy"
             width={120}
           />
@@ -53,7 +53,7 @@ export default function RecentSponsors() {
           <Image
             alt="Fortune Tech Solutions logo"
             src={fts}
-            placeholder="blur"
+            // placeholder="blur"
             loading="lazy"
             width={120}
           />

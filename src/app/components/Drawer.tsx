@@ -7,7 +7,7 @@ export default function Drawer({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="drawer">
+    <div className="drawer relative">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
@@ -31,7 +31,7 @@ export default function Drawer({
           </li>
           <li>
             <Link className="py-4 text-xl" href="/services">
-              Our Services
+              Services
             </Link>
           </li>
           <li>

@@ -3,17 +3,17 @@ import React from "react";
 
 export default function BecomeSponsor() {
   return (
-    <div className="h-[1800px] relative overflow-hidden">
+    <div className="h-[2000px] relative overflow-hidden">
       <div className="md:fixed m-8">
         <BackButton />
       </div>
 
-      <h2 className="text-4xl font-bold text-center mt-20">
+      {/* <h2 className="text-4xl font-bold text-center mt-20">
         Sponsor Registration
-      </h2>
+      </h2> */}
 
       <iframe
-        className="mt-24 overflow-y-hidden"
+        className="mt-10 overflow-y-hidden"
         style={{ overflowY: "hidden" }}
         src="https://api.leadconnectorhq.com/widget/form/F5Si2lr5zNrJ33D1mZC8"
         id="inline-F5Si2lr5zNrJ33D1mZC8"

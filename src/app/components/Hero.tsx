@@ -107,7 +107,7 @@ function Hero() {
             <span className="bg-secondary px-2 border text-primary-content">
               Bigger.
             </span>{" "}
-            &nbsp; Inspire The{" "}
+            &nbsp; Become The{" "}
             <span className="bg-success px-2 border text-primary-content">
               Entrepreneurs
             </span>{" "}

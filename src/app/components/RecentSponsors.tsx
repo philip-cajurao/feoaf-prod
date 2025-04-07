@@ -12,13 +12,13 @@ export default function RecentSponsors() {
         {/* <h2 className="text-4xl font-bold mb-4 text-accent text-center">
           Sponsors
         </h2> */}
-        <p className="text-xl max-w-2xl text-center">
+        <p className="text-xl max-w-2xl text-center px-2">
           Thank you to our Spring 2025 Gala Event - The Launch of Future
           Entrepreneurs Foundation.
         </p>
       </div>
 
-      <div className="flex w-full bg-neutral items-center justify-center gap-20">
+      <div className="flex px-4 md:px-auto w-full bg-neutral items-center justify-center gap-10 md:gap-20">
         <Link
           href="https://fortunehomesconstruction.com/"
           rel="noopener noreferrer"

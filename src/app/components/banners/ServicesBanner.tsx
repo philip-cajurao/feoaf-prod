@@ -4,11 +4,11 @@ import React from "react";
 
 export default function ServicesBanner() {
   return (
-    <div className="card image-full h-72">
-      <figure>
-        <Image placeholder="blur" priority={true} alt="Test" src={services} />
+    <div className="card image-full h-72 rounded-none">
+      <figure className=" rounded-none">
+        <Image className=" rounded-none" placeholder="blur" priority={true} alt="Test" src={services} />
       </figure>
-      <div className="card-body flex justify-center items-center">
+      <div className="card-body flex justify-center items-center rounded-none">
         <h2 className="card-title text-5xl font-bold">
           <div className="grid place-items-center">
             <div>

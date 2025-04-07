@@ -8,7 +8,7 @@ import image4 from "../assets/latest_events/present.jpg";
 export default function ServicesCard() {
   return (
     <div className="py-10 px-4 grid lg:grid-cols-2 place-items-center gap-10">
-      <div className="card card-sm border border-2 bg-secondary max-w-96 lg:justify-self-end">
+      <div className="card card-sm rounded-md border border-2 bg-secondary max-w-96 lg:justify-self-end">
         <figure>
           <Image
             alt="Test"
@@ -25,7 +25,7 @@ export default function ServicesCard() {
         </div>
       </div>
 
-      <div className="card card-sm border border-2 bg-accent max-w-96 lg:justify-self-start">
+      <div className="card card-sm rounded-md border border-2 bg-accent max-w-96 lg:justify-self-start">
         <figure>
           <Image
             alt="Test"
@@ -42,7 +42,7 @@ export default function ServicesCard() {
         </div>
       </div>
 
-      <div className="card card-sm border border-2 bg-primary max-w-96 lg:justify-self-end">
+      <div className="card card-sm rounded-md border border-2 bg-primary max-w-96 lg:justify-self-end">
         <figure>
           <Image
             alt="Test"
@@ -59,7 +59,7 @@ export default function ServicesCard() {
         </div>
       </div>
 
-      <div className="card card-sm border border-2 bg-success max-w-96 lg:justify-self-start">
+      <div className="card card-sm rounded-md border border-2 bg-success max-w-96 lg:justify-self-start">
         <figure>
           <Image
             alt="Test"

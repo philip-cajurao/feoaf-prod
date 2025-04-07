@@ -22,7 +22,7 @@ export default function Home() {
       {/* Sections */}
       <div>
         <div className="grid md:grid-cols-2 bg-[#f4f4f4]">
-          <div className="flex flex-col items-center justify-center px-10">
+          <div className="flex flex-col items-center justify-center px-10 pt-14 lg:pt-0">
             <h2 className="font-bold text-4xl mb-4 w-full">Who we are?</h2>
             <p className="max-w-4xl text-xl">
               At Future Entrepreneurs Of America Foundation, we focus on

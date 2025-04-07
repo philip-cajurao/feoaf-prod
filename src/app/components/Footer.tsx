@@ -25,7 +25,7 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Contacts</h6>
-          <p>919-769-9623</p>
+          <p>(919) 760-9623</p>
           <p>feoafoundation@gmail.com</p>
           <p>Virginia, USA</p>
         </nav>

@@ -16,7 +16,7 @@ export default function SpringGala() {
             of trailblazing entrepreneurs. Get your ticket now!
           </p>
         </div>
-        <div className="p-10 flex justify-center items-center">
+        <div className="p-4 sm:p-10 flex justify-center items-center">
           <div className="rounded-xl overflow-hidden dark:border-2">
             <Image
               alt="alt img to be put"

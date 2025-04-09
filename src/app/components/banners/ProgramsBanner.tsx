@@ -2,7 +2,7 @@ import Image from "next/image";
 import services from "../../assets/latest_events/services.jpeg";
 import React from "react";
 
-export default function ServicesBanner() {
+export default function ProgramsBanner() {
   return (
     <div className="card image-full h-72 rounded-none">
       <figure className=" rounded-none">
@@ -13,7 +13,7 @@ export default function ServicesBanner() {
           <div className="grid place-items-center">
             <div>
               <p className="font-bold text-2xl text-accent">Our</p>
-              <h2 className="font-bold text-5xl ml-4">Services</h2>
+              <h2 className="font-bold text-5xl ml-4">Programs</h2>
             </div>
           </div>
         </h2>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
-import ServicesBanner from "../components/banners/ServicesBanner";
-import ServicesCard from "../components/ServicesCard";
+import ProgramsBanner from "../components/banners/ProgramsBanner";
+import ServicesCard from "../components/ProgramsCard";
 
 export const metadata: Metadata = {
   title: "Services | Future Entrepreneurs Of America Foundation",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Services() {
   return (
     <div className="relative overflow-hidden">
-      <ServicesBanner />
+      <ProgramsBanner />
 
       <ServicesCard />
     </div>

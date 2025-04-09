@@ -1,9 +1,9 @@
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 import { Metadata } from "next";
 import RecentSponsors from "./components/RecentSponsors";
 import who from "./assets/latest_events/we.jpg";
 import Image from "next/image";
-import ServicesCard from "./components/ServicesCard";
+import ServicesCard from "./components/ProgramsCard";
 import SpringGala from "./components/SpringGala";
 
 export const metadata: Metadata = {
@@ -17,7 +17,19 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative">
-      <Hero />
+      {/* <Hero /> */}
+      <div>
+          <div
+            className={`flex items-center justify-center relative md:h-[calc(100svh-4rem)] bg-accent md:bg-fixed md:bg-center md:bg-cover md:bg-[url(./assets/latest_events/gala.JPEG)]`}
+          >
+           
+            {/* <div className="absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
+              <div className="absolute top-0 h-full"> */}
+                <SpringGala />
+              {/* </div>
+            </div> */}
+          </div>
+        </div>
 
       {/* Sections */}
       <div>
@@ -53,17 +65,7 @@ export default function Home() {
           </div>
           <ServicesCard />
         </div>
-        <div>
-          <div
-            className={`flex items-center justify-center relative h-[calc(100svh*2)] md:h-svh bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
-          >
-            <div className="absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
-              <div className="absolute top-0 h-full">
-                <SpringGala />
-              </div>
-            </div>
-          </div>
-        </div>
+        
         <div className="pb-24">
           <h2 className="text-4xl font-bold text-accent text-center -mb-20 mt-24">
             Sponsors

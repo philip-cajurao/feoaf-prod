@@ -30,8 +30,8 @@ export default function Drawer({
             </Link>
           </li>
           <li>
-            <Link className="py-4 text-xl" href="/services">
-              Services
+            <Link className="py-4 text-xl" href="/programs">
+              Programs
             </Link>
           </li>
           <li>

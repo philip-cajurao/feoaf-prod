@@ -5,7 +5,7 @@ import image2 from "../assets/latest_events/create.jpg";
 import image3 from "../assets/latest_events/plan.jpg";
 import image4 from "../assets/latest_events/present.jpg";
 
-export default function ServicesCard() {
+export default function ProgramsCard() {
   return (
     <div className="py-10 px-4 grid lg:grid-cols-2 place-items-center gap-10">
       <div className="card card-sm rounded-md border border-2 bg-secondary max-w-96 lg:justify-self-end">
@@ -19,8 +19,8 @@ export default function ServicesCard() {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
-            Programs
+          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-secondary-content">
+            Advertisements 101
           </h2>
         </div>
       </div>
@@ -36,8 +36,8 @@ export default function ServicesCard() {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
-            Creating Exciting New Business
+          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-accent-content">
+            Product Ideation
           </h2>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function ServicesCard() {
         </figure>
         <div className="card-body">
           <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
-            Planning on how to market your products/services
+            Social Media Madness
           </h2>
         </div>
       </div>
@@ -70,8 +70,8 @@ export default function ServicesCard() {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
-            Present your business to real investors
+          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-success-content">
+            Marketing 101
           </h2>
         </div>
       </div>

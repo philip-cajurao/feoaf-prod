@@ -3,7 +3,7 @@ import BackButton from "../components/BackButton";
 
 export default function Join() {
   return (
-    <div className="h-[1200px] relative overflow-hidden">
+    <div className="h-[1800px] relative overflow-hidden">
       <div className="md:fixed m-8">
           <BackButton />
       </div>
@@ -25,7 +25,7 @@ export default function Join() {
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name="Questionnaire For Kids"
-        data-layout-iframe-id="popup-pJ9SBOja8uLofySH2b8B"
+        data-layout-iframe-id="inline-pJ9SBOja8uLofySH2b8B"
         data-form-id="pJ9SBOja8uLofySH2b8B"
         width="100%"
         loading="lazy"

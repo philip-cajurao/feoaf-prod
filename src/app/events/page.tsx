@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Events() {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center relative">
       <EventsBanner />
 
       <SpringGala />

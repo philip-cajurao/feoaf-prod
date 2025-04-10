@@ -20,7 +20,7 @@ export default function Home() {
       {/* <Hero /> */}
       <div>
           <div
-            className={`flex relative md:h-[calc(100svh-4rem)] bg-accent md:bg-fixed md:bg-center md:bg-cover md:bg-[url(./assets/latest_events/gala.JPEG)]`}
+            className={`flex relative md:h-[calc(100svh-4rem)] border-b bg-accent md:bg-fixed md:bg-center md:bg-cover md:bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
            
             {/* <div className="absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
@@ -35,7 +35,7 @@ export default function Home() {
       <div>
         <div className="grid md:grid-cols-2 bg-[#f4f4f4]">
           <div className="flex flex-col items-center justify-center px-10 pt-14 lg:pt-0">
-            <h2 className="font-bold text-4xl mb-4 w-full">Who we are?</h2>
+            <h2 className="font-bold text-4xl mb-4 w-full max-w-4xl">Who we are?</h2>
             <p className="max-w-4xl text-xl">
               At Future Entrepreneurs Of America Foundation, we focus on
               building and creating young entrepreneurs by providing

@@ -20,7 +20,7 @@ export default function SponsorBanner() {
             <div>
               <p className="font-bold text-2xl text-accent">Our</p>
               <h2 className="font-bold text-5xl ml-4 text-neutral-content">
-                Programs
+                Sponsors
               </h2>
             </div>
           </div>

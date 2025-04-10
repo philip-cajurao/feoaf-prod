@@ -4,14 +4,12 @@ import flyer from "../../assets/latest_events/flyer.png";
 
 export default function Flyer() {
   return (
-      <div className="rounded-xl overflow-hidden dark:border-2">
+      <div className="rounded-xl overflow-hidden">
         <Image
           alt="alt img to be put"
           placeholder="blur"
           priority={true}
           src={flyer}
-          height={400}
-          width={400}
         />
       </div>
   );

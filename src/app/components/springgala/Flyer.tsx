@@ -8,6 +8,7 @@ export default function Flyer() {
         <Image
           alt="alt img to be put"
           placeholder="blur"
+          priority={true}
           src={flyer}
           height={400}
           width={400}

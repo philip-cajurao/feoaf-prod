@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Services() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="flex flex-col justify-center">
       <ProgramsBanner />
 
       <ServicesCard />

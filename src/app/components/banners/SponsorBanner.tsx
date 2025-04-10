@@ -11,7 +11,7 @@ export default function SponsorBanner() {
         alt="Test"
         src={services}
         fill
-        className="object-cover object-center brightness-35 -z-10"
+        className="object-cover object-[25%_20%] brightness-35 -z-10"
       />
 
       <div className="flex h-full justify-center items-center">

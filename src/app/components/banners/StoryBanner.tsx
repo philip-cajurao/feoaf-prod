@@ -1,8 +1,8 @@
+import React from 'react';
 import Image from "next/image";
-import event from "../../assets/latest_events/events.jpg";
-import React from "react";
+import event from "../../assets/latest_events/we.jpg";
 
-export default function EventsBanner() {
+export default function StoryBanner() {
   return (
     <div className="relative overflow-hidden h-[250px]">
       <Image
@@ -11,7 +11,7 @@ export default function EventsBanner() {
         alt="Test"
         src={event}
         fill
-        className="object-cover object-[25%_35%] brightness-35 -z-10"
+        className="object-cover object-[25%_50%] brightness-35 -z-10"
       />
 
       <div className="flex h-full justify-center items-center">
@@ -20,7 +20,7 @@ export default function EventsBanner() {
             <div>
               <p className="font-bold text-2xl text-accent">Our</p>
               <h2 className="font-bold text-5xl ml-4 text-neutral-content">
-                Events
+                Story
               </h2>
             </div>
           </div>

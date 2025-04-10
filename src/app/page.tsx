@@ -20,7 +20,7 @@ export default function Home() {
       {/* <Hero /> */}
       <div>
           <div
-            className={`flex items-center justify-center relative md:h-[calc(100svh-4rem)] bg-accent md:bg-fixed md:bg-center md:bg-cover md:bg-[url(./assets/latest_events/gala.JPEG)]`}
+            className={`flex relative md:h-[calc(100svh-4rem)] bg-accent md:bg-fixed md:bg-center md:bg-cover md:bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
            
             {/* <div className="absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">

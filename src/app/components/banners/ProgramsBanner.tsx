@@ -4,20 +4,26 @@ import React from "react";
 
 export default function ProgramsBanner() {
   return (
-    <div className="card image-full h-72 rounded-none">
-      <figure className=" rounded-none">
-        <Image className=" rounded-none" placeholder="blur" priority={true} alt="Test" src={services} />
-      </figure>
-      <div className="card-body flex justify-center items-center rounded-none">
-        <h2 className="card-title text-5xl font-bold">
-          <div className="grid place-items-center">
-            <div>
-              <p className="font-bold text-2xl text-accent">Our</p>
-              <h2 className="font-bold text-5xl ml-4">Programs</h2>
-            </div>
+    <div className="relative overflow-hidden h-[250px]">
+          <Image
+            placeholder="blur"
+            priority={true}
+            alt="Test"
+            src={services}
+            fill
+            className="object-cover object-center brightness-35 -z-10"
+          />
+    
+          <div className="flex h-full justify-center items-center">
+            <h2 className="text-5xl font-bold">
+              <div className="grid place-items-center">
+                <div>
+                  <p className="font-bold text-2xl text-accent">Our</p>
+                  <h2 className="font-bold text-5xl ml-4 text-neutral-content">Programs</h2>
+                </div>
+              </div>
+            </h2>
           </div>
-        </h2>
-      </div>
-    </div>
+        </div>
   );
 }

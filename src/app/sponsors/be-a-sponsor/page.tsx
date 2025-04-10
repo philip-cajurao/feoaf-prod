@@ -3,7 +3,7 @@ import React from "react";
 
 export default function BecomeSponsor() {
   return (
-    <div className="h-[2000px] relative overflow-hidden">
+    <div className="h-[2300px] relative overflow-hidden">
       <div className="md:fixed m-8">
         <BackButton />
       </div>

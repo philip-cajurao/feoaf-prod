@@ -6,7 +6,7 @@ import TicketButton from "./springgala/TicketButton";
 export default function SpringGala() {
   return (
     <div className="grid md:grid-cols-2 w-full">
-      <div className="p-4 relative sm:p-10 h-[calc(100svh-4rem)] md:h-full flex flex-col justify-center items-center order-last md:order-none">
+      <div className="relative p-2 h-[calc(100svh-4rem)] md:h-full flex flex-col justify-center items-center order-last md:order-none">
         <Flyer />
 
         <div className="md:hidden mt-10">

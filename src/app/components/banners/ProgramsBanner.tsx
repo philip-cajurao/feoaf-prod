@@ -1,5 +1,5 @@
 import Image from "next/image";
-import services from "../../assets/latest_events/services.jpeg";
+import program from "../../assets/latest_events/program.jpeg";
 import React from "react";
 
 export default function ProgramsBanner() {
@@ -9,7 +9,7 @@ export default function ProgramsBanner() {
             placeholder="blur"
             priority={true}
             alt="Test"
-            src={services}
+            src={program}
             fill
             className="object-cover object-center brightness-35 -z-10"
           />

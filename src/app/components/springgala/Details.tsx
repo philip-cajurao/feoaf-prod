@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Details() {
   return (
-      <div>
+      <div className="max-w-4xl">
         <h2 className="font-bold text-2xl md:text-4xl mb-4 text-primary-content dark:text-neutral-content">
           Spring Gala Event
         </h2>

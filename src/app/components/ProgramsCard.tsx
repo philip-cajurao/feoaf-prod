@@ -3,7 +3,7 @@ import React from "react";
 import image1 from "../assets/latest_events/fe5.jpg";
 import image2 from "../assets/latest_events/create.jpg";
 import image3 from "../assets/latest_events/sm.jpeg";
-import image4 from "../assets/latest_events/ads.jpeg";
+import image4 from "../assets/latest_events/ads.jpg";
 
 export default function ProgramsCard() {
   return (

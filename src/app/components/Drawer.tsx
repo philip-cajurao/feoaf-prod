@@ -25,6 +25,11 @@ export default function Drawer({
         ></label>
         <ul className="menu relative bg-neutral text-primary-content border-r-2 min-h-full w-52 p-4">
           <li>
+            <Link className="py-4 text-xl" href="/">
+              Home
+            </Link>
+          </li>
+          <li>
             <Link className="py-4 text-xl" href="/about">
               About Us
             </Link>

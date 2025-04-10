@@ -4,7 +4,7 @@ import services from "../../assets/latest_events/bgsponsor.jpg";
 
 export default function SponsorBanner() {
   return (
-    <div className="relative overflow-hidden border border-secondary h-[250px]">
+    <div className="relative overflow-hidden h-[250px]">
       <Image
         placeholder="blur"
         priority={true}

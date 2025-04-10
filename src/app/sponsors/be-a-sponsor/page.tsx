@@ -8,12 +8,12 @@ export default function BecomeSponsor() {
         <BackButton />
       </div>
 
-      <h2 className="text-4xl font-bold text-center mt-20">
+      {/* <h2 className="text-4xl font-bold text-center mt-20">
         Be Our Sponsor
-      </h2>
+      </h2> */}
 
       <iframe
-        className="mt-8 overflow-y-hidden"
+        className="mt-20 overflow-y-hidden"
         style={{ overflowY: "hidden" }}
         src="https://api.leadconnectorhq.com/widget/form/F5Si2lr5zNrJ33D1mZC8"
         id="inline-F5Si2lr5zNrJ33D1mZC8"

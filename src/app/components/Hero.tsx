@@ -99,23 +99,11 @@ function Hero() {
       <div className="absolute w-full h-full flex justify-center items-center">
         <div className="max-w-2xl flex flex-col items-center">
           <h2 className="text-center text-primary-content px-10 text-3xl/14 sm:text-5xl/20 font-bold">
-            Dream{" "}
-            <span className="bg-primary px-2 border text-primary-content">
-              Big,
-            </span>{" "}
-            Learn{" "}
-            <span className="bg-secondary px-2 border text-primary-content">
-              Bigger.
-            </span>{" "}
-            &nbsp; Become The{" "}
-            <span className="bg-success px-2 border text-primary-content">
-              Entrepreneurs
-            </span>{" "}
-            Of Tomorrow
+            We are the future of the world. We are the next generation, we are
+            tomorrow’s people, we are the Future Entrepreneurs.
           </h2>
           <p className="text-center max-w-md px-10 text-primary-content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
-            autem.
+            Join us and together we can make a difference!
           </p>
 
           <Link href="/join">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import thanksImage from "../assets/latest_events/fe.jpg";
 
-export default function Donate() {
+export default function Donation() {
   return (
     <div className="p-10 relative">
       <Link href="/" className="flex items-center gap-x-1 mb-8 cursor-pointer">

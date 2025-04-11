@@ -7,12 +7,12 @@ import Link from "next/link";
 
 export default function RecentSponsors() {
   return (
-    <div className="pt-24">
-      <div className="flex flex-col items-center justify-center mb-24">
+    <div className="pt-20">
+      <div className="flex flex-col items-center justify-center mb-20">
         {/* <h2 className="text-4xl font-bold mb-4 text-accent text-center">
           Sponsors
         </h2> */}
-        <p className="text-xl max-w-2xl text-center px-2">
+        <p className="text-2xl max-w-2xl text-center px-2">
           Thank you to our Spring 2025 Gala Event - The Launch of Future
           Entrepreneurs Foundation.
         </p>

@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import services from "../../assets/latest_events/bgsponsor.jpg";
+// import Image from "next/image";
+// import services from "../../assets/latest_events/bgsponsor.jpg";
 
 export default function SponsorBanner() {
   return (

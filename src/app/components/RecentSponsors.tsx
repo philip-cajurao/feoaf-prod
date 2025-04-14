@@ -13,8 +13,8 @@ export default function RecentSponsors() {
           Sponsors
         </h2> */}
         <p className="text-2xl max-w-2xl text-center px-2">
-          Thank you to our Spring 2025 Gala Event - The Launch of Future
-          Entrepreneurs Foundation.
+          Thank you for joining us at the Spring 2025 Gala — The Launch of the
+          Future Entrepreneurs Foundation.
         </p>
       </div>
 

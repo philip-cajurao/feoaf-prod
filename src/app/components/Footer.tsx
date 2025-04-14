@@ -31,6 +31,8 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Donate</h6>
+          <Link href="/donate" className="link link-hover">
+
           <Image
             placeholder="blur"
             loading="lazy"
@@ -38,7 +40,8 @@ const Footer = () => {
             src={qr}
             width={100}
           />
-        </nav>
+          </Link>
+          </nav>
       </footer>
       <footer className="footer grid grid-cols-3 place-items-center bg-neutral text-neutral-content text-base-content px-10 py-4">
         <nav className="grid-flow-col items-center justify-self-start">

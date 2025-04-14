@@ -39,10 +39,10 @@ export default function Home() {
               Who we are?
             </h2>
             <p className="max-w-4xl text-xl">
-              At Future Entrepreneurs Of America Foundation, we focus on
-              building and creating young entrepreneurs by providing
-              age-appropriate business training, guidance and funding for young
-              kids, 9-17 years old.
+              Future Entrepreneurs of America Foundation is focus on developing,
+              guiding and mentoring young entrepreneurs ages 9-17 years old by
+              proving age appropriate training and activities to motivate them
+              to become successful entrepreneurs in the future.
             </p>
             <Link href="/join">
               <button className="btn btn-accent btn-xl mt-8">

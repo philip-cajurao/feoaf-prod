@@ -74,11 +74,13 @@ export default function Home() {
           <ServicesCard />
         </div>
 
-        <div className="pb-24">
-          <h2 className="text-4xl font-bold text-accent text-center -mb-20 mt-24">
+        <div className="py-24">
+          <h2 className="text-4xl font-bold text-accent text-center -mb-20">
             Sponsors
           </h2>
-          <RecentSponsors />
+          <div className="mt-16">
+            <RecentSponsors />
+          </div>
         </div>
       </div>
     </div>

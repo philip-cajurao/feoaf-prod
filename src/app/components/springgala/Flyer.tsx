@@ -10,7 +10,7 @@ export default function Flyer() {
           placeholder="blur"
           priority={true}
           src={flyer}
-          width={530}
+          width={450}
           className="h-full"
         />
       </div>

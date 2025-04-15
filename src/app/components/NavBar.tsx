@@ -22,8 +22,7 @@ function NavBar() {
           <Image
             alt="FEOAF logo"
             src={feoaf}
-            height={210}
-            width={210}
+            className="h-auto w-52"
             priority
           />
         </Link>

@@ -8,7 +8,14 @@ import StoryBanner from "../components/banners/StoryBanner";
 
 export const metadata: Metadata = {
   title: "About | Future Entrepreneurs Of America Foundation",
-  description: "...",
+  description:
+    "Empowering youth ages 9–17 with real-world business training, the Future Entrepreneurs of America Foundation is a nonprofit dedicated to developing the next generation of entrepreneurs through age-appropriate guidance, funding, and hands-on experiences beyond the classroom.",
+  icons: {
+    icon: ["./favicon.ico"],
+  },
+  facebook: {
+    appId: "61573876332746",
+  },
 };
 
 export default function About() {
@@ -28,9 +35,9 @@ export default function About() {
           className="absolute perspective-distant -z-50 h-fit -right-90 top-0 hidden lg:block"
         />
 
-          <CompanyStory />
+        <CompanyStory />
 
-          <MissionVision />
+        <MissionVision />
       </div>
     </div>
   );

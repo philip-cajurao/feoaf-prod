@@ -8,10 +8,48 @@ import SpringGala from "./components/SpringGala";
 
 export const metadata: Metadata = {
   title: "Future Entrepreneurs Of America Foundation",
-  description: "...",
-  // icons: {
-  //   icon: ["./favicon.ico"]
-  // }
+  description:
+    "Welcome to the Future Entrepreneurs of America Foundation—where we inspire and equip youth ages 9–17 with age-appropriate business education, hands-on training, and mentorship. As a nonprofit organization, we’re committed to shaping the next generation of confident, capable entrepreneurs through innovative programs, events, and community support.",
+  icons: {
+    icon: ["./favicon.ico"],
+  },
+  keywords: [
+    "Future Entrepreneurs of America Foundation",
+    "Future Entrepreneurs of America",
+    "young entrepreneurs",
+    "youth entrepreneurship",
+    "kids business training",
+    "teen entrepreneurship",
+    "business education for kids",
+    "entrepreneurship for youth",
+    "nonprofit for young entrepreneurs",
+    "entrepreneurship foundation",
+    "business programs for kids ages 9-17",
+    "business training for teens",
+    "real world business exposure for kids",
+    "online business event for children",
+    "teach kids about business",
+    "business education not taught in schools",
+    "entrepreneurship programs for kids",
+    "pandemic inspired youth programs",
+    "age-appropriate entrepreneurship training",
+    "virtual business programs for children",
+    "legacy building for youth",
+    "develop the next generation of entrepreneurs",
+    "entrepreneurship outside academic settings",
+    "business exposure for youth",
+    "helping kids become successful",
+    "guidance and funding for kids in business",
+    "virtual learning alternatives for kids",
+    "kids educational foundation",
+    "empowering young minds",
+    "youth business empowerment",
+    "kids and teen development programs",
+    "computer-free activities for children",
+  ],
+  facebook: {
+    appId: "61573876332746",
+  },
 };
 
 export default function Home() {

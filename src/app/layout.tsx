@@ -3,7 +3,6 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import Drawer from "./components/Drawer";
 import Script from "next/script";
-import { Metadata } from "next";
 import PreResources from "@/lib/preresources";
 
 const poppins = Poppins({
@@ -11,13 +10,16 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-  title: "Future Entrepreneurs Of America Foundation",
-  description: "...",
-  icons: {
-    icon: ["./favicon.ico"],
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Future Entrepreneurs Of America Foundation",
+//   description: "...",
+//   icons: {
+//     icon: ["./favicon.ico"],
+//   },
+//   facebook: {
+//     appId: '61573876332746',
+//   },
+// };
 
 export default function RootLayout({
   children,

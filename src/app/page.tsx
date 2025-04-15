@@ -41,7 +41,7 @@ export default function Home() {
             <p className="max-w-4xl text-xl">
               Future Entrepreneurs of America Foundation is focus on developing,
               guiding and mentoring young entrepreneurs ages 9-17 years old by
-              proving age appropriate training and activities to motivate them
+              providing age appropriate training and activities to motivate them
               to become successful entrepreneurs in the future.
             </p>
             <Link href="/join">

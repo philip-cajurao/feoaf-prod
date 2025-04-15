@@ -7,7 +7,7 @@ import React from "react";
 
 function NavBar() {
   return (
-    <div className="navbar shadow-md sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-20">
+    <div className="navbar shadow-md sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-10">
       <nav className="navbar-start">
         {/* <Link href="/" className="mx-2 md:hidden">
           <Image

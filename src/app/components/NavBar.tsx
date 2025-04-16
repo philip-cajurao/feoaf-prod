@@ -55,8 +55,13 @@ function NavBar() {
 
         <ul className="flex flex-nowrap px-1 hidden md:flex">
           <li className="px-3">
+            <Link className="h-full flex items-center" href="/">
+              Home
+            </Link>
+          </li>
+          <li className="px-3">
             <Link className="h-full flex items-center" href="/about">
-              About Us
+              About
             </Link>
           </li>
           <li className="px-3">

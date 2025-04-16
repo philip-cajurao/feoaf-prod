@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Optional: Explicitly allow important pages (not required if Allow: / is already present)
+Allow: /about
+Allow: /programs
+Allow: /events
+Allow: /sponsors

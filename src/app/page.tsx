@@ -50,6 +50,10 @@ export const metadata: Metadata = {
   facebook: {
     appId: "61573876332746",
   },
+  metadataBase: new URL("https://feoaf.org"),
+  openGraph: {
+    images: ["./assets/feoaf.png"]
+  }
 };
 
 export default function Home() {

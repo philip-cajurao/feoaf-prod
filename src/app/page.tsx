@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://feoaf.org"),
   openGraph: {
-    images: ["/src/app/assets/feoaf.png"]
+    images: ["https://feoaf.org/favicon.ico"]
   }
 };
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Welcome to the Future Entrepreneurs of America Foundation—where we inspire and equip youth ages 9–17 with age-appropriate business education, hands-on training, and mentorship. As a nonprofit organization, we’re committed to shaping the next generation of confident, capable entrepreneurs through innovative programs, events, and community support.",
   icons: {
-    icon: ["./favicon.ico"],
+    icon: ["/src/app/favicon.ico"],
   },
   keywords: [
     "Future Entrepreneurs of America Foundation",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://feoaf.org"),
   openGraph: {
-    images: ["./assets/feoaf.png"]
+    images: ["/src/app/assets/feoaf.png"]
   }
 };
 

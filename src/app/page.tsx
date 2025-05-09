@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   description:
     "Join us, as we value young entrepreneurs of tomorrow.",
   icons: {
-    icon: ["/favicon.ico", "/logo.png"],
+    icon: [
+      "/logo.png",
+      "/favicon.ico"
+    ],
   },
   keywords: [
     "Future Entrepreneurs of America Foundation",

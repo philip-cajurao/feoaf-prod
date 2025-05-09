@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Discover exciting youth-focused events like our recent Spring Gala, where young entrepreneurs showcase their creativity and business ideas. The Future Entrepreneurs of America Foundation hosts inspiring gatherings that celebrate innovation, growth, and the power of the next generation.",
   icons: {
-    icon: ["/favicon.ico"],
+    icon: ["/favicon.ico", "/logo.png"],
   },
   facebook: {
     appId: "61573876332746",

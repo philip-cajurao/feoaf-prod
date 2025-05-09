@@ -9,9 +9,9 @@ import SpringGala from "./components/SpringGala";
 export const metadata: Metadata = {
   title: "Future Entrepreneurs Of America Foundation",
   description:
-    "Welcome to the Future Entrepreneurs of America Foundation—where we inspire and equip youth ages 9–17 with age-appropriate business education, hands-on training, and mentorship. As a nonprofit organization, we’re committed to shaping the next generation of confident, capable entrepreneurs through innovative programs, events, and community support.",
+    "Join us, as we value young entrepreneurs of tomorrow.",
   icons: {
-    icon: ["/favicon.ico"],
+    icon: ["/favicon.ico", "/logo.png"],
   },
   keywords: [
     "Future Entrepreneurs of America Foundation",

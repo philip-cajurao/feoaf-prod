@@ -33,7 +33,7 @@ export default function Events() {
             />
           </figure>
           <div className="card-body px-0">
-            <h2 className="card-title">Kids Summer Bootcamp</h2>
+            <h2 className="card-title">Kids Entrepreneurship Bootcamp</h2>
             <p>
               Listen and learn to successful entrepreneurs as they share their
               success stories.

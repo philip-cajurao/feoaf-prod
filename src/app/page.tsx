@@ -80,11 +80,11 @@ export default function Home() {
         <div className="hero-content flex-col lg:flex-row gap-x-16 mx-10">
           <Image
             src={SummerBootCampTicket}
-            className="w-92 rounded-lg shadow-2xl rounded-lg"
+            className="h-[calc(100svh-8rem)] w-auto rounded-lg shadow-2xl rounded-lg"
             alt="Summer Boot Camp ticket"
           />
           <div>
-            <h1 className="text-5xl font-bold">Kids Summer Bootcamp</h1>
+            <h1 className="text-5xl font-bold">Kids Entrepreneurship Bootcamp</h1>
             <p className="py-6">
               Elevate your journey and unlock new possibilities at our exclusive
               3-day event! Dive into insightful sessions led by successful
@@ -151,7 +151,7 @@ export default function Home() {
                     />
                   </figure>
                   <div className="card-body px-0">
-                    <h2 className="card-title">Kids Summer Bootcamp</h2>
+                    <h2 className="card-title">Kids Entrepreneurship Bootcamp</h2>
                     <p>
                       Listen and learn to successful entrepreneurs as they share
                       their success stories.

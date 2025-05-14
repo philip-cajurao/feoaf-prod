@@ -12,7 +12,7 @@ export default function KidsBootcamp() {
         Join Our Organization
       </h2> */}
       <iframe
-        className="my-8 h-[calc(100svh-4rem)] h-auto overflow-y-hidden"
+        className="my-16 w-full h-auto overflow-y-hidden"
         style={{ overflowY: "hidden" }}
         src="https://api.leadconnectorhq.com/widget/form/8GdbqCQjmBlZWh0MXFfi"
         id="inline-8GdbqCQjmBlZWh0MXFfi"

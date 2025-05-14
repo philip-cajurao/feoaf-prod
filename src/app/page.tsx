@@ -1,20 +1,20 @@
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 import { Metadata } from "next";
 import RecentSponsors from "./components/RecentSponsors";
 import who from "./assets/latest_events/we.jpg";
 import Image from "next/image";
 import ServicesCard from "./components/ProgramsCard";
-import SpringGala from "./components/SpringGala";
+// import SpringGala from "./components/SpringGala";
+import SummerBootCampTicket from "./assets/events/summerBootCamp2025/bootCampTicket.png";
+import SummerBootCampImg from "./assets/events/summerBootCamp2025/summerBootCamp.png";
+import SpringGalaImg from "./assets/events/springGala2025/springgala.png";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Future Entrepreneurs Of America Foundation",
-  description:
-    "Join us, as we value young entrepreneurs of tomorrow.",
+  description: "Join us, as we value young entrepreneurs of tomorrow.",
   icons: {
-    icon: [
-      "/logo.png",
-      "/favicon.ico"
-    ],
+    icon: ["/logo.png", "/favicon.ico"],
   },
   keywords: [
     "Future Entrepreneurs of America Foundation",
@@ -55,8 +55,9 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://feoaf.org"),
   openGraph: {
-    title: "Future Entrepreneurs of America Foundation", 
-    description: "Join our expanding organization that values young entrepreneurs future.",
+    title: "Future Entrepreneurs of America Foundation",
+    description:
+      "Join our expanding organization that values young entrepreneurs future.",
     url: "https://feoaf.org",
     siteName: "Future Entrepreneurs of America Foundation",
     images: [
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Future Entrepreneurs of America Foundation", 
+        alt: "Future Entrepreneurs of America Foundation",
       },
     ],
     locale: "en_US",
@@ -75,7 +76,27 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative">
-      <Hero />
+      <div className="hero bg-base-200 h-auto md:h-[calc(100svh-4rem)]">
+        <div className="hero-content flex-col lg:flex-row gap-x-16 mx-10">
+          <Image
+            src={SummerBootCampTicket}
+            className="w-92 rounded-lg shadow-2xl rounded-lg"
+            alt="Summer Boot Camp ticket"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">Kids Summer Bootcamp</h1>
+            <p className="py-6">
+              Elevate your journey and unlock new possibilities at our exclusive
+              3-day event! Dive into insightful sessions led by successful
+              entrepreneurs covering topics like negotiation, product ideation,
+              marketing, and more. Your success story starts here—join us and
+              make it happen!
+            </p>
+            <Link href="/kids-bootcamp"><button className="btn btn-accent btn-xl rounded-lg">Join</button></Link>
+          </div>
+        </div>
+      </div>
+      {/* <Hero /> */}
 
       {/* Sections */}
       <div>
@@ -118,8 +139,47 @@ export default function Home() {
           <div
             className={`flex relative h-full md:h-[calc(100svh-4rem)] bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
-            <div className="md:absolute top-0 left-0 h-fullw-full backdrop-brightness-75 backdrop-blur-[3px]">
-              <SpringGala />
+            <div className="md:absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
+              {/* <SpringGala /> */}
+              <div className="py-16 px-8 flex flex-col sm:flex-row gap-10 justify-center items-center my-auto h-full border">
+                <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
+                  <figure>
+                    <Image
+                      src={SummerBootCampImg}
+                      className="w-sm rounded-lg border"
+                      alt="Summer Bootcamp Logo"
+                    />
+                  </figure>
+                  <div className="card-body px-0">
+                    <h2 className="card-title">Kids Summer Bootcamp</h2>
+                    <p>
+                      Listen and learn to successful entrepreneurs as they share
+                      their success stories.
+                    </p>
+                  </div>
+                  <p className="text-xs">
+                    <span className="badge badge-xs">Upcoming event</span>
+                  </p>
+                </div>
+
+                <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
+                  <figure>
+                    <Image
+                      src={SpringGalaImg}
+                      className="w-sm rounded-lg border"
+                      alt="Summer Bootcamp Logo"
+                    />
+                  </figure>
+                  <div className="card-body px-0">
+                    <h2 className="card-title">Spring Gala 2025</h2>
+                    <p>
+                      Step into a night of innovation, creativity, and
+                      inspiration as we celebrate the bright minds shaping
+                      tomorrow.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

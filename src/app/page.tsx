@@ -1,7 +1,6 @@
 // import Hero from "./components/Hero";
 import { Metadata } from "next";
 import RecentSponsors from "./components/RecentSponsors";
-import who from "./assets/latest_events/we.jpg";
 import Image from "next/image";
 import ServicesCard from "./components/ProgramsCard";
 // import SpringGala from "./components/SpringGala";
@@ -9,6 +8,7 @@ import SummerBootCampTicket from "./assets/events/summerBootCamp2025/bootCampTic
 import SummerBootCampImg from "./assets/events/summerBootCamp2025/summerBootCamp.png";
 import SpringGalaImg from "./assets/events/springGala2025/springgala.png";
 import Link from "next/link";
+import SeeFlyerModal from "./components/SeeFlyerModal";
 
 export const metadata: Metadata = {
   title: "Future Entrepreneurs Of America Foundation",
@@ -76,23 +76,35 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative">
-      <div className="hero bg-base-200 h-auto md:h-[calc(100svh-4rem)]">
-        <div className="hero-content flex-col lg:flex-row gap-x-16 mx-10">
+      <div className="hero bg-base-200 h-[calc(100svh-4rem)]">
+        <div className="hero-content flex-col lg:flex-row gap-x-16">
           <Image
             src={SummerBootCampTicket}
-            className="h-[calc(100svh-8rem)] w-auto rounded-lg shadow-2xl rounded-lg"
+            className="rounded-lg shadow-2xl rounded-lg h-auto w-96 hidden lg:flex"
             alt="Summer Boot Camp ticket"
+            placeholder="blur"
+            priority={true}
           />
           <div>
-            <h1 className="text-5xl font-bold">Kids Entrepreneurship Bootcamp</h1>
-            <p className="py-6">
+            <h1 className="text-2xl sm:text-4xl font-bold">
+              Kids Entrepreneurship Bootcamp
+            </h1>
+            <p className="py-6 text-sm sm:text-lg">
               Elevate your journey and unlock new possibilities at our exclusive
               3-day event! Dive into insightful sessions led by successful
               entrepreneurs covering topics like negotiation, product ideation,
               marketing, and more. Your success story starts here—join us and
               make it happen!
             </p>
-            <Link href="/kids-bootcamp"><button className="btn btn-accent btn-xl rounded-lg">Join</button></Link>
+            <div className="flex justify-between items-center">
+              <SeeFlyerModal />
+
+              <Link href="/kids-bootcamp">
+                <button className="btn btn-accent btn-lg rounded-lg">
+                  Join
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -100,12 +112,12 @@ export default function Home() {
 
       {/* Sections */}
       <div>
-        <div className="grid md:grid-cols-2 py-8 bg-[#f4f4f4]">
-          <div className="flex flex-col items-center justify-center px-10 pt-14 lg:pt-0">
-            <h2 className="font-bold text-4xl mb-4 w-full max-w-4xl">
+        <div className="grid lg:grid-cols-2 py-8 bg-[#f4f4f4]">
+          <div className="flex flex-col items-center justify-center px-10 lg:pt-0">
+            <h2 className="font-bold text-2xl sm:text-4xl mb-4 w-full max-w-4xl">
               Who we are?
             </h2>
-            <p className="max-w-4xl text-xl">
+            <p className="max-w-4xl text-sm sm:text-lg">
               Future Entrepreneurs of America Foundation is focus on developing,
               guiding and mentoring young entrepreneurs ages 9-17 years old by
               providing age appropriate training and activities to motivate them
@@ -113,14 +125,15 @@ export default function Home() {
             </p>
           </div>
           <div className="px-4 py-10 sm:px-8">
-            <div className="rounded-xl border shadow-xl border-accent border-8 overflow-hidden mx-auto">
-              <Image
-                alt="Test"
-                placeholder="blur"
-                loading="lazy"
-                src={who}
-                className="w-auto h-auto"
-              />
+            <div className="rounded-xl shadow-xl border-accent border-6 w-auto h-82 max-w-lg mx-auto">
+              <iframe
+                className="rounded w-full h-full"
+                src="https://www.youtube.com/embed/hmZ4jqj-9u8?si=9rpBtlIbieyYzPte&amp;controls=0"
+                title="Future Entrepreneurs Introduction"
+                allow="autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -128,8 +141,8 @@ export default function Home() {
         <div className="py-16">
           <div className="grid place-items-center">
             <div>
-              <p className="font-bold text-2xl">Our</p>
-              <h2 className="font-bold text-5xl ml-4">Services</h2>
+              <p className="font-bold text-lg sm:text-2xl">Our</p>
+              <h2 className="font-bold text-2xl sm:text-4xl ml-4">Services</h2>
             </div>
           </div>
           <ServicesCard />
@@ -140,7 +153,7 @@ export default function Home() {
             className={`flex relative h-full md:h-[calc(100svh-4rem)] bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
             <div className="md:absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
-              {/* <SpringGala /> */}
+              {/* <SpringGala /> recent event  */}
               <div className="py-16 px-8 flex flex-col sm:flex-row gap-10 justify-center items-center my-auto h-full border">
                 <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
                   <figure>
@@ -151,7 +164,9 @@ export default function Home() {
                     />
                   </figure>
                   <div className="card-body px-0">
-                    <h2 className="card-title">Kids Entrepreneurship Bootcamp</h2>
+                    <h2 className="card-title">
+                      Kids Entrepreneurship Bootcamp
+                    </h2>
                     <p>
                       Listen and learn to successful entrepreneurs as they share
                       their success stories.
@@ -171,7 +186,7 @@ export default function Home() {
                     />
                   </figure>
                   <div className="card-body px-0">
-                    <h2 className="card-title">Spring Gala 2025</h2>
+                    <h2 className="card-title">Spring Gala</h2>
                     <p>
                       Step into a night of innovation, creativity, and
                       inspiration as we celebrate the bright minds shaping
@@ -185,7 +200,7 @@ export default function Home() {
         </div>
 
         <div className="py-24 border">
-          <h2 className="text-4xl font-bold text-accent text-center -mb-20">
+          <h2 className="text-2xl sm:text-4xl font-bold text-accent text-center -mb-20">
             Sponsors
           </h2>
           <div className="mt-16">

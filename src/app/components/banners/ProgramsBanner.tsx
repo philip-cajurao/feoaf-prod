@@ -18,8 +18,8 @@ export default function ProgramsBanner() {
             <h2 className="text-5xl font-bold">
               <div className="grid place-items-center">
                 <div>
-                  <p className="font-bold text-2xl text-accent">Our</p>
-                  <h2 className="font-bold text-5xl ml-4 text-neutral-content">Programs</h2>
+                  <p className="font-bold text-lg sm:text-2xl text-accent">Our</p>
+                  <h2 className="font-bold text-3xl sm:text-5xl ml-4 text-neutral-content">Programs</h2>
                 </div>
               </div>
             </h2>

@@ -19,7 +19,7 @@ export default function ProgramsCard() {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-secondary-content">
+          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-secondary-content">
             Advertisements 101
           </h2>
         </div>
@@ -36,7 +36,7 @@ export default function ProgramsCard() {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-accent-content">
+          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-accent-content">
             Product Ideation
           </h2>
         </div>
@@ -53,7 +53,7 @@ export default function ProgramsCard() {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-primary-content">
+          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-primary-content">
             Social Media Madness
           </h2>
         </div>
@@ -70,7 +70,7 @@ export default function ProgramsCard() {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content text-xl font-bold flex items-center h-full text-success-content">
+          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-success-content">
             Marketing 101
           </h2>
         </div>

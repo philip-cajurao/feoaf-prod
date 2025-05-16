@@ -86,8 +86,8 @@ export default function Home() {
             priority={true}
           />
           <div>
-            <h1 className="text-2xl sm:text-4xl font-bold">
-              Kids Entrepreneurship Bootcamp
+            <h1 className="text-4xl font-bold hyphens-auto" lang="en">
+              Kids Entrepre&shy;neurship Bootcamp
             </h1>
             <p className="py-6 text-sm sm:text-lg">
               Elevate your journey and unlock new possibilities at our exclusive

@@ -18,8 +18,8 @@ export default function SponsorBanner() {
         <h2 className="text-5xl font-bold">
           <div className="grid place-items-center">
             <div>
-              <p className="font-bold text-2xl text-neutral-content">Our</p>
-              <h2 className="font-bold text-5xl ml-4 text-neutral">
+              <p className="font-bold text-lg sm:text-2xl text-neutral-content">Our</p>
+              <h2 className="font-bold text-3xl sm:text-5xl ml-4 text-neutral">
                 Sponsors
               </h2>
             </div>

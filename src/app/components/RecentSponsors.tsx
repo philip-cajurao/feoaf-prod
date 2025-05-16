@@ -12,7 +12,7 @@ export default function RecentSponsors() {
         {/* <h2 className="text-4xl font-bold mb-4 text-accent text-center">
           Sponsors
         </h2> */}
-        <p className="text-2xl max-w-2xl text-center px-2">
+        <p className="text-lg sm:text-2xl max-w-2xl text-center px-2">
           Thank you for joining us at the Spring 2025 Gala — The Launch of the
           Future Entrepreneurs Foundation.
         </p>

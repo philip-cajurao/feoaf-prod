@@ -43,8 +43,8 @@ const Footer = () => {
           </Link>
           </nav>
       </footer>
-      <footer className="footer grid grid-cols-3 place-items-center bg-neutral text-neutral-content text-base-content px-10 py-4">
-        <nav className="grid-flow-col items-center justify-self-start">
+      <footer className="footer grid md:grid-cols-3 place-items-center bg-neutral text-neutral-content text-base-content px-10 py-4">
+        <nav className="order-2 md:order-1 grid-flow-col items-center justify-self-center md:justify-self-start">
           <Image
             placeholder="blur"
             loading="lazy"
@@ -53,10 +53,10 @@ const Footer = () => {
             width={200}
           />
         </nav>
-        <nav className="">
-          <p>© 2025. All rights reserved.</p>
+        <nav className="order-3 md:order-2">
+          <p className="text-center">© 2025. All rights reserved.</p>
         </nav>
-        <nav className="justify-self-end">
+        <nav className="order-1 md:order-3 justify-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
             <Link
               href="https://www.facebook.com/people/Future-Entrepreneurs-of-America-Foundation/61573876332746/"

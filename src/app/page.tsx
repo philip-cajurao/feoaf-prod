@@ -1,14 +1,14 @@
-// import Hero from "./components/Hero";
+import Hero from "./components/Hero";
 import { Metadata } from "next";
 import RecentSponsors from "./components/RecentSponsors";
 import Image from "next/image";
 import ServicesCard from "./components/ProgramsCard";
 // import SpringGala from "./components/SpringGala";
-import SummerBootCampTicket from "./assets/events/summerBootCamp2025/bootCampTicket.png";
+// import SummerBootCampTicket from "./assets/events/summerBootCamp2025/bootCampTicket.png";
 import SummerBootCampImg from "./assets/events/summerBootCamp2025/summerBootCamp.png";
 import SpringGalaImg from "./assets/events/springGala2025/springgala.png";
 import Link from "next/link";
-import SeeFlyerModal from "./components/SeeFlyerModal";
+// import SeeFlyerModal from "./components/SeeFlyerModal";
 
 export const metadata: Metadata = {
   title: "Future Entrepreneurs Of America Foundation",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative">
-      <div className="hero bg-base-200 h-[calc(100svh-4rem)]">
+      {/* <div className="hero bg-base-200 h-[calc(100svh-4rem)]">
         <div className="hero-content flex-col lg:flex-row gap-x-16">
           <Image
             src={SummerBootCampTicket}
@@ -107,8 +107,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      {/* <Hero /> */}
+      </div> */}
+      <Hero />
 
       {/* Sections */}
       <div>
@@ -142,7 +142,7 @@ export default function Home() {
           <div className="grid place-items-center">
             <div>
               <p className="font-bold text-lg sm:text-2xl">Our</p>
-              <h2 className="font-bold text-2xl sm:text-4xl ml-4">Services</h2>
+              <h2 className="font-bold text-2xl sm:text-4xl ml-4">Programs</h2>
             </div>
           </div>
           <ServicesCard />
@@ -153,47 +153,50 @@ export default function Home() {
             className={`flex relative h-full md:h-[calc(100svh-4rem)] bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
             <div className="md:absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
-              {/* <SpringGala /> recent event  */}
               <div className="py-16 px-8 flex flex-col sm:flex-row gap-10 justify-center items-center my-auto h-full border">
-                <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
-                  <figure>
-                    <Image
-                      src={SummerBootCampImg}
-                      className="w-sm rounded-lg border"
-                      alt="Summer Bootcamp Logo"
-                    />
-                  </figure>
-                  <div className="card-body px-0">
-                    <h2 className="card-title">
-                      Kids Entrepreneurship Bootcamp
-                    </h2>
-                    <p>
-                      Listen and learn to successful entrepreneurs as they share
-                      their success stories.
-                    </p>
-                  </div>
-                  <p className="text-xs">
+                <Link href="/events">
+                  <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
+                    <figure>
+                      <Image
+                        src={SummerBootCampImg}
+                        className="w-sm rounded-lg border"
+                        alt="Summer Bootcamp Logo"
+                      />
+                    </figure>
+                    <div className="card-body px-0">
+                      <h2 className="card-title">
+                        Kids Entrepreneurship Bootcamp
+                      </h2>
+                      <p>
+                        Listen and learn to successful entrepreneurs as they
+                        share their success stories.
+                      </p>
+                    </div>
+                    {/* <p className="text-xs">
                     <span className="badge badge-xs">Upcoming event</span>
-                  </p>
-                </div>
-
-                <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
-                  <figure>
-                    <Image
-                      src={SpringGalaImg}
-                      className="w-sm rounded-lg border"
-                      alt="Summer Bootcamp Logo"
-                    />
-                  </figure>
-                  <div className="card-body px-0">
-                    <h2 className="card-title">Spring Gala</h2>
-                    <p>
-                      Step into a night of innovation, creativity, and
-                      inspiration as we celebrate the bright minds shaping
-                      tomorrow.
-                    </p>
+                  </p> */}
                   </div>
-                </div>
+                </Link>
+
+                <Link href="/events">
+                  <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
+                    <figure>
+                      <Image
+                        src={SpringGalaImg}
+                        className="w-sm rounded-lg border"
+                        alt="Summer Bootcamp Logo"
+                      />
+                    </figure>
+                    <div className="card-body px-0">
+                      <h2 className="card-title">Spring Gala</h2>
+                      <p>
+                        Step into a night of innovation, creativity, and
+                        inspiration as we celebrate the bright minds shaping
+                        tomorrow.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

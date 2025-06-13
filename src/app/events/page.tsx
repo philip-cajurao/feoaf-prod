@@ -33,15 +33,14 @@ export default function Events() {
             />
           </figure>
           <div className="card-body px-0">
-            <h2 className="card-title text-sm sm:text-xl">Kids Entrepreneurship Bootcamp</h2>
+            <h2 className="card-title text-sm sm:text-xl">
+              Kids Entrepreneurship Bootcamp
+            </h2>
             <p className="text-xs sm:text-sm">
               Listen and learn to successful entrepreneurs as they share their
               success stories.
             </p>
           </div>
-          <p className="text-xs">
-            <span className="badge badge-xs">Upcoming event</span>
-          </p>
         </div>
 
         {/* <div className="card bg-base-300 rounded-lg w-xl shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
@@ -62,7 +61,9 @@ export default function Events() {
         </div> */}
 
         <div className="my-8 w-full">
-          <h2 className="font-bold text-lg sm:text-2xl text-center">Spring Gala</h2>
+          <h2 className="font-bold text-lg sm:text-2xl text-center">
+            Spring Gala
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-10 my-6 w-full">
             <div className="border border-4 rounded-lg border-accent w-auto h-82">

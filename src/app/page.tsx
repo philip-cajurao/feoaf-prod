@@ -153,6 +153,7 @@ export default function Home() {
             className={`flex relative h-full md:h-[calc(100svh-4rem)] bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
             <div className="md:absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
+              {/* <SpringGala /> recent event  */}
               <div className="py-16 px-8 flex flex-col sm:flex-row gap-10 justify-center items-center my-auto h-full border">
                 <Link href="/events">
                   <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">

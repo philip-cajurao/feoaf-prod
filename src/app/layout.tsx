@@ -5,6 +5,7 @@ import Drawer from "./components/Drawer";
 import Script from "next/script";
 import { Metadata } from "next";
 import PreResources from "@/lib/preresources";
+import Popup from "./components/Popup";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -39,6 +40,8 @@ export default function RootLayout({
       <PreResources />
 
       <body className={`${poppins.className} antialiased`}>
+      <Popup />
+
         <Drawer>
           {children}
           <Footer />

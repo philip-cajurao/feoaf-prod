@@ -29,7 +29,7 @@ export default function RecentSponsors() {
             src={fhc}
             // placeholder="blur"
             loading="lazy"
-            width={120}
+            width={230}
           />
         </Link>
         <Link
@@ -42,7 +42,7 @@ export default function RecentSponsors() {
             src={pmi}
             // placeholder="blur"
             loading="lazy"
-            width={120}
+            width={230}
           />
         </Link>
         <Link
@@ -55,7 +55,7 @@ export default function RecentSponsors() {
             src={fts}
             // placeholder="blur"
             loading="lazy"
-            width={120}
+            width={230}
           />
         </Link>
       </div>

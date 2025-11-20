@@ -75,6 +75,40 @@ export default function ProgramsCard() {
           </h2>
         </div>
       </div>
+
+      <div className="card card-sm rounded-md border border-2 bg-primary max-w-96 lg:justify-self-end">
+        <figure>
+          <Image
+            alt="Test"
+            placeholder="blur"
+            loading="lazy"
+            src={image3}
+            className="h-52 object-cover"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-primary-content">
+            Scholarship Program for members
+          </h2>
+        </div>
+      </div>
+
+      <div className="card card-sm rounded-md border border-2 bg-success max-w-96 lg:justify-self-start">
+        <figure>
+          <Image
+            alt="Test"
+            placeholder="blur"
+            loading="lazy"
+            src={image4}
+            className="h-52 object-cover"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-success-content">
+            0 interest loan on business 
+          </h2>
+        </div>
+      </div>
     </div>
   );
 }

@@ -24,24 +24,54 @@ export default function Events() {
       <EventsBanner />
 
       <div className="py-16 px-8 flex flex-col gap-10 justify-center items-center">
-        <div className="card bg-base-300 px-4 rounded-lg w-full max-w-md shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
-          <figure>
-            <Image
-              src={SummerBootCampImg}
-              className="w-sm rounded-lg border"
-              alt="Summer Bootcamp Logo"
-            />
-          </figure>
-          <div className="card-body px-0">
-            <h2 className="card-title text-sm sm:text-xl">
-              Kids Entrepreneurship Bootcamp
-            </h2>
-            <p className="text-xs sm:text-sm">
-              Listen and learn to successful entrepreneurs as they share their
-              success stories.
-            </p>
+        <div className="flex justify-center items-stretch space-x-8">
+
+          <div className="card bg-base-300 px-4 rounded-lg w-full max-w-md shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
+            <figure>
+              <img
+                src="https://feoaf.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.4922cd3e.png&w=1920&q=75"
+                className="w-sm rounded-lg shadow bg-black p-2"
+                alt="Summer Bootcamp Logo"
+              />
+            </figure>
+            <div className="card-body px-0">
+              <h2 className="card-title text-sm sm:text-xl">
+                Future Entrepreneurs Of America Foundation Annual Holiday Event
+              </h2>
+              <p className="text-xs sm:text-sm">
+                December 6, 2025
+                <br />
+                9:30a-12:30p
+                <br />
+                Hampton Inn Gainesville
+                <br />
+                7300 Atlas Walkway, Gainesville, VA
+
+
+              </p>
+            </div>
+          </div>
+
+          <div className="card bg-base-300 px-4 rounded-lg w-full max-w-md shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
+            <figure>
+              <Image
+                src={SummerBootCampImg}
+                className="w-sm rounded-lg border"
+                alt="Summer Bootcamp Logo"
+              />
+            </figure>
+            <div className="card-body px-0">
+              <h2 className="card-title text-sm sm:text-xl">
+                Kids Entrepreneurship Bootcamp
+              </h2>
+              <p className="text-xs sm:text-sm">
+                Listen and learn to successful entrepreneurs as they share their
+                success stories.
+              </p>
+            </div>
           </div>
         </div>
+
 
         {/* <div className="card bg-base-300 rounded-lg w-xl shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
           <figure>

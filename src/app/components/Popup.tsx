@@ -30,7 +30,7 @@ export default function Popup() {
                             </form>
                             <form method="dialog">
                                 <div className="border rounded-lg">
-                                    <button className="btn btn-accent rounded-lg" onClick={() => navigate.push('/sponsors')}>Support Kids</button>
+                                    <button className="btn btn-accent rounded-lg" onClick={() => navigate.push('/sponsors')}>Learn more</button>
                                 </div>
                             </form>
                         </div>

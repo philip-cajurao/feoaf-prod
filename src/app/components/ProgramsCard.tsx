@@ -4,111 +4,80 @@ import image1 from "../assets/latest_events/fe5.jpg";
 import image2 from "../assets/latest_events/create.jpg";
 import image3 from "../assets/latest_events/sm.jpeg";
 import image4 from "../assets/latest_events/ads.jpg";
+import image5 from "../assets/latest_events/interest.jpg"; // New Image
+import image6 from "../assets/latest_events/scholar.jpg";   // New Image
 
 export default function ProgramsCard() {
+  const programs = [
+    {
+      title: "Advertisements 101",
+      image: image1,
+      // Color: Secondary (Pink/Purple)
+      colorClass: "bg-secondary text-secondary-content",
+    },
+    {
+      title: "Product Ideation",
+      image: image2,
+      // Color: Primary (Blue)
+      colorClass: "bg-primary text-primary-content",
+    },
+    {
+      title: "Social Media Madness",
+      image: image3,
+      // Color: Accent (Teal/Cyan)
+      colorClass: "bg-accent text-accent-content",
+    },
+    {
+      title: "Marketing 101",
+      image: image4,
+      // Color: Secondary (Pink/Purple)
+      colorClass: "bg-secondary text-secondary-content",
+    },
+    {
+      title: "Scholarship Program",
+      image: image6, // Swapped to Scholar image
+      // Color: Success (Green)
+      colorClass: "bg-success text-success-content",
+    },
+    {
+      title: "0% Interest Loan",
+      image: image5, // Swapped to Interest image
+      // Color: Primary (Blue)
+      colorClass: "bg-primary text-primary-content",
+    },
+  ];
+
   return (
-    <div className="py-10 px-4 grid lg:grid-cols-2 place-items-center gap-10">
-      <div className="card card-sm rounded-md border border-2 bg-secondary max-w-96 lg:justify-self-end">
-        <figure>
-          <Image
-            alt="Test"
-            placeholder="blur"
-            loading="lazy"
-            src={image1}
-            className="h-52 object-cover"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-secondary-content">
-            Advertisements 101
-          </h2>
-        </div>
-      </div>
+    <div className="py-12 px-4 grid lg:grid-cols-2 gap-10 w-full max-w-6xl mx-auto">
+      {programs.map((program, index) => (
+        <div
+          key={index}
+          className={`
+            card w-full max-w-sm shadow-xl overflow-hidden rounded-2xl
+            transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl
+            ${index % 2 === 0 ? "lg:justify-self-end" : "lg:justify-self-start"}
+          `}
+        >
+          {/* Image Section */}
+          <figure className="h-52 w-full bg-base-100">
+            <Image
+              alt={program.title}
+              placeholder="blur"
+              loading="lazy"
+              src={program.image}
+              className="h-full w-full object-cover"
+            />
+          </figure>
 
-      <div className="card card-sm rounded-md border border-2 bg-accent max-w-96 lg:justify-self-start">
-        <figure>
-          <Image
-            alt="Test"
-            placeholder="blur"
-            loading="lazy"
-            src={image2}
-            className="h-52 object-cover"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-accent-content">
-            Product Ideation
-          </h2>
+          {/* Text Section - Solid colorful block */}
+          <div className={`card-body text-center p-6 ${program.colorClass}`}>
+            <h2 className="text-xl font-extrabold uppercase tracking-wider drop-shadow-sm">
+              {program.title}
+            </h2>
+            <div className="w-12 h-1 bg-current opacity-40 mx-auto mt-2 rounded-full"></div>
+          </div>
         </div>
-      </div>
-
-      <div className="card card-sm rounded-md border border-2 bg-primary max-w-96 lg:justify-self-end">
-        <figure>
-          <Image
-            alt="Test"
-            placeholder="blur"
-            loading="lazy"
-            src={image3}
-            className="h-52 object-cover"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-primary-content">
-            Social Media Madness
-          </h2>
-        </div>
-      </div>
-
-      <div className="card card-sm rounded-md border border-2 bg-success max-w-96 lg:justify-self-start">
-        <figure>
-          <Image
-            alt="Test"
-            placeholder="blur"
-            loading="lazy"
-            src={image4}
-            className="h-52 object-cover"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-success-content">
-            Marketing 101
-          </h2>
-        </div>
-      </div>
-
-      <div className="card card-sm rounded-md border border-2 bg-primary max-w-96 lg:justify-self-end">
-        <figure>
-          <Image
-            alt="Test"
-            placeholder="blur"
-            loading="lazy"
-            src={image3}
-            className="h-52 object-cover"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-primary-content">
-            Scholarship Program for members
-          </h2>
-        </div>
-      </div>
-
-      <div className="card card-sm rounded-md border border-2 bg-success max-w-96 lg:justify-self-start">
-        <figure>
-          <Image
-            alt="Test"
-            placeholder="blur"
-            loading="lazy"
-            src={image4}
-            className="h-52 object-cover"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title dark:text-neutral-content sm:text-xl font-bold flex items-center h-full text-success-content">
-            0 interest loan on business 
-          </h2>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

@@ -79,7 +79,7 @@ export default function Home() {
     <div className="relative">
       <Popup />
 
-      
+
       {/* <div className="hero bg-base-200 h-[calc(100svh-4rem)]">
         <div className="hero-content flex-col lg:flex-row gap-x-16">
           <Image
@@ -142,15 +142,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="py-16">
-          <div className="grid place-items-center">
-            <div>
-              <p className="font-bold text-lg sm:text-2xl">Our</p>
-              <h2 className="font-bold text-2xl sm:text-4xl ml-4">Programs</h2>
-            </div>
-          </div>
-          <ServicesCard />
-        </div>
+
 
         <div>
           <div
@@ -207,14 +199,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="py-24 border">
-          <h2 className="text-2xl sm:text-4xl font-bold text-accent text-center -mb-20">
-            Sponsors
-          </h2>
-          <div className="mt-16">
-            <RecentSponsors />
+        <div className="py-16">
+          <div className="grid place-items-center">
+            <div>
+              <p className="font-bold text-lg sm:text-2xl">Our</p>
+              <h2 className="font-bold text-2xl sm:text-4xl ml-4">Programs</h2>
+            </div>
           </div>
+          <ServicesCard />
         </div>
+
+        <RecentSponsors />
       </div>
     </div>
   );

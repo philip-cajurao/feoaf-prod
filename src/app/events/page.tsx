@@ -88,17 +88,23 @@ export default function Events() {
 
                 <div className="flex gap-3 items-center">
                   {/* RSVP Button (Primary) */}
-                  <button className="btn btn-accent flex-1 text-neutral border-neutral h-auto py-4 min-h-0 rounded-2xl text-lg font-bold shadow-xl shadow-black/10 hover:shadow-black/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
-                    RSVP Now
-                  </button>
+                  <Link
+                    href={"/events/join/annual-holiday-event"}
+                    target="__blank"
+                    className="btn btn-accent flex-1 text-neutral border-neutral h-auto py-4 min-h-0 rounded-2xl text-lg font-bold shadow-xl shadow-black/10 hover:shadow-black/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                  >
+                    <button className="cursor-pointer">
+                      RSVP Now
+                    </button>
+                  </Link>
 
                   {/* Get Directions Icon (Secondary) */}
                   <Link href={"https://maps.app.goo.gl/Lf49zsDfTvVDt9S29"} target="__blank">
-                  <button className="btn btn-neutral w-16 h-full min-h-[60px] rounded-2xl flex items-center justify-center hover:scale-[1.05] active:scale-[0.95] transition-all duration-300">
-                    <svg className="w-14 h-14 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                      <path fillRule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clipRule="evenodd" />
-                    </svg>
-                  </button>
+                    <button className="btn btn-neutral w-16 h-full min-h-[60px] rounded-2xl flex items-center justify-center hover:scale-[1.05] active:scale-[0.95] transition-all duration-300">
+                      <svg className="w-14 h-14 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fillRule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clipRule="evenodd" />
+                      </svg>
+                    </button>
                   </Link>
                 </div>
 
@@ -143,23 +149,23 @@ export default function Events() {
             </div>
 
             <div className="card max-w-md mx-auto bg-base-300 px-4 rounded-lg w-full shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
-            <figure>
-              <Image
-                src={SummerBootCampImg}
-                className="w-sm rounded-lg border"
-                alt="Summer Bootcamp Logo"
-              />
-            </figure>
-            <div className="card-body px-0 mx-auto max-w-md">
-              <h2 className="card-title text-sm sm:text-xl">
-                Kids Entrepreneurship Bootcamp
-              </h2>
-              <p className="text-xs sm:text-sm">
-                Listen and learn to successful entrepreneurs as they share their
-                success stories.
-              </p>
+              <figure>
+                <Image
+                  src={SummerBootCampImg}
+                  className="w-sm rounded-lg border"
+                  alt="Summer Bootcamp Logo"
+                />
+              </figure>
+              <div className="card-body px-0 mx-auto max-w-md">
+                <h2 className="card-title text-sm sm:text-xl">
+                  Kids Entrepreneurship Bootcamp
+                </h2>
+                <p className="text-xs sm:text-sm">
+                  Listen and learn to successful entrepreneurs as they share their
+                  success stories.
+                </p>
+              </div>
             </div>
-          </div>
 
             {/* User Provided UI Structure */}
             <div className="my-8 w-full">

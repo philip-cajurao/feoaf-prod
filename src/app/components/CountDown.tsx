@@ -10,7 +10,7 @@ const UPCOMING_EVENTS = [
     { title: "Fall Gala Event", date: "TBD", subtitle: "Fall 2026" },
 ];
 
-function getTimeLeft(targetDate) {
+function getTimeLeft(targetDate: Date) {
     const now = new Date();
     const diff = targetDate.getTime() - now.getTime();
 

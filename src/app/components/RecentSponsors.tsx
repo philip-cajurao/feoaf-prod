@@ -4,6 +4,8 @@ import fhc from "../assets/sponsors/FHC.png";
 import pmi from "../assets/sponsors/PMI.png";
 import fts from "../assets/sponsors/FTS.png";
 import Link from "next/link";
+import bg from "../assets/bg.png";
+import DonateQR from "./DonateQR";
 
 export default function RecentSponsors() {
   return (
@@ -18,7 +20,20 @@ export default function RecentSponsors() {
         </p>
       </div>
 
-      <div className="flex px-4 md:px-auto w-full bg-neutral items-center justify-center gap-10 md:gap-20">
+<div className="bg-neutral py-8 relative overflow-hidden">
+
+  <Image
+        src={bg}
+        alt="bg"
+        className="absolute h-fit -left-50 top-0 hidden sm:block"
+      />
+      <Image
+        src={bg}
+        alt="bg"
+        className="absolute rotate-180 perspective-distant h-fit -right-60 top-0 hidden sm:block"
+      />
+
+      <div className="flex px-4 md:px-auto w-full items-center justify-center gap-10 md:gap-20">
         <Link
           href="https://fortunehomesconstruction.com/"
           rel="noopener noreferrer"
@@ -59,6 +74,10 @@ export default function RecentSponsors() {
           />
         </Link>
       </div>
+
+        <DonateQR/>
+</div>
+
     </div>
   );
 }

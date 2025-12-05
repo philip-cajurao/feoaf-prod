@@ -3,6 +3,8 @@ import React from "react";
 import RecentSponsors from "../components/RecentSponsors";
 import DonateQR from "../components/DonateQR";
 import SponsorBanner from "../components/banners/SponsorBanner";
+import { Sprout } from "lucide-react";
+import SponsorshipOpportunities from "./SponsorshipOpportuinities";
 
 export const metadata: Metadata = {
   title: "Sponsors | Future Entrepreneurs Of America Foundation",
@@ -24,8 +26,8 @@ export default function Sponsors() {
     <div className="relative">
       <SponsorBanner />
       <RecentSponsors />
+<SponsorshipOpportunities />
 
-      <DonateQR />
     </div>
   );
 }

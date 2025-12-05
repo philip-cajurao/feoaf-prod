@@ -8,6 +8,7 @@ import ServicesCard from "./components/ProgramsCard";
 import SummerBootCampImg from "./assets/events/summerBootCamp2025/summerBootCamp.png";
 import SpringGalaImg from "./assets/events/springGala2025/springgala.png";
 import Link from "next/link";
+import Popup from "./components/Popup";
 // import SeeFlyerModal from "./components/SeeFlyerModal";
 
 export const metadata: Metadata = {
@@ -76,6 +77,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative">
+      <Popup />
 
       
       {/* <div className="hero bg-base-200 h-[calc(100svh-4rem)]">

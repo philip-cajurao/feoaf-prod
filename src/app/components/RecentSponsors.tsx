@@ -30,7 +30,7 @@ export default function RecentSponsors() {
       <Image
         src={bg}
         alt="bg"
-        className="absolute rotate-180 perspective-distant h-fit -right-60 top-0 hidden sm:block"
+        className="absolute rotate-180 perspective-distant h-fit -right-60 -top-1 hidden sm:block"
       />
 
       <div className="flex px-4 md:px-auto w-full items-center justify-center gap-10 md:gap-20">

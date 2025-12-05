@@ -1,9 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 import RecentSponsors from "../components/RecentSponsors";
-import DonateQR from "../components/DonateQR";
 import SponsorBanner from "../components/banners/SponsorBanner";
-import { Sprout } from "lucide-react";
 import SponsorshipOpportunities from "./SponsorshipOpportuinities";
 
 export const metadata: Metadata = {

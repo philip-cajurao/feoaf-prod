@@ -169,25 +169,25 @@ export default function CountDown() {
                         <div className={`grid grid-flow-col gap-5 mt-4 text-center auto-cols-max transition-all duration-700 ease-in-out transform ${!isFinished ? 'opacity-100 scale-100' : 'opacity-0 scale-125 pointer-events-none'}`}>
                             <div className={`flex flex-col p-2 bg-neutral rounded-lg text-neutral-content transition-all duration-500 ease-out ${mounted ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
                                 <span className="countdown font-mono text-5xl">
-                                    <span style={{ "--value": timeLeft.days }}></span>
+                                    <span style={{ "--value": timeLeft.days } as React.CSSProperties}></span>
                                 </span>
                                 days
                             </div>
                             <div className={`flex flex-col p-2 bg-neutral rounded-lg text-neutral-content transition-all duration-500 delay-200 ease-out ${mounted ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
                                 <span className="countdown font-mono text-5xl">
-                                    <span style={{ "--value": timeLeft.hours }}></span>
+                                    <span style={{ "--value": timeLeft.hours } as React.CSSProperties}></span>
                                 </span>
                                 hours
                             </div>
                             <div className={`flex flex-col p-2 bg-neutral rounded-lg text-neutral-content transition-all duration-500 delay-500 ease-out ${mounted ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
                                 <span className="countdown font-mono text-5xl">
-                                    <span style={{ "--value": timeLeft.minutes }}></span>
+                                    <span style={{ "--value": timeLeft.minutes } as React.CSSProperties}></span>
                                 </span>
                                 min
                             </div>
                             <div className={`flex flex-col p-2 bg-neutral rounded-lg text-neutral-content transition-all duration-500 delay-700 ease-out ${mounted ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
                                 <span className="countdown font-mono text-5xl">
-                                    <span style={{ "--value": timeLeft.seconds }}></span>
+                                    <span style={{ "--value": timeLeft.seconds } as React.CSSProperties}></span>
                                 </span>
                                 sec
                             </div>

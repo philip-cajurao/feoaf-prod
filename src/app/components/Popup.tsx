@@ -16,7 +16,7 @@ export default function Popup() {
     return (
         <div>
             <dialog id="my_modal_1" ref={modalRef} className="modal">
-                <div className="card modal-box p-0 rounded-lg bg-base-100 w-96 shadow-xl relative">
+                <div className="card modal-box p-0 rounded-lg bg-base-100 w-56 sm:w-96 shadow-xl relative">
                     <figure>
                         <Image
                         src={supportkids}

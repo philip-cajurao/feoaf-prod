@@ -23,7 +23,7 @@ export default function CountDown() {
 
     // Initialize with static 0s to prevent hydration mismatch.
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-    
+
     // Add a mounted state to control visibility
     const [mounted, setMounted] = useState(false);
 
@@ -42,18 +42,16 @@ export default function CountDown() {
     return (
         <div className="mt-8">
             <div className="flex flex-col h-full justify-center items-center">
-                <h2 className="text-5xl font-bold">
-                    <div className="grid place-items-center">
-                        <div>
-                            <h2 className="font-bold text-4xl sm:text-5xl ml-4 text-neutral">
-                                SAVE<span className="text-accent"> THE DATE</span>!
-                            </h2>
-                            <p className="text-neutral">
-                                Upcoming event
-                            </p>
-                        </div>
+                <div className="grid place-items-center">
+                    <div>
+                        <h2 className="font-bold text-4xl sm:text-5xl ml-4 text-neutral">
+                            SAVE<span className="text-accent"> THE DATE</span>!
+                        </h2>
+                        <p className="text-neutral text-xl text-center">
+                            Upcoming event in
+                        </p>
                     </div>
-                </h2>
+                </div>
 
                 {/* Countdown */}
                 <div className="grid grid-flow-col gap-5 mt-4 text-center auto-cols-max">

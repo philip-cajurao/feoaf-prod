@@ -69,7 +69,7 @@ export default function Events() {
               <div className="pt-12 sm:pt-8 md:pt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-end">
 
                 {/* Left Side: Details */}
-                <div className="space-y-6">
+                <div className="space-y-6 mt-16 sm:mt-0">
                   <div className="flex items-center space-x-4">
                     <div>
                       <p className="text-lg font-bold text-base-content">9:30 AM – 12:30 PM</p>

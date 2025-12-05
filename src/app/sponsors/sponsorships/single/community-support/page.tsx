@@ -8,15 +8,11 @@ export default function SingleCommunitySupport() {
         <BackButton />
       </div>
 
-      {/* <h2 className="text-4xl font-bold text-center mt-20">
-        Be Our Sponsor
-      </h2> */}
-
       <iframe
         className="my-20 h-auto overflow-y-hidden"
         style={{ overflowY: "hidden" }}
-        src="https://api.leadconnectorhq.com/widget/form/F5Si2lr5zNrJ33D1mZC8"
-        id="inline-F5Si2lr5zNrJ33D1mZC8"
+        src="https://api.leadconnectorhq.com/widget/form/i9G4PZPpmYQJ45R09eux"
+        id="inline-i9G4PZPpmYQJ45R09eux"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -24,13 +20,16 @@ export default function SingleCommunitySupport() {
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Sponsorship form"
+        data-form-name="One Event Only Sponsorship - Community Friends Support ($any amount)"
         width="100%"
         loading="lazy"
-        data-layout-iframe-id="inline-F5Si2lr5zNrJ33D1mZC8"
-        data-form-id="F5Si2lr5zNrJ33D1mZC8"
-        title="Sponsorship form"
-      ></iframe>
+        data-layout-iframe-id="inline-i9G4PZPpmYQJ45R09eux"
+        data-form-id="i9G4PZPpmYQJ45R09eux"
+        title="One Event Only Sponsorship - Community Friends Support ($any amount)"
+      >
+      </iframe>
+
+
     </div>
   );
 }

@@ -6,7 +6,7 @@ import SummerBootCampImg from "../assets/events/summerBootCamp2025/summerBootCam
 // import SpringGalaImg from "../assets/events/springGala2025/springgala.png";
 import Image from "next/image";
 import CountDown from "../components/CountDown";
-import Link from "next/link";
+// import Link from "next/link";
 
 
 export const metadata: Metadata = {
@@ -36,19 +36,17 @@ export default function Events() {
 
 
 
-          <div className="card w-full max-w-3xl bg-base-100 shadow-2xl overflow-hidden rounded-3xl group transition-all duration-300 hover:shadow-3xl border border-base-200">
+          {/* <div className="card w-full max-w-3xl bg-base-100 shadow-2xl overflow-hidden rounded-3xl group transition-all duration-300 hover:shadow-3xl border border-base-200">
 
 
             <div
               className="relative p-8 sm:p-10 pb-16 bg-radial-[at_0%_0%] from-black via-black to-accent to-140%"
             >
 
-              {/* Title & Subtitle */}
               <div className="relative max-w-2xl">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-2 tracking-tight">
                   Future Entrepreneurs Of America Foundation
                 </h2>
-                {/* Divider */}
                 <div className="h-1.5 w-24 bg-accent rounded-full my-4"></div>
                 <span className="text-xl sm:text-2xl text-white/90 font-semibold tracking-wide">
                   Annual Holiday Event
@@ -56,10 +54,8 @@ export default function Events() {
               </div>
             </div>
 
-            {/* Content Section */}
             <div className="relative px-8 pb-8 sm:px-10 sm:pb-10 pt-0">
 
-              {/* Floating Date Badge - Positioned to bridge Header & Body */}
               <div className="absolute right-8 sm:right-10 -top-16 card bg-white p-4 rounded-2xl shadow-xl text-center min-w-[110px] transform -rotate-10 hover:rotate-0 hover:scale-110 transition-transform duration-300 border border-base-200">
                 <div className="text-sm font-bold text-accent uppercase tracking-wider">Dec</div>
                 <div className="text-5xl font-black text-base-content leading-none my-1">06</div>
@@ -68,7 +64,6 @@ export default function Events() {
 
               <div className="pt-12 sm:pt-8 md:pt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-end">
 
-                {/* Left Side: Details */}
                 <div className="space-y-6 mt-16 sm:mt-0">
                   <div className="flex items-center space-x-4">
                     <div>
@@ -87,7 +82,6 @@ export default function Events() {
 
 
                 <div className="flex gap-3 items-center">
-                  {/* RSVP Button (Primary) */}
                   <Link
                     href={"/events/join/annual-holiday-event"}
                     target="__blank"
@@ -98,7 +92,6 @@ export default function Events() {
                     </button>
                   </Link>
 
-                  {/* Get Directions Icon (Secondary) */}
                   <Link href={"https://maps.app.goo.gl/Lf49zsDfTvVDt9S29"} target="__blank">
                     <button className="btn btn-neutral w-16 h-full min-h-[60px] rounded-2xl flex items-center justify-center hover:scale-[1.05] active:scale-[0.95] transition-all duration-300">
                       <svg className="w-14 h-14 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -110,7 +103,7 @@ export default function Events() {
 
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* <div className="card bg-base-300 px-4 rounded-lg w-full max-w-md shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
             <figure>

@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "../assets/feoaf.png";
 import Link from "next/link";
-import Image from "next/image";
+// import logo from "../assets/feoaf.png"; // Uncomment if needed
 
 // --- Data Definitions ---
 
@@ -36,7 +35,7 @@ const programs = [
 const annualTiers = [
   {
     name: "PLATINUM SPONSOR",
-    slug: "platinum-sponsor", // Added Slug
+    slug: "platinum-sponsor",
     price: "$5,000",
     period: "/year",
     tagline: "Greatest impact — Highest recognition",
@@ -54,7 +53,7 @@ const annualTiers = [
   },
   {
     name: "GOLD SPONSOR",
-    slug: "gold-sponsor", // Added Slug
+    slug: "gold-sponsor",
     price: "$2,500",
     period: "/year",
     tagline: "Strong visibility & community impact",
@@ -71,7 +70,7 @@ const annualTiers = [
   },
   {
     name: "SILVER SPONSOR",
-    slug: "silver-sponsor", // Added Slug
+    slug: "silver-sponsor",
     price: "$1,000",
     period: "/year",
     tagline: "Great support for young entrepreneurs",
@@ -86,7 +85,7 @@ const annualTiers = [
   },
   {
     name: "BRONZE SPONSOR",
-    slug: "bronze-sponsor", // Added Slug
+    slug: "bronze-sponsor",
     price: "$500",
     period: "/year",
     tagline: "Valued Support",
@@ -99,7 +98,7 @@ const annualTiers = [
   },
   {
     name: "COMMUNITY FRIEND",
-    slug: "community-support", // Added Slug
+    slug: "community-support",
     price: "Any Amount",
     period: "",
     tagline: "Every dollar helps empower a child",
@@ -111,7 +110,7 @@ const annualTiers = [
 const singleEventTiers = [
   {
     name: "Platinum Sponsorship",
-    slug: "platinum-sponsor", // Added Slug
+    slug: "platinum-sponsor",
     price: "$1,000",
     features: [
       "Everything in Gold Sponsorship package",
@@ -122,7 +121,7 @@ const singleEventTiers = [
   },
   {
     name: "Gold Sponsorship",
-    slug: "gold-sponsor", // Added Slug
+    slug: "gold-sponsor",
     price: "$500",
     features: [
       "Everything in Bronze Sponsorship Package",
@@ -132,7 +131,7 @@ const singleEventTiers = [
   },
   {
     name: "Bronze Sponsorship",
-    slug: "bronze-sponsor", // Added Slug
+    slug: "bronze-sponsor",
     price: "$250",
     features: [
       "As a Bronze Sponsor for one of our major events, you will be mentioned in all our marketing materials including social media, event flyers, and the take home thank you brochures",
@@ -142,7 +141,7 @@ const singleEventTiers = [
   },
   {
     name: "Community Friends",
-    slug: "community-support", // Added Slug
+    slug: "community-support",
     price: "Any Amount",
     features: [
       "A thank you mention of your name/business during the event",
@@ -185,51 +184,13 @@ const StarIcon = () => (
 export default function SponsorshipOpportunities() {
   return (
     <div className="text-base-content">
-      {/* 1. Programs Context */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold sm:text-4xl tracking-tight">
-              Programs & Events You Support
-            </h2>
-            <p className="mt-4 text-lg text-base-content/80 max-w-3xl mx-auto leading-relaxed">
-              Your sponsorship directly funds these impactful initiatives for our
-              future leaders.
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {programs.map((program, index) => (
-              <div
-                key={index}
-                className="card rounded-md bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-accent h-full"
-              >
-                <div className="card-body p-8">
-                  <h3 className="card-title text-xl font-bold mb-3">
-                    {program.title}
-                  </h3>
-                  <p className="text-base-content/70 leading-relaxed">
-                    {program.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Single Event Sponsorships */}
+      {/* 1. Single Event Sponsorships */}
       <section className="py-24 bg-neutral text-neutral-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="badge badge-accent font-bold uppercase tracking-wide mb-4 p-4 text-neutral">
-              Single Event
-            </div>
             <h2 className="text-4xl font-extrabold tracking-tight text-white">
-              One Event Only Sponsorship
+              Event Only Sponsorship
             </h2>
-            <p className="mt-4 text-lg text-neutral-content/70 max-w-2xl mx-auto leading-relaxed">
-              There are different ways to help sponsor a kid&apos;s dream.
-            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -263,7 +224,6 @@ export default function SponsorshipOpportunities() {
                     ))}
                   </ul>
                   <div className="card-actions mt-6">
-                    {/* DYNAMIC LINK: Single Sponsorship */}
                     <Link
                       href={`/sponsors/sponsorships/single/${tier.slug}`}
                       className="btn btn-outline btn-accent btn-sm btn-block rounded-md"
@@ -278,18 +238,12 @@ export default function SponsorshipOpportunities() {
         </div>
       </section>
 
-      {/* 3. Annual Sponsorships */}
+      {/* 2. Annual Sponsorships */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="badge badge-accent badge-outline font-bold uppercase tracking-wide mb-4 p-4">
-            Annual Packages
-          </div>
           <h2 className="text-4xl font-extrabold tracking-tight">
             Annual Sponsorship
           </h2>
-          <p className="mt-4 text-lg text-base-content/70 max-w-2xl mx-auto leading-relaxed">
-            Year-round partnership and recognition.
-          </p>
         </div>
 
         <div className="grid gap-8 lg:gap-10 lg:grid-cols-3 items-start">
@@ -337,7 +291,6 @@ export default function SponsorshipOpportunities() {
                   ))}
                 </ul>
                 <div className="card-actions">
-                  {/* DYNAMIC LINK: Annual Sponsorship */}
                   <Link
                     href={`/sponsors/sponsorships/annual/${tier.slug}`}
                     className={`btn btn-block rounded-md ${
@@ -350,120 +303,129 @@ export default function SponsorshipOpportunities() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
 
-      {/* 4. Sponsorship Specific Contact */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="relative card rounded-xl overflow-hidden bg-neutral text-neutral-content shadow-2xl isolate">
-            {/* Decorative Ambient Background */}
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+          {/* --- NEW IMPROVED INSTALLMENT CARD --- */}
+          <div className="card rounded-md bg-base-100 border-2 border-dashed border-base-300 h-full hover:border-accent transition-colors duration-300 group">
+            <div className="card-body p-8 flex flex-col justify-center items-center text-center">
+              {/* Icon Top */}
+              <div className="mb-4 text-accent/80 group-hover:text-accent transition-colors">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-16 h-16"
+                >
+                  <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                  <path
+                    fillRule="evenodd"
+                    d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
 
-            <div className="card-body p-10 md:p-16 text-center md:text-left">
-              <h2 className="card-title text-3xl md:text-4xl font-bold mb-10 justify-center md:justify-start">
-                Interested in Sponsoring?
-              </h2>
+              <h3 className="card-title text-2xl font-bold mb-4 text-base-content">
+                Need Flexibility?
+              </h3>
+              <p className="text-base-content/70 mb-8 leading-relaxed">
+                For <strong className="text-accent">Platinum</strong> and{" "}
+                <strong className="text-accent">Gold</strong> sponsorships, we
+                offer convenient installment plans.
+                <br />
+                <span className="font-bold text-base-content block mt-2">
+                  Contact us for more info.
+                </span>
+              </p>
 
-              <div className="flex flex-col gap-8 w-full mb-10">
-                {/* Contact Item 1: Founder */}
-                <div className="flex justify-center w-full">
-                  <div className="group w-full md:max-w-md flex flex-col justify-center text-center p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl backdrop-blur-sm relative overflow-hidden">
-                    <p className="text-xs uppercase font-extrabold tracking-widest mb-2 opacity-80 text-accent">
-                      Founder
+              <div className="w-full space-y-3">
+                {/* Email Link */}
+                <a
+                  href="mailto:feoafoundation@gmail.com"
+                  className="flex items-center p-3 rounded-lg hover:bg-base-200 transition-all group/link text-left"
+                >
+                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-3 shrink-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                      <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest opacity-50">
+                      Email Us
                     </p>
-                    <p className="text-3xl font-black tracking-wide">
-                      Mary Rose Lam
+                    <p className="font-bold text-sm sm:text-base break-all group-hover/link:text-accent transition-colors text-nowrap">
+                      feoafoundation@gmail.com
                     </p>
                   </div>
-                </div>
+                </a>
 
-                {/* Contact Items Row */}
-                <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 w-full">
-                  {/* Contact Item 2: Phone */}
-                  <div className="group flex-1 flex flex-col justify-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden backdrop-blur-sm">
-                    <p className="text-xs uppercase font-bold tracking-widest mb-2 text-neutral-content/60">
-                      Phone
+                {/* Phone Link */}
+                <a
+                  href="tel:9197609623"
+                  className="flex items-center p-3 rounded-lg hover:bg-base-200 transition-all group/link text-left"
+                >
+                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-3 shrink-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 5.25V4.5Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest opacity-50">
+                      Call Us
                     </p>
-                    <p className="text-xl font-bold tracking-wide">
+                    <p className="font-bold text-sm sm:text-base group-hover/link:text-accent transition-colors">
                       919-760-9623
                     </p>
                   </div>
-
-                  {/* Contact Item 3: Email */}
-                  <div className="group flex-1 flex flex-col justify-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden backdrop-blur-sm">
-                    <p className="text-xs uppercase font-bold tracking-widest mb-2 text-neutral-content/60">
-                      Email
-                    </p>
-                    <a
-                      href="mailto:feoafoundation@gmail.com"
-                      className="text-lg font-bold link link-hover group-hover:text-accent transition-colors break-all"
-                    >
-                      feoafoundation@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Online Links Section */}
-              <div className="border-t border-neutral-content/10 pt-8 mt-4">
-                <p className="text-center text-sm font-bold uppercase tracking-widest mb-6 text-neutral-content/50">
-                  Connect With Us Online
-                </p>
-                <div className="flex flex-row gap-8 justify-center items-center">
-                  {/* Website Logo Button */}
-                  <Link
-                    href="/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group flex flex-col items-center gap-3 transition-transform hover:scale-105"
-                  >
-                    <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center text-accent shadow-lg ring-accent/30 transition-all">
-                      <Image
-                        placeholder="blur"
-                        loading="lazy"
-                        alt="qr donation"
-                        src={logo}
-                        width={100}
-                      />
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-widest opacity-70 group-hover:opacity-100 group-hover:text-accent transition-all">
-                      Website
-                    </span>
-                  </Link>
-
-                  {/* YouTube Logo Button */}
-                  <a
-                    href="https://www.youtube.com/@FutureEntrepreneursOfAmerica"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group flex flex-col items-center gap-3 transition-transform hover:scale-105"
-                  >
-                    <div className="w-16 h-16 bg-transparent rounded-full flex items-center justify-center text-[#FF0000] shadow-lg ring-red-500/30 transition-all">
-                      <svg
-                        className="w-32 h-32"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-widest opacity-70 group-hover:opacity-100 group-hover:text-[#FF0000] transition-all">
-                      YouTube
-                    </span>
-                  </a>
-                </div>
+                </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Programs Context */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-extrabold sm:text-4xl tracking-tight">
+              Programs & Events You Support
+            </h2>
+            <p className="mt-4 text-lg text-base-content/80 max-w-3xl mx-auto leading-relaxed">
+              Your sponsorship directly funds these impactful initiatives for our
+              future leaders.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {programs.map((program, index) => (
+              <div
+                key={index}
+                className="card rounded-md bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-accent h-full"
+              >
+                <div className="card-body p-8">
+                  <h3 className="card-title text-xl font-bold mb-3">
+                    {program.title}
+                  </h3>
+                  <p className="text-base-content/70 leading-relaxed">
+                    {program.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

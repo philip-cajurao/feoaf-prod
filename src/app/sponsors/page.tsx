@@ -23,9 +23,8 @@ export default function Sponsors() {
   return (
     <div className="relative">
       <SponsorBanner />
+      <SponsorshipOpportunities />
       <RecentSponsors />
-<SponsorshipOpportunities />
-
     </div>
   );
 }

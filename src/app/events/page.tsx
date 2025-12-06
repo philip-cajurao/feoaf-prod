@@ -31,7 +31,7 @@ export default function Events() {
 
       <CountDown />
 
-      <div className="py-8 px-8 flex flex-col gap-10 justify-center items-center">
+      <div className="px-8 flex flex-col justify-center items-center">
         <div className="flex justify-center items-stretch space-x-8">
 
 
@@ -128,7 +128,7 @@ export default function Events() {
 
 
 
-        <div className="w-full min-h-screen mt-16 bg-base-100 py-10 px-4 font-sans">
+        <div className="w-full min-h-screen my-32 bg-base-100 px-4 font-sans">
           <div className="max-w-5xl mx-auto">
 
             {/* Header - Simple text, no gradients */}

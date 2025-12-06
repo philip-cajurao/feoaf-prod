@@ -267,7 +267,7 @@ export default function CountDown() {
             {/* SECTION 2: HOLIDAY CARD (Visible until 12:00 PM) */}
             {showHolidayCard && (
                 // Added a negative margin-top transition to pull it up smoothly when the top section collapses
-                <div className={`card w-full max-w-3xl bg-base-100 shadow-2xl overflow-hidden rounded-3xl group transition-all duration-1000 ease-in-out hover:shadow-3xl border border-base-200 fade-in-section z-20 ${showUpcomingEvents ? '-mt-8' : 'mt-0'}`}>
+                <div className={`card w-full max-w-3xl bg-base-100 shadow-2xl overflow-hidden rounded-3xl group transition-all duration-1000 ease-in-out hover:shadow-3xl border border-base-200 fade-in-section ${showUpcomingEvents ? '-mt-8' : 'mt-0'}`}>
                     <div className="relative p-8 sm:p-10 pb-16 bg-radial-[at_0%_0%] from-black via-black to-accent to-140%">
                         <div className="relative max-w-2xl flex flex-col items-start">
                             

@@ -64,6 +64,11 @@ function NavBar() {
               About
             </Link>
           </li>
+           <li className="px-3">
+            <Link className="h-full flex items-center" href="/funding-request">
+              Funding Request
+            </Link>
+          </li>
           <li className="px-3">
             <Link className="h-full flex items-center" href="/programs">
               Programs

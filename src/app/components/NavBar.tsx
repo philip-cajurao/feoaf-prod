@@ -7,7 +7,7 @@ import React from "react";
 
 function NavBar() {
   return (
-    <div className="navbar shadow-md sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-10">
+    <div className="navbar shadow-md sticky bg-neutral text-neutral-content shadow-7xl absolute top-0 h-16 py-0 z-100">
       <nav className="navbar-start">
         {/* <Link href="/" className="mx-2 md:hidden">
           <Image
@@ -62,6 +62,11 @@ function NavBar() {
           <li className="px-3">
             <Link className="h-full flex items-center" href="/about">
               About
+            </Link>
+          </li>
+           <li className="px-3">
+            <Link className="h-full flex items-center" href="/funding-request">
+              Funding Request
             </Link>
           </li>
           <li className="px-3">

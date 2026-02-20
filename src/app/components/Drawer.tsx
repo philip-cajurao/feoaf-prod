@@ -23,7 +23,7 @@ export default function Drawer({
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu relative bg-neutral text-primary-content border-r-2 min-h-full w-52 p-4">
+        <ul className="menu relative bg-neutral text-primary-content border-r-2 min-h-full w-52 px-4 py-18">
           <li>
             <Link className="py-4 text-xl" href="/">
               Home
@@ -32,6 +32,11 @@ export default function Drawer({
           <li>
             <Link className="py-4 text-xl" href="/about">
               About Us
+            </Link>
+          </li>
+          <li>
+            <Link className="py-4 text-xl" href="/funding-request">
+              Funding Request
             </Link>
           </li>
           <li>

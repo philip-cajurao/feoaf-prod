@@ -1,34 +1,66 @@
-import React from "react";
+"use client"
+
 import Link from "next/link";
-// import logo from "../assets/feoaf.png"; // Uncomment if needed
+import Image from "next/image";
+
+// --- Static Asset Imports ---
+// Note: Ensure these paths match your project structure
+import fhLogo from "@/app/assets/sponsors/FHC.png";
+import fhGrowthFundLogo from "@/app/assets/partners/fhGrowthFund.png";
+import fortuneLogo from "@/app/assets/sponsors/fts-full-bg.png";
 
 // --- Data Definitions ---
 
 const programs = [
   {
     title: "Spring Festival",
-    description:
-      "Kids showcase their products and services in a festival type event. There would be various event vendors and would be expecting around 500 attendees.",
+    description: "Kids showcase their products and services in a festival type event. There would be various event vendors and would be expecting around 500 attendees.",
+    image: "/events/church/IMG_3778.JPEG",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+      </svg>
+    ),
   },
   {
     title: "Summer Bootcamp",
-    description:
-      "Various Successful Business Owners, Bankers, and Community Leaders get to speak and train the kids in different aspects of business and teach them entrepreneurship skills.",
+    description: "Various Successful Business Owners, Bankers, and Community Leaders get to speak and train the kids in different aspects of business and teach them entrepreneurship skills.",
+    image: "/events/church/IMG_3795.JPEG",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.438 4.438 0 002.946 2.946 4.493 4.493 0 004.306-1.758q.161-.253.298-.521" />
+      </svg>
+    ),
   },
   {
     title: "Cocktail for A Cause",
-    description:
-      "It’s a community event wherein we invite our sponsors to mingle and socialize with our community and have some fun in a little “Community Auction Fundraising”",
+    description: "It’s a community event wherein we invite our sponsors to mingle and socialize with our community and have some fun in a little “Community Auction Fundraising”",
+    image: "/events/holiday/IMG_4627.jpg",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+    ),
   },
   {
     title: "Holiday Event",
-    description:
-      "It’s the year end event to celebrate with the kids and recognize their accomplishments for the year. As a sponsor, you will be invited to be one of the participants in the “SHARKTANK” (the famous part of the Future Entrepreneurs Events).",
+    description: "It’s the year end event to celebrate with the kids and recognize their accomplishments for the year. As a sponsor, you will be invited to be one of the participants in the “SHARKTANK”.",
+    image: "/events/church/IMG_3795.JPEG",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+      </svg>
+    ),
   },
   {
     title: "Fall Gala Event",
-    description:
-      "This gala celebrates our mission, honors the individuals who make our work possible, and raises vital support to continue creating meaningful impact in our community. Together, we gather not only to celebrate progress, but to strengthen our ability to serve, empower, and uplift those who need us most. This event is also to recognize and show appreciation to our sponsors.",
+    description: "This gala celebrates our mission, honors the individuals who make our work possible, and raises vital support. Together, we gather to celebrate progress and show appreciation to our sponsors.",
+    image: "/events/holiday/IMG_4364.JPEG",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0116.27 9.728m-8.54-5.492a46.327 46.327 0 005.418 0M12 11.25v.375m-7.166 3.9c.33.328.675.642 1.034.93M20.166 15.525c-.33.328-.675.642-1.034.93" />
+      </svg>
+    ),
   },
 ];
 
@@ -134,7 +166,7 @@ const singleEventTiers = [
     slug: "bronze-sponsor",
     price: "$250",
     features: [
-      "As a Bronze Sponsor for one of our major events, you will be mentioned in all our marketing materials including social media, event flyers, and the take home thank you brochures",
+      "Mentioned in all marketing materials including social media, event flyers, and take home brochures",
       "Recognition in the actual program",
       "1 VIP Event Ticket",
     ],
@@ -150,85 +182,62 @@ const singleEventTiers = [
   },
 ];
 
-const CheckIcon = () => (
-  <svg
-    className="h-5 w-5 text-accent shrink-0 mr-3 mt-0.5"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2.5}
-      d="M5 13l4 4L19 7"
-    />
+// --- Contrast Icons ---
+
+const CheckIcon = ({ highlight }) => (
+  <svg className={`h-5 w-5 shrink-0 mr-3 mt-0.5 ${highlight ? 'text-accent' : 'text-accent'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
   </svg>
 );
 
 const StarIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="w-4 h-4 text-accent shrink-0 mt-1 mr-2"
-  >
-    <path
-      fillRule="evenodd"
-      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-      clipRule="evenodd"
-    />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-accent shrink-0 mt-1 mr-2">
+    <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
   </svg>
 );
 
 export default function SponsorshipOpportunities() {
+  const partners = [
+    { name: "FH Growth Fund", logo: fhGrowthFundLogo },
+    { name: "Roberts", logo: fhGrowthFundLogo },
+    { name: "Fortune Tech Solutions", logo: fortuneLogo }
+  ];
+
   return (
-    <div className="text-base-content">
+    <div className="text-base-content bg-base-200 font-sans">
+
       {/* 1. Single Event Sponsorships */}
-      <section className="py-24 bg-neutral text-neutral-content">
+      <section className="pt-28 pb-52 bg-neutral text-neutral-content">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold tracking-tight text-white">
+            <h2 className="text-2xl sm:text-5xl font-bold tracking-tight text-white">
               Event Only Sponsorship
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {singleEventTiers.map((tier, idx) => (
-              <div
-                key={idx}
-                className="card rounded-md bg-base-100 text-base-content shadow-xl border-t-8 border-accent hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full"
-              >
-                <div className="card-body p-6">
-                  <h3 className="card-title text-xl font-bold min-h-[3.5rem] items-start">
+              <div key={idx} className="card rounded-xl bg-white text-base-content shadow-xl border-t-[10px] border-accent border-x-2 border-b-2 border-neutral-focus hover:-translate-y-2 transition-transform duration-300 h-full">
+                <div className="card-body p-8">
+                  <h3 className="card-title text-2xl font-black uppercase leading-tight">
                     {tier.name}
                   </h3>
                   <div className="my-4">
-                    <p className="text-3xl font-extrabold text-accent">
-                      {tier.price}
-                    </p>
-                    <p className="text-xs text-base-content/50 font-semibold uppercase mt-1">
-                      One-time
-                    </p>
+                    <p className="text-4xl font-black text-accent">{tier.price}</p>
+                    <p className="text-xs text-base-content/60 font-bold uppercase mt-1">One-time payment</p>
                   </div>
-                  <div className="divider my-2"></div>
-                  <ul className="space-y-3 flex-1">
+                  <div className="divider before:bg-base-content/20 after:bg-base-content/20 my-2"></div>
+                  <ul className="space-y-4 flex-1">
                     {tier.features.map((feature, fIdx) => (
-                      <li
-                        key={fIdx}
-                        className="text-sm text-base-content/70 flex items-start leading-snug"
-                      >
+                      <li key={fIdx} className="text-sm font-bold flex items-start leading-snug">
                         <StarIcon />
-                        <span>{feature}</span>
+                        <span className="opacity-100">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="card-actions mt-6">
-                    <Link
-                      href={`/sponsors/sponsorships/single/${tier.slug}`}
-                      className="btn btn-outline btn-accent btn-sm btn-block rounded-md"
-                    >
-                      Select
+                  <div className="card-actions mt-8">
+                    <Link href={`/sponsors/sponsorships/single/${tier.slug}`} className="btn btn-block btn-neutral rounded-md font-bold text-white uppercase border-2 border-white/10">
+                      Select Package
                     </Link>
                   </div>
                 </div>
@@ -238,64 +247,69 @@ export default function SponsorshipOpportunities() {
         </div>
       </section>
 
-      {/* 2. Annual Sponsorships */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold tracking-tight">
+      {/* 2. Annual Sponsorship */}
+      <section className="py-42 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-24">
+          <h2 className="text-2xl sm:text-5xl font-bold tracking-tight text-neutral">
             Annual Sponsorship
           </h2>
         </div>
 
-        <div className="grid gap-8 lg:gap-10 lg:grid-cols-3 items-start">
+        <div className="grid gap-8 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {annualTiers.map((tier, idx) => (
             <div
               key={idx}
-              className={`card rounded-md bg-base-100 h-full ${
-                tier.highlight
-                  ? "border-2 border-accent shadow-2xl scale-100 lg:scale-105 overflow-visible"
-                  : "border border-base-200 shadow-lg hover:shadow-xl transition-shadow"
-              }`}
+              className={`card rounded-xl h-full relative transition-all duration-300 ${tier.highlight
+                ? "bg-neutral text-white shadow-2xl border-none scale-100 lg:scale-105 z-10"
+                : "bg-white text-base-content border-2 border-neutral/30 shadow-2xl hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(var(--tw-colors-accent),0.5)]"
+                }`}
             >
-              <div className="card-body p-8 relative">
-                {tier.highlight && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <div className="badge badge-accent badge-lg font-bold shadow-md">
-                      MOST POPULAR
-                    </div>
-                  </div>
-                )}
-                <div className="mb-6 border-b border-base-200 pb-6">
-                  <h3 className="card-title text-2xl font-bold mb-2">
+              {/* Floating Badge for Platinum */}
+              {tier.highlight && (
+                <div className="absolute top-0 inset-x-0 flex justify-center -translate-y-1/2">
+                  <span className="badge badge-accent border-none font-black py-4 px-6 uppercase tracking-widest shadow-lg text-neutral">
+                    Premier Choice
+                  </span>
+                </div>
+              )}
+
+              <div className={`card-body p-8 lg:p-10 flex flex-col ${tier.highlight ? 'pt-12' : ''}`}>
+                <div className="mb-6 border-b-2 border-current pb-6 opacity-80">
+                  <h3 className={`card-title text-2xl font-black mb-2 uppercase italic ${tier.highlight ? 'text-white' : 'text-neutral'}`}>
                     {tier.name}
                   </h3>
-                  <p className="text-sm font-medium uppercase tracking-wider text-base-content/60">
+                  <p className={`text-sm tracking-wider font-bold min-h-[2.5rem] ${tier.highlight ? 'text-white/80' : 'text-base-content/80'}`}>
                     {tier.tagline}
                   </p>
                 </div>
+
                 <div className="mb-8 flex items-baseline">
-                  <span className="text-4xl font-extrabold text-accent">
+                  <span className={`text-5xl font-black ${tier.highlight ? 'text-accent' : 'text-neutral'}`}>
                     {tier.price}
                   </span>
-                  <span className="text-base-content/60 font-semibold ml-2">
+                  <span className={`font-black ml-2 uppercase text-sm ${tier.highlight ? 'text-white/60' : 'text-base-content/60'}`}>
                     {tier.period}
                   </span>
                 </div>
-                <ul className="space-y-4 mb-8 flex-1">
+
+                <ul className="space-y-4 mb-10 flex-1">
                   {tier.features.map((feature, fIdx) => (
                     <li key={fIdx} className="flex items-start">
-                      <CheckIcon />
-                      <span className="text-base-content/80 text-sm leading-snug">
+                      <CheckIcon highlight={tier.highlight} />
+                      <span className={`text-sm leading-snug font-bold ${tier.highlight ? 'text-white/90' : 'text-base-content/90'}`}>
                         {feature}
                       </span>
                     </li>
                   ))}
                 </ul>
-                <div className="card-actions">
+
+                <div className="card-actions mt-auto">
                   <Link
                     href={`/sponsors/sponsorships/annual/${tier.slug}`}
-                    className={`btn btn-block rounded-md ${
-                      tier.highlight ? "btn-accent" : "btn-outline btn-accent"
-                    }`}
+                    className={`btn btn-block rounded-md font-black uppercase text-base h-14 ${tier.highlight
+                      ? "btn-accent shadow-[0_0_15px_rgba(var(--tw-colors-accent),0.4)] text-neutral hover:scale-[1.02]"
+                      : "btn-outline btn-neutral text-neutral shadow-md hover:bg-accent hover:text-neutral hover:scale-[1.02]"
+                      }`}
                   >
                     Choose Plan
                   </Link>
@@ -303,124 +317,111 @@ export default function SponsorshipOpportunities() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
 
-          {/* --- NEW IMPROVED INSTALLMENT CARD --- */}
-          <div className="card rounded-md bg-base-100 border-2 border-dashed border-base-300 h-full hover:border-accent transition-colors duration-300 group">
-            <div className="card-body p-8 flex flex-col justify-center items-center text-center">
-              {/* Icon Top */}
-              <div className="mb-4 text-accent/80 group-hover:text-accent transition-colors">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-16 h-16"
-                >
-                  <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
-                  <path
-                    fillRule="evenodd"
-                    d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
-                    clipRule="evenodd"
+      {/* 3. Dedicated Partners Section */}
+      <section className="py-32 bg-neutral border-y border-white/10 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+
+          {/* Clean Heart Icon */}
+          <div className="mb-6 flex justify-center relative cursor-default group">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-16 h-16 text-accent relative z-10 
+                   drop-shadow-sm
+                   group-hover:scale-105 group-hover:-translate-y-1 
+                   transition-all duration-300"
+            >
+              <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+            </svg>
+          </div>
+
+          {/* Solid Yellow "Thank You" */}
+          <h2 className="text-3xl font-extrabold sm:text-5xl tracking-tight uppercase mb-4">
+            <span className="text-accent">
+              Thank You
+            </span>
+            <span className="text-white"> To Our Partners</span>
+          </h2>
+
+          <p className="text-white/70 mb-12 font-bold leading-relaxed max-w-2xl mx-auto text-lg">
+            We are incredibly grateful for the support of our sponsors who empower our future leaders.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mb-12">
+            {partners.map((partner, i) => (
+              <div key={i} className="flex items-center gap-4 bg-white/5 backdrop-blur-sm p-4 pr-6 rounded-xl border border-white/10 transition-all hover:border-accent hover:bg-white/10 group/logo">
+                <div className="w-16 h-16 relative bg-white rounded-lg overflow-hidden shrink-0 shadow-sm flex items-center justify-center">
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className="object-contain p-2"
+                    unoptimized
                   />
-                </svg>
-              </div>
-
-              <h3 className="card-title text-2xl font-bold mb-4 text-base-content">
-                Need Flexibility?
-              </h3>
-              <p className="text-base-content/70 mb-8 leading-relaxed">
-                For <strong className="text-accent">Platinum</strong> and{" "}
-                <strong className="text-accent">Gold</strong> sponsorships, we
-                offer convenient installment plans.
-                <br />
-                <span className="font-bold text-base-content block mt-2">
-                  Contact us for more info.
+                </div>
+                <span className="font-black text-white leading-tight text-xl group-hover/logo:text-accent transition-colors">
+                  {partner.name}
                 </span>
-              </p>
-
-              <div className="w-full space-y-3">
-                {/* Email Link */}
-                <a
-                  href="mailto:feoafoundation@gmail.com"
-                  className="flex items-center p-3 rounded-lg hover:bg-base-200 transition-all group/link text-left"
-                >
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-3 shrink-0">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
-                      <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-widest opacity-50">
-                      Email Us
-                    </p>
-                    <p className="font-bold text-sm sm:text-base break-all group-hover/link:text-accent transition-colors text-nowrap">
-                      feoafoundation@gmail.com
-                    </p>
-                  </div>
-                </a>
-
-                {/* Phone Link */}
-                <a
-                  href="tel:9197609623"
-                  className="flex items-center p-3 rounded-lg hover:bg-base-200 transition-all group/link text-left"
-                >
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent mr-3 shrink-0">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 5.25V4.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-widest opacity-50">
-                      Call Us
-                    </p>
-                    <p className="font-bold text-sm sm:text-base group-hover/link:text-accent transition-colors">
-                      919-760-9623
-                    </p>
-                  </div>
-                </a>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="max-w-xs mx-auto">
+            <Link href="/partner" className="btn btn-accent btn-block rounded-md shadow-lg hover:shadow-accent/30 transition-all font-black text-neutral uppercase tracking-widest h-14">
+              Partner With Us
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* 3. Programs Context */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 4. Programs & Events - NOW WITH NEXT.JS IMAGE */}
+      <section className="py-24 bg-base-200 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold sm:text-4xl tracking-tight">
-              Programs & Events You Support
+            <span className="text-accent font-black tracking-widest uppercase text-sm mb-3 block drop-shadow-sm">
+              Your sponsorship directly funds these impactful initiatives for our future leaders.
+            </span>
+            <h2 className="text-4xl font-extrabold sm:text-5xl tracking-tight text-neutral uppercase">
+              Programs You Support
             </h2>
-            <p className="mt-4 text-lg text-base-content/80 max-w-3xl mx-auto leading-relaxed">
-              Your sponsorship directly funds these impactful initiatives for our
-              future leaders.
-            </p>
+            <div className="h-1.5 w-24 bg-accent mx-auto mt-6 rounded-full"></div>
           </div>
+
+          {/* Card Grid with Image Headers */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {programs.map((program, index) => (
               <div
                 key={index}
-                className="card rounded-md bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-accent h-full"
+                className="group card rounded-3xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 border border-base-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full"
               >
-                <div className="card-body p-8">
-                  <h3 className="card-title text-xl font-bold mb-3">
+                {/* Image Header */}
+                <figure className="relative h-56 w-full overflow-hidden bg-neutral">
+                  <Image
+                    src={program.image}
+                    alt={program.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                  />
+                  {/* Subtle Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral/90 via-neutral/20 to-transparent"></div>
+
+                  {/* Floating Icon */}
+                  <div className="absolute bottom-4 left-6 w-12 h-12 bg-accent text-neutral rounded-xl flex items-center justify-center shadow-lg transform group-hover:-translate-y-1 transition-transform duration-300">
+                    {program.icon}
+                  </div>
+                </figure>
+
+                <div className="card-body p-6 sm:p-8 flex-1">
+                  <h3 className="card-title text-2xl font-black mb-2 text-neutral uppercase group-hover:text-accent transition-colors duration-300">
                     {program.title}
                   </h3>
-                  <p className="text-base-content/70 leading-relaxed">
+                  <div className="w-12 h-1 bg-base-300 mb-4 rounded-full group-hover:bg-accent group-hover:w-16 transition-all duration-300"></div>
+                  <p className="text-neutral/70 leading-relaxed font-medium">
                     {program.description}
                   </p>
                 </div>
@@ -429,6 +430,7 @@ export default function SponsorshipOpportunities() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

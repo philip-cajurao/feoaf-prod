@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import EventsBanner from "../components/banners/EventsBanner";
-import SummerBootCampImg from "../assets/events/summerBootCamp2025/summerBootCamp.png";
 import Image from "next/image";
 import CountDown from "../components/CountDown";
 

@@ -1,13 +1,7 @@
 import Hero from "./components/Hero";
 import { Metadata } from "next";
 import RecentSponsors from "./components/RecentSponsors";
-import Image from "next/image";
 import ServicesCard from "./components/ProgramsCard";
-// import SpringGala from "./components/SpringGala";
-// import SummerBootCampTicket from "./assets/events/summerBootCamp2025/bootCampTicket.png";
-import SummerBootCampImg from "./assets/events/summerBootCamp2025/summerBootCamp.png";
-import SpringGalaImg from "./assets/events/springGala2025/springgala.png";
-import Link from "next/link";
 import Popup from "./components/Popup";
 // import SeeFlyerModal from "./components/SeeFlyerModal";
 
@@ -144,12 +138,11 @@ export default function Home() {
 
 
 
-        <div>
+        {/* <div>
           <div
             className={`flex relative h-full md:h-[calc(100svh-4rem)] bg-fixed bg-center bg-cover bg-[url(./assets/latest_events/gala.JPEG)]`}
           >
             <div className="md:absolute top-0 left-0 h-full w-full backdrop-brightness-75 backdrop-blur-[3px]">
-              {/* <SpringGala /> recent event  */}
               <div className="py-16 px-8 flex flex-col sm:flex-row gap-10 justify-center items-center my-auto h-full border">
                 <Link href="/events">
                   <div className="card bg-base-300 rounded-lg sm:w-lg shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 p-8 transition-all">
@@ -169,9 +162,6 @@ export default function Home() {
                         share their success stories.
                       </p>
                     </div>
-                    {/* <p className="text-xs">
-                    <span className="badge badge-xs">Upcoming event</span>
-                  </p> */}
                   </div>
                 </Link>
 
@@ -197,7 +187,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="py-16">
           <div className="grid place-items-center">

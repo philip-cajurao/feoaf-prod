@@ -36,74 +36,72 @@ export default function ProgramsCard() {
       title: "Scholarship Program",
       image: image6, 
       colorClass: "bg-success text-success-content",
-      href: "/join/academic-scholarship", // Added the link here
+      href: "/join/academic-scholarship",
     },
     {
       title: "0% Interest Loan",
       image: image5, 
       colorClass: "bg-primary text-primary-content",
-      href: "/funding-request", // This tells the code to make it a link
+      href: "/funding-request",
     },
   ];
 
+  const CardInnerContent = ({ program }) => (
+    <>
+      <figure className="relative h-60 w-full overflow-hidden bg-base-200">
+        <Image
+          alt={program.title}
+          placeholder="blur"
+          loading="lazy"
+          src={program.image}
+          // Minimal, synchronized image zoom
+          className="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+        />
+        {/* Subtle, synchronized overlay fade */}
+        <div className="absolute inset-0 bg-black/10 mix-blend-multiply transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
+      </figure>
+      
+      <div className={`relative z-10 -mt-8 flex-grow rounded-t-[2rem] p-8 text-center shadow-[0_-4px_20px_rgba(0,0,0,0.1)] ${program.colorClass}`}>
+        <h2 className="text-xl font-black uppercase tracking-widest drop-shadow-sm">
+          {program.title}
+        </h2>
+        {/* Static underline for a cleaner look */}
+        <div className="mx-auto mt-4 h-1.5 w-12 rounded-full bg-current opacity-40"></div>
+      </div>
+    </>
+  );
+
   return (
-    <div className="py-12 px-4 grid lg:grid-cols-2 gap-10 w-full max-w-6xl mx-auto">
-      {programs.map((program, index) => {
-        // Shared classes for both regular cards and clickable links
-        const cardClasses = `
-          card w-full max-w-sm shadow-xl overflow-hidden rounded-2xl block
-          transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl
-          ${index % 2 === 0 ? "lg:justify-self-end" : "lg:justify-self-start"}
-        `;
+    <section className="relative w-full py-20 px-4">
+      <div className="mx-auto grid w-full max-w-6xl gap-x-10 gap-y-16 lg:grid-cols-2">
+        {programs.map((program, index) => {
+          
+          // Minimal scale on the parent container, synchronized timing
+          const cardClasses = `
+            group relative flex flex-col w-full max-w-md mx-auto shadow-lg overflow-hidden rounded-3xl
+            transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-2xl
+            ${index % 2 === 1 ? "lg:translate-y-12" : ""} 
+          `;
 
-        // If an href exists, wrap it in a Next.js Link
-        if (program.href) {
+          if (program.href) {
+            return (
+              <Link 
+                key={index} 
+                href={program.href} 
+                className={`${cardClasses} cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-primary/50`}
+              >
+                <CardInnerContent program={program} />
+              </Link>
+            );
+          }
+
           return (
-            <Link 
-              key={index} 
-              href={program.href} 
-              className={`${cardClasses} cursor-pointer hover:ring-4 hover:ring-primary/50`}
-            >
-              <figure className="h-52 w-full bg-base-100">
-                <Image
-                  alt={program.title}
-                  placeholder="blur"
-                  loading="lazy"
-                  src={program.image}
-                  className="h-full w-full object-cover"
-                />
-              </figure>
-              <div className={`card-body text-center p-6 ${program.colorClass}`}>
-                <h2 className="text-xl font-extrabold uppercase tracking-wider drop-shadow-sm">
-                  {program.title}
-                </h2>
-                <div className="w-12 h-1 bg-current opacity-40 mx-auto mt-2 rounded-full"></div>
-              </div>
-            </Link>
-          );
-        }
-
-        // Standard card for items without links
-        return (
-          <div key={index} className={cardClasses}>
-            <figure className="h-52 w-full bg-base-100">
-              <Image
-                alt={program.title}
-                placeholder="blur"
-                loading="lazy"
-                src={program.image}
-                className="h-full w-full object-cover"
-              />
-            </figure>
-            <div className={`card-body text-center p-6 ${program.colorClass}`}>
-              <h2 className="text-xl font-extrabold uppercase tracking-wider drop-shadow-sm">
-                {program.title}
-              </h2>
-              <div className="w-12 h-1 bg-current opacity-40 mx-auto mt-2 rounded-full"></div>
+            <div key={index} className={cardClasses}>
+              <CardInnerContent program={program} />
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }

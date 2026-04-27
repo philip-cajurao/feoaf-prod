@@ -131,21 +131,21 @@ function Hero() {
       </section>
 
       {/* --- UPCOMING EVENTS SECTION --- */}
-      <section id="events" className="bg-base-100 py-24 px-6 border-t border-base-300">
+      <section id="events" className="bg-base-300 py-24 px-6 border-t border-base-300">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold italic">Upcoming Events</h2>
               <div className="h-1.5 w-24 bg-accent mt-2" />
             </div>
-            <p className="text-lg opacity-70 max-w-md">
+            <p className="text-lg opacity-90 max-w-md">
               Secure your spot in our upcoming workshops and networking sessions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {upcomingEvents.map((event) => (
-              <div key={event.id} className="group flex flex-col h-full bg-base-200 rounded-2xl overflow-hidden border border-base-300 transition-all hover:shadow-2xl">
+              <div key={event.id} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-black/50 transition-all hover:shadow-none shadow-2xl">
                 {/* Image Wrapper */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image 
@@ -182,7 +182,7 @@ function Hero() {
                   </p>
 
                   <Link href={event.registrationUrl} className="w-full">
-                    <button className="btn btn-outline btn-accent btn-block group-hover:btn-accent group-hover:text-white transition-all">
+                    <button className="btn btn-outline btn-accent btn-block group-hover:btn-link transition-all">
                       Register Now
                     </button>
                   </Link>

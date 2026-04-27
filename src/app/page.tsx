@@ -110,19 +110,26 @@ export default function Home() {
 
       {/* Sections */}
       <div>
-        <div className="grid lg:grid-cols-2 py-8 bg-[#f4f4f4]">
+        <div className="grid lg:grid-cols-2 py-24 bg-white">
           <div className="flex flex-col items-center justify-center px-10 lg:pt-0">
-            <h2 className="font-bold text-2xl sm:text-4xl mb-4 w-full max-w-4xl">
-              Who we are?
-            </h2>
-            <p className="max-w-4xl text-sm sm:text-lg">
-              Future Entrepreneurs of America Foundation is focus on developing,
-              guiding and mentoring young entrepreneurs ages 9-17 years old by
-              providing age appropriate training and activities to motivate them
-              to become successful entrepreneurs in the future.
-            </p>
+            <div className="w-full max-w-4xl">
+              {/* Title Container */}
+              <h2 className="relative font-black text-2xl sm:text-5xl mb-8 inline-block">
+                Who we are?
+                {/* Custom Underline Accent */}
+                <span className="absolute -bottom-2 left-0 w-1/3 h-2 bg-accent rounded-full opacity-80" />
+              </h2>
+
+              <p className="max-w-4xl text-sm sm:text-lg leading-relaxed text-gray-700">
+                Future Entrepreneurs of America Foundation is focused on developing,
+                guiding and mentoring young entrepreneurs ages <span className="font-bold">9-17 years old</span> by
+                providing age-appropriate training and activities to motivate them
+                to become successful entrepreneurs in the future.
+              </p>
+            </div>
           </div>
-          <div className="px-4 py-10 sm:px-8">
+
+         <div className="px-4 py-10 sm:px-8">
             <div className="rounded-xl shadow-xl border-accent border-6 w-auto h-82 max-w-lg mx-auto">
               <iframe
                 className="rounded w-full h-full"
@@ -189,11 +196,16 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className="py-16">
-          <div className="grid place-items-center">
-            <div>
-              <p className="font-bold text-lg sm:text-2xl">Our</p>
-              <h2 className="font-bold text-2xl sm:text-4xl ml-4">Programs</h2>
+        <div className="py-24 bg-white overflow-hidden">
+          <div className="grid place-items-center mb-16">
+            <div className="relative">
+
+              {/* Secondary accent bar */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-accent rounded-full" />
+
+              <h2 className="relative font-black text-3xl sm:text-6xl uppercase tracking-tighter text-base-content italic">
+                Our <span className="text-accent">Programs</span>
+              </h2>
             </div>
           </div>
           <ServicesCard />

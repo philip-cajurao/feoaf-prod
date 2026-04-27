@@ -20,9 +20,9 @@ import image6 from "../assets/latest_events/fe5.jpg";
 import image7 from "../assets/latest_events/fe6.jpg";
 
 // Event Image Imports (Ensure these paths match your folder structure)
-import pickleball from "../assets/latest_events/FE1.jpg"; 
-import summerBootCamp from "../assets/latest_events/FE2.jpg";
-import galaImage from "../assets/latest_events/FE3.jpg";
+import pickleball from "../assets/events/pickleball.jpg"; 
+import summerBootCamp from "../assets/events/summerBootCamp.png";
+import galaImage from "../assets/events/GALA.jpg";
 
 import Link from "next/link";
 import { ChevronDown, MapPin, Clock } from "lucide-react";
@@ -121,7 +121,7 @@ function Hero() {
 
           <div className="absolute -bottom-24 md:-bottom-32 flex flex-col items-center">
              <p className="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-2">
-                Join our Upcoming Events Below
+               Join our Upcoming Events Below
              </p>
              <div className="animate-bounce p-2 mt-8 bg-white/10 rounded-full backdrop-blur-md">
                 <ChevronDown className="w-6 h-6 text-white" />
@@ -145,7 +145,11 @@ function Hero() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {upcomingEvents.map((event) => (
-              <div key={event.id} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-black/50 transition-all hover:shadow-none shadow-2xl">
+              <Link 
+                key={event.id} 
+                href="/events"
+                className="group flex flex-col h-full bg-base-200 rounded-2xl overflow-hidden border border-base-300 transition-all hover:border-accent hover:shadow-2xl cursor-pointer"
+              >
                 {/* Image Wrapper */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image 
@@ -177,17 +181,11 @@ function Hero() {
                     </div>
                   </div>
 
-                  <p className="text-sm opacity-70 mb-6 line-clamp-3 flex-grow">
+                  <p className="text-sm opacity-70 line-clamp-3 flex-grow">
                     {event.description}
                   </p>
-
-                  <Link href={event.registrationUrl} className="w-full">
-                    <button className="btn btn-outline btn-accent btn-block group-hover:btn-link transition-all">
-                      Register Now
-                    </button>
-                  </Link>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

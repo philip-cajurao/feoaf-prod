@@ -1,5 +1,7 @@
-import { Metadata } from "next";
+"use client"
+
 import Link from "next/link";
+import BackButton from "../../components/BackButton";
 // 1. Import the font from Google
 import { Inter } from "next/font/google";
 
@@ -10,11 +12,6 @@ const mainFont = Inter({
   variable: '--font-inter',
 });
 
-export const metadata: Metadata = {
-  title: "Program Details | Youth Business Loan Program",
-  description: "Interest-free, educational micro-loans for youth ages 8-18.",
-};
-
 export default function BusinessLoanProgram() {
   return (
     // 3. Apply the font className to the wrapper div
@@ -22,9 +19,9 @@ export default function BusinessLoanProgram() {
       
       <div className="max-w-6xl mx-auto px-6 pt-12 md:pt-20">
         
-        <Link href="/funding-request" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors mb-8 group">
+        <BackButton href="/funding-request" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors mb-8 group">
           <span className="group-hover:-translate-x-1 transition-transform">←</span> Back
-        </Link>
+        </BackButton>
 
         {/* Tightened the tracking (letter-spacing) for the big header to make it look cleaner */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-6">

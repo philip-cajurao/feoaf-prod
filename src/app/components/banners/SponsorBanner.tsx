@@ -21,7 +21,7 @@ export default function SponsorBanner() {
       {/* Clean, floating text */}
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         <p className="font-bold text-xs sm:text-sm text-accent uppercase tracking-[0.2em] mb-2 drop-shadow-md">
-          Partner With Us
+          PROUDLY SUPPORTED BY
         </p>
         <div className="flex items-baseline justify-center">
           <span className="font-bold text-4xl sm:text-5xl text-white mr-3 drop-shadow-md">

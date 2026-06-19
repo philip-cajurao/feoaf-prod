@@ -1,130 +1,113 @@
-import { Metadata } from "next";
+"use client"
+
 import EventsBanner from "../components/banners/EventsBanner";
 import Image from "next/image";
 import CountDown from "../components/CountDown";
 
-export const metadata: Metadata = {
-  title: "Events | Future Entrepreneurs Of America Foundation",
-  description:
-    "Discover exciting youth-focused events like our recent Spring Gala, where young entrepreneurs showcase their creativity and business ideas.",
-  icons: {
-    icon: ["/logo.png", "/favicon.ico"],
-  },
-  facebook: {
-    appId: "61573876332746",
-  },
-};
+// Import your assets for use in the static list
+import pickleball from "@/app/assets/events/pickleball.jpg";
 
 export default function Events() {
   return (
     <div className="flex flex-col justify-center relative">
       <EventsBanner />
 
+      {/* ─── UPCOMING EVENTS (Primary / Hero Section) ─── */}
       <CountDown />
 
-      <div className="px-6 py-24 flex flex-col items-center w-full">
-        
-        {/* --- Section Header --- */}
-        <div className="text-center mb-32 max-w-3xl">
-          <h1 className="text-5xl sm:text-6xl font-black text-neutral uppercase tracking-tighter mb-6">
+      {/* ─── PREVIOUS EVENTS (Simple List) ─── */}
+      <div className="relative px-4 sm:px-6 py-12 flex flex-col items-center w-full">
+
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-base-300 to-transparent" />
+
+        {/* Section Header */}
+        <div className="text-center mb-8 max-w-xl">
+          <h2 className="text-2xl sm:text-3xl font-black text-neutral uppercase tracking-tighter mt-1">
             Previous <span className="text-accent">Events</span>
-          </h1>
-          <p className="text-xl text-base-content/60 leading-relaxed">
-            Take a look back at our memorable moments and upcoming gatherings designed to empower the next generation.
-          </p>
-          <div className="h-1.5 w-20 bg-accent mx-auto mt-8 rounded-full"></div>
+          </h2>
         </div>
 
-        {/* --- Event List --- */}
-        <div className="w-full max-w-6xl space-y-40">
+        {/* Simple Event List */}
+        <div className="w-full max-w-2xl flex flex-col gap-12">
 
-          {/* 1. CCWRC Outreach */}
-          <section className="flex flex-col lg:flex-row items-center gap-12 group">
-            <div className="lg:w-1/2 order-2 lg:order-1">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-64 rounded-3xl overflow-hidden shadow-xl transform group-hover:-translate-y-2 transition-transform duration-500">
-                  <Image src="/events/church/IMG_3778.JPEG" alt="Outreach" fill className="object-cover" />
-                </div>
-                <div className="relative h-64 mt-8 rounded-3xl overflow-hidden shadow-xl transform group-hover:translate-y-2 transition-transform duration-500">
-                  <Image src="/events/church/IMG_3795.JPEG" alt="Community Support" fill className="object-cover" />
-                </div>
+          {/* 1. Pickleball Tournament */}
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs font-bold text-accent uppercase tracking-wider">April 18, 2026</span>
+            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Dink For a Cause — Pickleball Tournament</h3>
+            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">Thank you to everyone who joined us at Dill Dinkers at Manassas Mall for a day of fun, networking, and impact.</p>
+            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
+              <Image src={pickleball} alt="Pickleball" fill className="object-cover" />
+            </div>
+          </div>
+
+          <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
+
+          {/* 2. CCWRC Outreach */}
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs font-bold text-accent uppercase tracking-wider">February 2026</span>
+            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Christian Center of World Restoration Outreach</h3>
+            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">A community-focused initiative bridging the gap between local resources and youth potential, fostering growth through faith and entrepreneurship.</p>
+            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
+              <Image src="/events/outreach images/DSC08222.JPG" alt="CCWRC" fill className="object-cover" />
+            </div>
+          </div>
+
+          <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
+
+          {/* 3. Spring Gala — with playable YouTube embeds */}
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs font-bold text-accent uppercase tracking-wider">April 2025</span>
+            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Spring Gala Event</h3>
+            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">Watch our students take the stage. Our flagship gala combines student showcases with high-energy networking and business pitches.</p>
+            {/* Playable YouTube embeds */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mt-4">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-sm">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/w6UiWqXI_lo"
+                  title="Spring Gala 2025 Video 1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="aspect-video rounded-xl overflow-hidden shadow-sm">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/SVMYB5t8QSk"
+                  title="Spring Gala 2025 Video 2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
               </div>
             </div>
-            <div className="lg:w-1/2 order-1 lg:order-2 text-center lg:text-left">
-              <span className="text-accent font-bold uppercase tracking-widest text-sm">February 2026</span>
-              <h2 className="text-4xl font-black mt-3 mb-6 leading-tight text-neutral">Christian Center of World Restoration Outreach</h2>
-              <p className="text-base-content/70 text-lg leading-relaxed">
-                A community-focused initiative bridging the gap between local resources and youth potential, fostering growth through faith and entrepreneurship.
-              </p>
-            </div>
-          </section>
+          </div>
 
-          {/* 2. Spring Gala (Alternating side) */}
-          <section className="flex flex-col lg:flex-row items-center gap-24 group">
-            <div className="lg:w-1/2 text-center lg:text-right">
-              <span className="text-accent font-bold uppercase tracking-widest text-sm">April 2025</span>
-              <h2 className="text-4xl font-black mt-3 mb-6 leading-tight text-neutral">Spring Gala Event</h2>
-              <p className="text-base-content/70 text-lg leading-relaxed mb-8">
-                Watch our students take the stage. Our flagship gala combines student showcases with high-energy networking and business pitches.
-              </p>
-            </div>
-            <div className="lg:w-1/2">
-              <div className="grid gap-6">
-                <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl border-b-4 border-accent">
-                  <iframe className="w-full h-full" src="https://www.youtube.com/embed/w6UiWqXI_lo" allowFullScreen></iframe>
-                </div>
-                <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl border-b-4 border-accent lg:-ml-12">
-                   <iframe className="w-full h-full" src="https://www.youtube.com/embed/SVMYB5t8QSk" allowFullScreen></iframe>
-                </div>
-              </div>
-            </div>
-          </section>
+          <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
 
-          {/* 3. Summer Bootcamp */}
-          <section className="flex flex-col lg:flex-row items-center gap-12 group">
-            <div className="lg:w-1/2">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-72 rounded-[2rem] overflow-hidden shadow-xl border-2 border-base-200">
-                   <Image src="/events/church/IMG_3795.JPEG" alt="Kids Learning" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="relative h-72 rounded-[2rem] overflow-hidden shadow-xl">
-                   <Image src="/events/church/IMG_3795.JPEG" alt="Kids Learning" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-              </div>
+          {/* 4. Summer Bootcamp */}
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs font-bold text-accent uppercase tracking-wider">June 2025</span>
+            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Summer Bootcamp</h3>
+            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">An intensive experience where successful business owners, bankers, and community leaders train kids in entrepreneurship and professional skills.</p>
+            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
+              <Image src="/events/summer_bootcamp_2025/summer_bootcamp_image_1.JPEG" alt="Summer Bootcamp" fill className="object-cover" />
             </div>
-            <div className="lg:w-1/2 text-center lg:text-left">
-              <span className="text-accent font-bold uppercase tracking-widest text-sm">June 2025</span>
-              <h2 className="text-4xl font-black mt-3 mb-6 leading-tight text-neutral">Summer Bootcamp</h2>
-              <p className="text-base-content/70 text-lg leading-relaxed">
-                An intensive experience where successful business owners, bankers, and community leaders train kids in entrepreneurship and professional skills.
-              </p>
-            </div>
-          </section>
+          </div>
 
-          {/* 4. Holiday Event (Now unified and styled like others) */}
-          <section className="flex flex-col lg:flex-row items-center gap-12 group">
-            <div className="lg:w-1/2 text-center lg:text-right order-1 lg:order-1">
-              <span className="text-accent font-bold uppercase tracking-widest text-sm">2024 - 2026 Tradition</span>
-              <h2 className="text-4xl font-black mt-3 mb-6 leading-tight text-neutral">Annual Holiday Event</h2>
-              <p className="text-base-content/70 text-lg leading-relaxed">
-                The year-end celebration where kids recognize their accomplishments. Includes the signature "SHARKTANK" competition where sponsors participate as judges.
-              </p>
+          <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
+
+          {/* 5. Annual Holiday Event */}
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs font-bold text-accent uppercase tracking-wider">2024 – 2026 Tradition</span>
+            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Annual Holiday Event</h3>
+            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">The year-end celebration where kids recognize their accomplishments. Includes the signature &quot;SHARKTANK&quot; competition where sponsors participate as judges.</p>
+            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
+              <Image src="/events/holiday/IMG_4627.jpg" alt="Holiday Event" fill className="object-cover" />
             </div>
-            <div className="lg:w-1/2 order-2 lg:order-2">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-64 rounded-3xl overflow-hidden shadow-xl transform group-hover:rotate-2 transition-all duration-500">
-                  <Image src="/events/holiday/IMG_4627.jpg" alt="Holiday 2024" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                </div>
-                <div className="relative h-64 mt-8 rounded-3xl overflow-hidden shadow-xl transform group-hover:-rotate-2 transition-all duration-500">
-                  <Image src="/events/holiday/IMG_4364.JPEG" alt="Holiday 2025/26" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                </div>
-              </div>
-            </div>
-          </section>
+          </div>
 
         </div>
+
       </div>
     </div>
   );

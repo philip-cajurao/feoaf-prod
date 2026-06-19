@@ -4,8 +4,8 @@ import BackButton from "../components/BackButton";
 export default function Donate() {
   return (
     <div className="h-auto relative overflow-hidden">
-      <div className="md:fixed m-8">
-        <BackButton />
+      <div className="relative md:fixed m-8 z-50">
+        <BackButton href="/" />
       </div>
 
       {/* <h2 className="text-4xl font-bold text-center mt-20">

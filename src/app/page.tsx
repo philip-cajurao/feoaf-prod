@@ -70,9 +70,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative bg-base-200">
       <Popup />
-
 
       {/* <div className="hero bg-base-200 h-[calc(100svh-4rem)]">
         <div className="hero-content flex-col lg:flex-row gap-x-16">
@@ -110,9 +109,10 @@ export default function Home() {
 
       {/* Sections */}
       <div>
-        <div className="grid lg:grid-cols-2 py-24 bg-white">
-          <div className="flex flex-col items-center justify-center px-10 lg:pt-0">
-            <div className="w-full max-w-4xl">
+        <div className="py-24 max-w-7xl mx-auto px-10">
+          {/* Who We Are Text */}
+          <div className="flex flex-col items-center justify-center mb-12">
+            <div className="w-full max-w-3xl text-center">
               {/* Title Container */}
               <h2 className="relative font-black text-2xl sm:text-5xl mb-8 inline-block">
                 Who we are?
@@ -120,30 +120,27 @@ export default function Home() {
                 <span className="absolute -bottom-2 left-0 w-1/3 h-2 bg-accent rounded-full opacity-80" />
               </h2>
 
-              <p className="max-w-4xl text-sm sm:text-lg leading-relaxed text-gray-700">
+              <p className="text-sm sm:text-lg leading-relaxed text-gray-700">
                 Future Entrepreneurs of America Foundation is focused on developing,
-                guiding and mentoring young entrepreneurs ages <span className="font-bold">9-17 years old</span> by
+                guiding and mentoring young entrepreneurs ages <span className="font-bold">9-18 years old</span> by
                 providing age-appropriate training and activities to motivate them
                 to become successful entrepreneurs in the future.
               </p>
             </div>
           </div>
 
-         <div className="px-4 py-10 sm:px-8">
-            <div className="rounded-xl shadow-xl border-accent border-6 w-auto h-82 max-w-lg mx-auto">
-              <iframe
-                className="rounded w-full h-full"
-                src="https://www.youtube.com/embed/hmZ4jqj-9u8?si=9rpBtlIbieyYzPte&amp;controls=0"
-                title="Future Entrepreneurs Introduction"
-                allow="autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
+          {/* YouTube Video — full width of the section */}
+          <div className="w-full max-w-5xl mx-auto aspect-video rounded-xl shadow-xl border-accent border-6 overflow-hidden">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/hmZ4jqj-9u8?si=9rpBtlIbieyYzPte&amp;controls=0"
+              title="Future Entrepreneurs Introduction"
+              allow="autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
-
-
 
         {/* <div>
           <div
@@ -196,14 +193,16 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className="py-24 bg-white overflow-hidden">
+        
+
+        <div className="py-24 overflow-hidden">
           <div className="grid place-items-center mb-16">
             <div className="relative">
 
               {/* Secondary accent bar */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-accent rounded-full" />
 
-              <h2 className="relative font-black text-3xl sm:text-6xl uppercase tracking-tighter text-base-content italic">
+              <h2 className="relative font-black text-3xl sm:text-6xl uppercase tracking-tighter text-base-content">
                 Our <span className="text-accent">Programs</span>
               </h2>
             </div>
@@ -211,7 +210,36 @@ export default function Home() {
           <ServicesCard />
         </div>
 
-        <RecentSponsors />
+        {/* Newsletter Section */}
+        <div className="py-24 border-t border-base-300">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <div className="relative inline-block mb-6">
+              <h2 className="font-black text-3xl sm:text-5xl tracking-tight text-base-content">
+                Stay <span className="text-accent">Updated</span>
+              </h2>
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-1 bg-accent rounded-full" />
+            </div>
+            
+            <p className="text-sm sm:text-lg text-gray-600 max-w-xl mx-auto mb-10">
+              Subscribe to our newsletter to receive the latest updates on our programs, upcoming bootcamps, and success stories.
+            </p>
+
+            <form className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="input input-bordered w-full rounded-lg focus:border-accent focus:outline-none"
+                required 
+              />
+              <button type="submit" className="btn btn-accent w-full sm:w-auto rounded-lg px-8">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <RecentSponsors fadeTop={true} />
+
       </div>
     </div>
   );

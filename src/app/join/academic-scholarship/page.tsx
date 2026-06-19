@@ -4,8 +4,8 @@ import BackButton from "../../components/BackButton";
 export default function Join() {
     return (
         <div className="h-auto relative overflow-hidden">
-            <div className="md:fixed m-8">
-                <BackButton />
+            <div className="relative md:fixed m-8 z-50">
+                <BackButton href="/programs" />
             </div>
 
             {/* <h2 className="text-4xl font-bold text-center mt-20">
@@ -13,7 +13,7 @@ export default function Join() {
       </h2> */}
 
             <iframe
-                className="mt-8 h-[calc(100svh-4rem)] h-auto overflow-y-hidden"
+                className="my-20 h-[calc(100svh-4rem)] h-auto overflow-y-hidden"
                 src="https://api.leadconnectorhq.com/widget/form/sm8S1iZ6ePCh8V8PZoNK"
                 style={{ overflowY: "hidden" }}
                 id="inline-sm8S1iZ6ePCh8V8PZoNK"

@@ -22,13 +22,13 @@ export default function CountDown() {
     const cardExpiryDate = useMemo(() => {
         const expiry = new Date(targetDate);
         expiry.setHours(12, 0, 0, 0);
-        if(expiry < targetDate) expiry.setDate(expiry.getDate() + 1);
+        if (expiry < targetDate) expiry.setDate(expiry.getDate() + 1);
         return expiry;
     }, [targetDate]);
 
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-    
-    const [showUpcomingEvents, setShowUpcomingEvents] = useState(true); 
+
+    const [showUpcomingEvents, setShowUpcomingEvents] = useState(true);
     const [showHolidayCard, setShowHolidayCard] = useState(true);
     const [isHappeningNow, setIsHappeningNow] = useState(false);
 
@@ -38,7 +38,7 @@ export default function CountDown() {
         const checkTime = () => {
             const now = new Date().getTime();
             setTimeLeft(getTimeLeft(targetDate));
-            
+
             setShowHolidayCard(now < cardExpiryDate.getTime());
             setShowUpcomingEvents(now >= showUpcomingDate.getTime());
             setIsHappeningNow(now >= targetDate.getTime() && now < cardExpiryDate.getTime());
@@ -95,9 +95,10 @@ export default function CountDown() {
             {showHolidayCard && (
                 <div className={`card w-full max-w-3xl bg-base-100 shadow-2xl overflow-hidden rounded-3xl group transition-all duration-1000 border border-base-200 fade-in-section ${showUpcomingEvents ? '-mt-8' : 'mt-0'}`}>
                     <div className="relative p-8 sm:p-10 pb-16 overflow-hidden">
-                        <img 
-                            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" 
-                            alt="Holiday Event Background" 
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop"
+                            alt="Holiday Event Background"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/60"></div>
@@ -144,60 +145,88 @@ export default function CountDown() {
             )}
 
             {showUpcomingEvents && (
-                <div className="w-full max-w-6xl flex flex-col items-center gap-8 fade-in-section pb-12 mt-24">
-                    <div className="text-center px-4">
-                        <h2 className="text-4xl sm:text-5xl font-extrabold text-neutral mb-2">Upcoming Events</h2>
-                        <div className="h-1.5 w-24 bg-accent rounded-full mx-auto"></div>
-                        
-                        <div className="mt-8 bg-accent/10 border border-accent/20 rounded-2xl p-4 inline-block shadow-sm">
-                            <p className="text-lg sm:text-xl font-black text-neutral flex flex-col sm:flex-row items-center justify-center gap-2 leading-snug">
-                                <span className="text-2xl hidden sm:inline-block">🚀</span> 
-                                <span>
-                                    Ready to dive in? <span className="text-accent underline decoration-wavy underline-offset-4">Click any event below</span> to get details and REGISTER! 
-                                </span>
-                                <span className="text-2xl">👇</span>
-                            </p>
-                        </div>
+                <div className="w-full max-w-7xl flex flex-col items-center gap-12 fade-in-section py-20 mt-8 px-4 sm:px-6">
+
+                    {/* Section Header */}
+                    <div className="text-center">
+                        <h2 className="text-6xl sm:text-7xl font-black text-neutral uppercase tracking-tighter leading-none mb-4">
+                            Upcoming <span className="text-accent">Events</span>
+                        </h2>
+                        <div className="h-2 w-28 bg-accent rounded-full mx-auto mb-6" />
+                        <p className="text-base-content/60 text-lg sm:text-xl max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2">
+                            <span className="text-2xl hidden sm:inline-block">🚀</span>
+                            <span>Click any event below to get <span className="text-accent font-bold underline decoration-wavy underline-offset-4">details</span> and REGISTER!</span>
+                            <span className="text-2xl">👇</span>
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full px-4 items-stretch mt-4">
+                    {/* Event Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full items-stretch">
                         {UPCOMING_EVENTS.map((event) => (
-                            <div 
-                                key={event.id} 
-                                onClick={() => setSelectedEvent(event)} 
-                                className="group h-full cursor-pointer"
+                            <div
+                                key={event.id}
+                                onClick={() => setSelectedEvent(event)}
+                                className="group cursor-pointer h-full"
                             >
-                                <div className="card w-full bg-base-100 shadow-xl overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-2xl border border-base-200 hover:-translate-y-2 h-full flex flex-col">
-                                    <div className="relative p-6 pb-12 h-44 flex flex-col justify-center overflow-hidden">
-                                        <img 
-                                            src={event.flyerUrl} 
-                                            alt={event.title} 
-                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                {/* Card — accent top border + shadow + lift on hover */}
+                                <div className="relative bg-base-100 rounded-3xl overflow-hidden border border-base-200 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 flex flex-col h-full" style={{boxShadow: '0 4px 24px -4px rgba(0,0,0,0.10)'}}>
+
+                                    {/* Accent top stripe */}
+                                    <div className="h-2 w-full bg-accent flex-shrink-0" />
+
+                                    {/* Flyer image — top visual */}
+                                    <div className="relative w-full h-72 sm:h-80 flex-shrink-0 overflow-hidden">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={event.flyerUrl}
+                                            alt={event.title}
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300"></div>
-                                        
-                                        <div className="relative z-10">
-                                            <h3 className="text-2xl font-extrabold text-white leading-tight tracking-tight">
-                                                {event.title}
-                                            </h3>
-                                            <div className="h-1 w-16 bg-accent rounded-full my-3"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent" />
+                                    </div>
+
+                                    {/* ALL INFO — bottom of card */}
+                                    <div className="px-8 pt-7 pb-8 flex flex-col gap-5 flex-grow">
+
+                                        {/* Title + date badge */}
+                                        <div className="flex items-start justify-between gap-4">
+                                            <div className="flex-1 min-w-0">
+                                                <h3 className="text-3xl font-black text-neutral leading-tight tracking-tight">
+                                                    {event.title}
+                                                </h3>
+                                                <div className="h-1 w-16 bg-accent rounded-full mt-3" />
+                                            </div>
+                                            {/* Date badge */}
+                                            <div className="bg-white border border-base-200 rounded-2xl shadow text-center px-5 py-3 min-w-[88px] flex-shrink-0">
+                                                <div className="text-xs font-black text-accent uppercase tracking-widest leading-none">{event.month}</div>
+                                                <div className={`font-black text-neutral leading-none mt-1.5 ${event.date.length > 2 ? 'text-3xl' : 'text-5xl'}`}>{event.date}</div>
+                                                <div className="text-xs text-base-content/40 font-semibold mt-1">{event.year}</div>
+                                            </div>
+                                        </div>
+
+                                        {/* Time & Location */}
+                                        <div className="flex flex-col gap-3">
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-accent text-lg">🕐</span>
+                                                <span className="text-base font-semibold text-base-content/80">{event.time}</span>
+                                            </div>
+                                            <div className="flex items-start gap-3">
+                                                <span className="text-accent text-lg mt-0.5">📍</span>
+                                                <span className="text-base font-semibold text-base-content/80 leading-snug">{event.location}</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Full-width Register button */}
+                                        <div className="mt-auto pt-3">
+                                            <div className="w-full bg-accent text-neutral font-black text-base uppercase tracking-widest py-4 rounded-2xl flex items-center justify-center gap-2 shadow-md group-hover:shadow-lg group-hover:brightness-105 transition-all duration-200">
+                                                View Details &amp; Register
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div className="relative px-6 pb-6 pt-0 bg-base-100 flex-grow">
-                                        <div className="absolute right-6 -top-10 card bg-white p-3 rounded-2xl shadow-lg text-center min-w-[80px] border border-base-200 z-20">
-                                            <div className="text-xs font-bold text-accent uppercase tracking-wider">{event.month}</div>
-                                            <div className={`font-black text-base-content leading-none my-1 ${event.date.length > 2 ? 'text-3xl' : 'text-5xl'}`}>{event.date}</div>
-                                        </div>
-                                        <div className="pt-10 space-y-3">
-                                            <div className="flex items-start space-x-3 opacity-80">
-                                                <span className="text-sm font-medium"><strong className="text-neutral">Time:</strong> {event.time}</span>
-                                            </div>
-                                            <div className="flex items-start space-x-3 opacity-80">
-                                                <span className="text-sm font-medium leading-snug"><strong className="text-neutral">Location:</strong> {event.location}</span>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -207,16 +236,16 @@ export default function CountDown() {
 
             {/* --- POPUP MODAL OVERLAY --- */}
             {selectedEvent && (
-                <div 
+                <div
                     className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm overflow-y-auto"
                     onClick={() => setSelectedEvent(null)}
                 >
-                    <div 
+                    <div
                         className="relative w-full max-w-6xl bg-base-100 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row my-auto animate-modal items-stretch"
-                        onClick={(e) => e.stopPropagation()} 
+                        onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close Button */}
-                        <button 
+                        <button
                             className="btn btn-circle btn-sm absolute top-4 right-4 z-50 border-none bg-black/50 hover:bg-black/80 text-white"
                             onClick={() => setSelectedEvent(null)}
                         >
@@ -225,9 +254,10 @@ export default function CountDown() {
 
                         {/* Image Section */}
                         <div className="w-full md:w-auto md:max-w-[55%] shrink-0 border-b md:border-b-0 md:border-r border-base-200 bg-base-100 flex">
-                            <img 
-                                src={selectedEvent.flyerUrl} 
-                                alt={selectedEvent.title} 
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={selectedEvent.flyerUrl}
+                                alt={selectedEvent.title}
                                 className="w-full md:w-auto h-auto block max-h-[60vh] md:max-h-[90vh] object-contain object-left"
                             />
                         </div>
@@ -239,11 +269,11 @@ export default function CountDown() {
                                     <div className="badge badge-accent badge-lg font-bold uppercase tracking-wider mb-4 border-none text-white shadow-md">
                                         {selectedEvent.month} {selectedEvent.date}, {selectedEvent.year}
                                     </div>
-                                    
+
                                     <h3 className="text-3xl sm:text-4xl font-extrabold text-base-content leading-tight mb-6">
                                         {selectedEvent.title}
                                     </h3>
-                                    
+
                                     <div className="space-y-4 mb-6">
                                         <div>
                                             <h4 className="text-sm font-bold text-base-content/60 uppercase tracking-wider">Time</h4>
@@ -265,7 +295,7 @@ export default function CountDown() {
                                 {/* --- REGISTER BUTTON (Updated to use dynamic URL) --- */}
                                 <div className="mt-auto pt-6 border-t border-base-200">
                                     {/* Make sure 'registrationUrl' is added to your EventData interface and data objects */}
-                                    <Link href={(selectedEvent as any).registrationUrl || "#"} target="_blank" className="w-full">
+                                    <Link href={selectedEvent.registrationUrl || "#"} target="_blank" className="w-full">
                                         <button className="btn btn-accent w-full py-4 h-auto rounded-2xl text-lg font-bold text-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                                             Register Now
                                         </button>

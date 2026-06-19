@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import qr from "../assets/qr/sponsorQR.png";
 import Link from "next/link";
 
@@ -11,7 +10,7 @@ export default function DonateQR() {
       <p className="text-base-300">
         Make a difference in each child’s future. <br />
         <Link href="/sponsors/be-a-sponsor" className="text-accent">
-          Be one of our sponsors.
+          Be a Sponsor
         </Link>
       </p>
       <Image

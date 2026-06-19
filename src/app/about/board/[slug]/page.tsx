@@ -1,10 +1,17 @@
 import React from "react";
-import Link from "next/link";
+import BackButton from "@/app/components/BackButton";
 import { notFound } from "next/navigation";
 import { ArrowLeft, User, Sparkles } from "lucide-react";
 
-// You can move this data to a separate database or config file later!
-const boardBios: Record<string, any> = {
+interface BoardMemberBio {
+  name: string;
+  role: string;
+  image: string;
+  content: React.ReactNode;
+}
+
+// Bio Data
+const boardBios: Record<string, BoardMemberBio> = {
   "mary-rose-lam": {
     name: "Mary Rose Lam",
     role: "Founder, President",
@@ -147,6 +154,27 @@ const boardBios: Record<string, any> = {
       </p>
     ),
   },
+  "sol-sanchez": {
+    name: "Sol Sanchez",
+    role: "Youth Program Leader",
+    image: "",
+    content: (
+      <>
+        <p className="mb-5">
+          Sol Sanchez is the Youth Program Leader for the Future Entrepreneurs of America Foundation.
+          She is dedicated to empowering and guiding young minds as they discover their creative and entrepreneurial potential.
+        </p>
+        <p className="mb-5">
+          Through workshops, mentorship, and youth leadership development programs, Sol helps build confidence
+          in students to think outside the box and turn their ideas into action.
+        </p>
+        <p>
+          She supports the foundation&apos;s mission to bridge the gap between traditional classroom learning
+          and real-world experiences, helping young people grow into active contributors to their communities.
+        </p>
+      </>
+    ),
+  },
 };
 
 export default async function BoardMemberPage({
@@ -163,28 +191,26 @@ export default async function BoardMemberPage({
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
-      {/* Decorative Hero Banner - Black with Uniform, Spaced Pattern */}
+      {/* Decorative Hero Banner */}
       <div className="w-full h-[350px] bg-black relative overflow-hidden">
-        {/* Uniform Grid Pattern Layer */}
         <div className="absolute inset-0 opacity-10 flex flex-wrap justify-center content-start gap-16 p-8 pointer-events-none">
-          {/* We create 50 invisible slots to fill the banner with logos */}
-          {Array.from({ length: 50 }).map((_, i) => (
-            <img
-              key={i}
-              src="/logo.png"
-              alt=""
-              /* Change w-20 h-20 to make the logo larger or smaller */
-              className="w-20 h-20 object-contain select-none"
-            />
-          ))}
+          {Array.from({ length: 50 }).map((_, i) => {
+            return (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={i}
+                src="/logo.png"
+                alt=""
+                className="w-20 h-20 object-contain select-none"
+              />
+            );
+          })}
         </div>
 
-        {/* Subtle gradient overlay to fade the pattern slightly towards the bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 pointer-events-none"></div>
 
-        {/* Navigation Wrapper inside Banner */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 relative z-10">
-          <Link
+          <BackButton
             href="/about"
             className="inline-flex items-center text-white/80 hover:text-white mb-8 font-medium transition-all duration-200 group bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10"
           >
@@ -192,36 +218,45 @@ export default async function BoardMemberPage({
               size={18}
               className="mr-2 group-hover:-translate-x-1 transition-transform"
             />
-            Back to Leadership
-          </Link>
+            Back
+          </BackButton>
         </div>
       </div>
 
-      {/* Main Content Area (Overlapping the banner) */}
-      <div className="flex-grow max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 -mt-40 relative z-20 pb-24">
+      {/* Main Content Area */}
+      <div className="flex-grow max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 -mt-40 relative z-20 pb-24">
         {/* Profile Card */}
         <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 overflow-hidden border border-gray-100 flex flex-col md:flex-row">
-          {/* Left Column: Photo & Quick Info */}
-          <div className="md:w-2/5 bg-gray-50/50 p-8 md:p-12 flex flex-col items-center border-r border-gray-100 relative">
-            <div className="w-56 h-56 rounded-full overflow-hidden border-8 border-white shadow-xl mb-8 bg-gray-200 flex-shrink-0 relative group">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+          
+          {/* Left Column: Full-Length Photo & Quick Info */}
+          <div className="md:w-1/2 bg-gray-50/50 p-8 flex flex-col items-center border-r border-gray-100 relative">
+            
+            {/* CHANGED: Removed rounded-full and fixed w-56 h-56.
+              Added rounded-2xl for soft corners and h-[500px] to accommodate full height.
+              object-contain ensures the whole person fits without being cut off.
+            */}
+            <div className="w-full h-[400px] md:h-[550px] overflow-hidden border-8 border-white shadow-xl mb-8 bg-gray-200 flex-shrink-0 relative group rounded-2xl flex items-center justify-center">
+              {member.image ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-contain md:object-cover transition-transform duration-500"
+                />
+              ) : (
+                <User size={96} className="text-gray-400" />
+              )}
             </div>
 
             <h1 className="text-3xl font-extrabold text-gray-900 text-center mb-2 tracking-tight">
               {member.name}
             </h1>
 
-            {/* Accent colored badge */}
             <div className="inline-flex items-center justify-center px-4 py-1.5 bg-accent/10 text-accent rounded-full font-bold text-sm tracking-wide mt-2">
               <Sparkles size={16} className="mr-2" />
               {member.role}
             </div>
 
-            {/* Accent colored divider line */}
             <div className="w-12 h-1 bg-accent rounded-full mt-8 mb-6"></div>
 
             <p className="text-gray-500 text-sm text-center font-medium">
@@ -230,9 +265,8 @@ export default async function BoardMemberPage({
           </div>
 
           {/* Right Column: Full Biography */}
-          <div className="md:w-3/5 p-8 md:p-12 lg:p-14 bg-white">
+          <div className="md:w-1/2 p-8 md:p-12 lg:p-14 bg-white">
             <div className="flex items-center mb-8 pb-4 border-b border-gray-100">
-              {/* Accent colored icon background */}
               <div className="bg-accent/10 p-3 rounded-xl mr-4">
                 <User size={24} className="text-accent" />
               </div>
@@ -241,7 +275,6 @@ export default async function BoardMemberPage({
               </h2>
             </div>
 
-            {/* Biography Text */}
             <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed font-normal">
               {member.content}
             </div>

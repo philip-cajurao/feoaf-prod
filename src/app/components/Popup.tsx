@@ -24,15 +24,15 @@ export default function Popup() {
                         />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">Sponsor a Future Entrepreneur!</h2>
-                        <p>Support a Kid to Build Their Dreams and Build a Legacy</p>
+                        <h2 className="card-title">Sponsor a Future Entrepreneur</h2>
+                        <p>Sponsor a Kid. Inspire a Dream. Build a Future</p>
                         <div className="card-actions justify-between modal-action">
                             <form method="dialog">
                                 <button className="btn btn-link no-underline text-neutral decoration-transparent">Close</button>
                             </form>
                             <form method="dialog">
                                 <div className="border rounded-lg">
-                                    <button className="btn btn-accent rounded-lg" onClick={() => navigate.push('/sponsors')}>Learn more</button>
+                                    <button className="btn btn-accent rounded-lg" onClick={() => navigate.push('/sponsors/sponsor-a-kid')}>Learn more</button>
                                 </div>
                             </form>
                         </div>

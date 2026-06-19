@@ -5,6 +5,7 @@ import Drawer from "./components/Drawer";
 import Script from "next/script";
 import { Metadata } from "next";
 import PreResources from "@/lib/preresources";
+import NavigationTracker from "./components/NavigationTracker";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -38,7 +39,8 @@ export default function RootLayout({
 
       <PreResources />
 
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${poppins.className} antialiased`} suppressHydrationWarning>
+        <NavigationTracker />
 
         <Drawer>
           {children}

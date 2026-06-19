@@ -7,7 +7,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="footer justify-between sm:footer-horizontal bg-neutral text-neutral-content p-10">
+      <footer className="footer justify-between sm:footer-horizontal bg-neutral/98 text-neutral-content p-10">
         <nav>
           <h6 className="footer-title">Company</h6>
           <Link href="/about" className="link link-hover">
@@ -31,19 +31,21 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Donate</h6>
-          <Link href="/donate" className="link link-hover">
-
-          <Image
-            placeholder="blur"
-            loading="lazy"
-            alt="qr donation"
-            src={qr}
-            width={100}
-          />
+          <p className="text-xs max-w-[160px] leading-snug opacity-85">
+            Make a difference in each child’s future
+          </p>
+          <Link href="/donate" className="link link-hover mt-2">
+            <Image
+              placeholder="blur"
+              loading="lazy"
+              alt="qr donation"
+              src={qr}
+              width={100}
+            />
           </Link>
-          </nav>
+        </nav>
       </footer>
-      <footer className="footer grid md:grid-cols-3 place-items-center bg-neutral text-neutral-content text-base-content px-10 py-4">
+      <footer className="footer grid md:grid-cols-3 place-items-center bg-neutral/98 text-neutral-content text-base-content px-10 py-4">
         <nav className="order-2 md:order-1 grid-flow-col items-center justify-self-center md:justify-self-start">
           <Image
             placeholder="blur"

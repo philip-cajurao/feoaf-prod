@@ -4,8 +4,8 @@ import React from "react";
 export default function AnnualGoldSponsor() {
   return (
     <div className="h-auto relative overflow-hidden">
-      <div className="md:fixed m-8">
-        <BackButton />
+      <div className="relative md:fixed m-8 z-50">
+        <BackButton href="/sponsors" />
       </div>
 
       <iframe

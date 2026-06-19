@@ -3,6 +3,7 @@ import React from "react";
 import RecentSponsors from "../components/RecentSponsors";
 import SponsorBanner from "../components/banners/SponsorBanner";
 import SponsorshipOpportunities from "./SponsorshipOpportuinities";
+import DonateQR from "../components/DonateQR";
 
 export const metadata: Metadata = {
   title: "Sponsors | Future Entrepreneurs Of America Foundation",
@@ -21,10 +22,13 @@ export const metadata: Metadata = {
 
 export default function Sponsors() {
   return (
-    <div className="relative">
+    <div className="relative bg-base-200">
       <SponsorBanner />
+      <RecentSponsors showQR={false} />
       <SponsorshipOpportunities />
-      <RecentSponsors />
+      <div className="py-16 bg-neutral">
+        <DonateQR />
+      </div>
     </div>
   );
 }

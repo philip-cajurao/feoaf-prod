@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/carousel";
 import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
+
+// Hero Backgrounds
 import image1 from "../assets/latest_events/FE1.jpg";
 import image2 from "../assets/latest_events/FE2.jpg";
 import image3 from "../assets/latest_events/FE3.jpg";
@@ -16,108 +18,165 @@ import image4 from "../assets/latest_events/fe.jpg";
 import image5 from "../assets/latest_events/fe4.jpg";
 import image6 from "../assets/latest_events/fe5.jpg";
 import image7 from "../assets/latest_events/fe6.jpg";
+
+import summerBootCamp from "../assets/events/summerBootCamp.png";
+import galaImage from "../assets/events/GALA.jpg";
+
 import Link from "next/link";
+import { ChevronDown, MapPin, Clock } from "lucide-react";
 
 function Hero() {
   const plugin = React.useRef([
     Autoplay({ delay: 7000, stopOnInteraction: true }),
     Fade(),
   ]);
-  return (
-    <div className="h-auto md:h-[calc(100svh-4rem)] grid md:grid-cols-2">
-      {/* <span className="bg-linear-to-b from-base-300 to-transparent absolute top-0 h-2/3 w-full" /> */}
-      <div className="w-full h-[calc(60svh)] md:order-last md:h-full flex justify-center items-center py-4 px-10">
-        <div className="max-w-2xl flex flex-col items-center">
-          <h2 className="text-center text-xl sm:text-3xl/10 font-bold">
-            We are the future of the world. We are the next generation, we are
-            tomorrow’s people, we are the Future Entrepreneurs.
-          </h2>
-          <p className="text-center text-sm sm:text-lg max-w-md px-10 mt-4">
-            Join us and together we can make a difference!
-          </p>
 
+  const heroImages = [image1, image2, image3, image4, image5, image6, image7];
+
+  // --- UPDATED EVENTS DATA ---
+  const upcomingEvents = [
+    { 
+        id: "summer-bootcamp",
+        title: "Entrepreneurship Summer Bootcamp", 
+        date: "15-19", 
+        month: "June",
+        year: "2026",
+        time: "9AM - 2PM",
+        location: "The Waverly Club, 15401 Fog Mountain Cir, Haymarket, VA 20169",
+        description: "The FEOAF Summer Bootcamp is a fun, hands-on program where youth learn entrepreneurship, financial literacy, and leadership skills.",
+        flyerUrl: summerBootCamp.src,
+        registrationUrl: "/register/bootcamp"
+    },
+    { 
+        id: "annual-gala",
+        title: "The FEOAF Gala", 
+        date: "17", 
+        month: "Oct",
+        year: "2026",
+        time: "6:30PM - 11PM",
+        location: "Heritage Hunt Country Club, 6901 Arthur Hills Drive, Gainesville, VA 20155",
+        description: "The FEOAF Gala is our premier annual fundraising event that supports programs designed to nurture young entrepreneurs.",
+        flyerUrl: galaImage.src,
+        registrationUrl: "https://givebutter.com/c/X0GXZ6?source=qr&version=1"
+    }
+  ];
+
+  return (
+    <div className="flex flex-col w-full">
+      {/* --- HERO SECTION --- */}
+      <section className="relative h-[calc(100dvh-4rem)] w-full overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <Carousel
+            plugins={plugin.current}
+            opts={{ loop: true, duration: 50 }}
+            className="h-full w-full"
+          >
+            <CarouselContent className="h-full m-0">
+              {heroImages.map((img, index) => (
+                <CarouselItem key={index} className="h-full p-0">
+                  <Image
+                    alt="Background Slide"
+                    placeholder="blur"
+                    priority={index === 0}
+                    src={img}
+                    fill
+                    className="object-cover object-center"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        <div className="absolute inset-0 z-10 bg-black/50" />
+
+        <div className="relative z-20 max-w-4xl px-6 text-center text-white flex flex-col items-center">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">
+            Empowering the Next Generation of Entrepreneurs
+          </h1>
+          <p className="text-sm sm:text-lg md:text-2xl mb-8 text-gray-100 max-w-2xl drop-shadow-md">
+            From ideas to real businesses, Future Entrepreneurs of America equips 
+            youth ages 9–18 with the skills and confidence to lead.
+          </p>
+          
           <Link href="/join">
-            <div className="border mt-4">
-              <button className="btn btn-accent sm:btn-xl">
-                {/* <span className="absolute h-[calc(100%+2rem)] w-[calc(100%+2rem)] bg-accent rounded-full -z-10 -top-3 -left-3 -translate-x-full group-hover:translate-x-0 transform-all duration-300" /> */}
-                Join
-              </button>
-            </div>
+            <button className="btn btn-accent btn-md sm:btn-lg px-8 sm:px-12 shadow-xl hover:scale-105 transition-transform text-white">
+              Join Now
+            </button>
           </Link>
         </div>
-      </div>
 
-      <div className="relative h-auto my-4 md:my-0 md:order-first">
-        <Carousel
-          plugins={plugin.current}
-          opts={{
-            align: "start",
-            loop: true,
-            duration: 50,
-          }}
-          className="h-full w-full top-0 left-0 -z-10"
-        >
-          <CarouselContent>
-            <CarouselItem>
-              <Image
-                alt="test"
-                placeholder="blur"
-                priority={true}
-                src={image1}
-                className="object-cover object-center h-full brightness-90 md:rounded-br-2xl"
-              />
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-                alt="test"
-                placeholder="blur"
-                src={image2}
-                className="object-cover object-center h-full brightness-90 md:rounded-br-2xl"
-              />
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-                alt="test"
-                placeholder="blur"
-                src={image3}
-                className="object-cover object-center h-full brightness-90 md:rounded-br-2xl"
-              />
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-                alt="test"
-                placeholder="blur"
-                src={image4}
-                className="object-cover object-center h-full brightness-90 md:rounded-br-2xl"
-              />
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-                alt="test"
-                placeholder="blur"
-                src={image5}
-                className="object-cover object-right-bottom h-full brightness-90 md:rounded-br-2xl"
-              />
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-                alt="test"
-                placeholder="blur"
-                src={image6}
-                className="object-cover object-left-top h-full brightness-90 md:rounded-br-2xl"
-              />
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-                alt="test"
-                placeholder="blur"
-                src={image7}
-                className="object-cover object-center h-full brightness-90 md:rounded-br-2xl"
-              />
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
-      </div>
+        {/* Scroll Indicator positioned relative to the screen height */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none">
+          <p className="text-xs sm:text-sm font-bold uppercase text-center tracking-[0.2em] text-accent mb-8">
+            Join our Upcoming Events Below
+          </p>
+          <div className="animate-bounce p-2 bg-white/10 rounded-full backdrop-blur-md">
+            <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+          </div>
+        </div>
+      </section>
+
+      {/* --- UPCOMING EVENTS SECTION --- */}
+      <section id="events" className="bg-base-200 py-24 px-6 border-t border-base-300">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col justify-between items-center mb-12 gap-4">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold italic">Upcoming Events</h2>
+              <div className="h-1.5 w-24 bg-accent mt-2" />
+            </div>
+            <p className="text-lg opacity-90 max-w-md">
+              Secure your spot in our upcoming workshops and networking sessions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {upcomingEvents.map((event) => (
+              <Link 
+                key={event.id} 
+                href="/events"
+                className="group flex flex-col h-full max-w-sm mx-auto bg-white rounded-2xl overflow-hidden border border-black/50 transition-all hover:border-accent hover:shadow-none shadow-2xl cursor-pointer"
+              >
+                {/* Image Wrapper */}
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image 
+                    src={event.flyerUrl}
+                    alt={event.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4 flex flex-col items-center justify-center bg-white text-black px-3 py-1 rounded-lg shadow-lg border border-black/50">
+                    <span className="text-xs font-bold uppercase leading-none">{event.month}</span>
+                    <span className="text-xl font-black">{event.date}</span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors line-clamp-2">
+                    {event.title}
+                  </h3>
+                  
+                  <div className="space-y-2 mb-4 text-sm opacity-80">
+                    <div className="flex items-start gap-2">
+                      <Clock className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span className="line-clamp-2">{event.location}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-sm opacity-70 line-clamp-3 flex-grow">
+                    {event.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

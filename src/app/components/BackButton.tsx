@@ -13,23 +13,15 @@ interface BackButtonProps {
 
 export default function BackButton({ href, className, label = "Back", children }: BackButtonProps) {
   const router = useRouter();
-  const [targetPath, setTargetPath] = useState<string | null>(null);
+  // null = loading, true = has browser history, false = no history (direct/new tab)
+  const [hasBrowserHistory, setHasBrowserHistory] = useState<boolean | null>(null);
 
   useEffect(() => {
-    try {
-      const prevPath = sessionStorage.getItem("prevPath");
-      if (prevPath) {
-        setTargetPath(prevPath);
-      } else if (href) {
-        setTargetPath(href);
-      }
-    } catch (e) {
-      console.warn("sessionStorage is not available", e);
-      if (href) {
-        setTargetPath(href);
-      }
-    }
-  }, [href]);
+    // window.history.length is 1 when the page is the first (or only) entry —
+    // i.e., opened directly, in a new tab, or from an external link.
+    // When > 1 the user navigated here from somewhere, so router.back() is safe.
+    setHasBrowserHistory(window.history.length > 1);
+  }, []);
 
   const defaultContent = (
     <>
@@ -57,14 +49,30 @@ export default function BackButton({ href, className, label = "Back", children }
   const content = children || defaultContent;
   const combinedClassName = className || "flex items-center gap-x-1 cursor-pointer";
 
-  if (targetPath) {
+  // While determining history state, render nothing to avoid flicker
+  if (hasBrowserHistory === null) {
+    return null;
+  }
+
+  // Has real browser history → go back (respects the actual page the user came from)
+  if (hasBrowserHistory) {
     return (
-      <Link href={targetPath} className={combinedClassName}>
+      <button className={combinedClassName} onClick={() => router.back()}>
+        {content}
+      </button>
+    );
+  }
+
+  // No browser history (direct navigation / new tab) → use the fallback href
+  if (href) {
+    return (
+      <Link href={href} className={combinedClassName}>
         {content}
       </Link>
     );
   }
 
+  // Last resort: try router.back() anyway
   return (
     <button className={combinedClassName} onClick={() => router.back()}>
       {content}

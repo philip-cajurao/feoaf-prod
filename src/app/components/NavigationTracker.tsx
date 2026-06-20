@@ -7,17 +7,19 @@ export default function NavigationTracker() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Save previous path when pathname changes
+    // Clean up stale sessionStorage keys from the old BackButton implementation.
+    // These are no longer read anywhere, but old clients may still have them cached.
     try {
-      const currentStored = sessionStorage.getItem("currentPath");
-      if (currentStored && currentStored !== pathname) {
-        sessionStorage.setItem("prevPath", currentStored);
-      }
-      sessionStorage.setItem("currentPath", pathname);
+      sessionStorage.removeItem("prevPath");
+      sessionStorage.removeItem("currentPath");
     } catch (e) {
       console.warn("sessionStorage is not available", e);
     }
-  }, [pathname]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // run once on first mount
+
+  // Suppress unused-variable warning — pathname kept for potential future use
+  void pathname;
 
   return null;
 }

@@ -283,11 +283,8 @@ export default function FundingRequest() {
                 </div>
             </Link>
 
-            <div className="pt-8 text-center">
-                <p className="text-sm text-gray-400 font-medium">
-                    Have questions? <a href="#" className="text-black underline decoration-yellow-400 decoration-2 underline-offset-2 hover:bg-yellow-100 transition-colors">Contact Support</a>
-                </p>
-            </div>
+
+
 
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react";
+import { Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -194,8 +195,20 @@ const StarIcon = () => (
   </svg>
 );
 
-export default function SponsorshipOpportunities() {
-  const [activeTab, setActiveTab] = useState<"sponsors" | "packages">("sponsors");
+
+// Inner component that uses useSearchParams (must be wrapped in Suspense)
+function SponsorshipOpportunitiesInner() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
+  const activeTab: "sponsors" | "packages" = tabParam === "packages" ? "packages" : "sponsors";
+
+  const setActiveTab = (tab: "sponsors" | "packages") => {
+    // Use replace so switching tabs doesn't add browser history entries
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("tab", tab);
+    router.replace(`/sponsors?${params.toString()}`, { scroll: false });
+  };
 
   // Reconfigured partners object array to support typography logos dynamically
   const partners = [
@@ -488,3 +501,12 @@ export default function SponsorshipOpportunities() {
     </div>
   );
 }
+
+// Suspense wrapper required by Next.js when using useSearchParams in a client component
+export default function SponsorshipOpportunities() {
+  return (
+    <Suspense fallback={null}>
+      <SponsorshipOpportunitiesInner />
+    </Suspense>
+  );
+}

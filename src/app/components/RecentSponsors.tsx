@@ -64,7 +64,7 @@ export default function RecentSponsors({ showQR = true, fadeTop = false }: { sho
 
         <div className="flex flex-col items-center justify-center mb-12 relative z-10">
           <h2 className="text-base-content sm:text-4xl font-black text-2xl max-w-2xl text-center px-2 uppercase tracking-wide">
-            Annual Bronze Sponsors
+            Annual Sponsors
           </h2>
           <div className="h-1 w-20 bg-accent mt-4 rounded-full"></div>
         </div>

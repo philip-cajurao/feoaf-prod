@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import RecentSponsors from "./components/RecentSponsors";
 import ServicesCard from "./components/ProgramsCard";
 import Popup from "./components/Popup";
+import NewsletterSection from "./components/NewsletterSection";
 // import SeeFlyerModal from "./components/SeeFlyerModal";
 
 export const metadata: Metadata = {
@@ -211,32 +212,7 @@ export default function Home() {
         </div>
 
         {/* Newsletter Section */}
-        <div className="py-24 border-t border-base-300">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <div className="relative inline-block mb-6">
-              <h2 className="font-black text-3xl sm:text-5xl tracking-tight text-base-content">
-                Stay <span className="text-accent">Updated</span>
-              </h2>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-1 bg-accent rounded-full" />
-            </div>
-            
-            <p className="text-sm sm:text-lg text-gray-600 max-w-xl mx-auto mb-10">
-              Subscribe to our newsletter to receive the latest updates on our programs, upcoming bootcamps, and success stories.
-            </p>
-
-            <form className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="input input-bordered w-full rounded-lg focus:border-accent focus:outline-none"
-                required 
-              />
-              <button type="submit" className="btn btn-accent w-full sm:w-auto rounded-lg px-8">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
+        <NewsletterSection />
 
         <RecentSponsors fadeTop={true} />
 

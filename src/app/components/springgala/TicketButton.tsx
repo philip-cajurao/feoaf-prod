@@ -3,7 +3,7 @@ import React from "react";
 export default function TicketButton() {
   return (
     <a
-      href=" https://join.feoaf.org/springgala2025"
+      href="https://join.feoaf.org/springgala2025"
       className="mx-auto flex items-center justify-center z-10 p-4 rounded-sm
       bg-neutral text-neutral-content hover:bg-neutral/95 group cursor-pointer
       relative overflow-hidden border-2 border-[#09090b]"

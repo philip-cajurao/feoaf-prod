@@ -157,20 +157,15 @@ const boardBios: Record<string, BoardMemberBio> = {
   "sol-sanchez": {
     name: "Sol Sanchez",
     role: "Youth Program Leader",
-    image: "",
+    image: "/board/sol-sanchez.jpg",
     content: (
       <>
-        <p className="mb-5">
-          Sol Sanchez is the Youth Program Leader for the Future Entrepreneurs of America Foundation.
-          She is dedicated to empowering and guiding young minds as they discover their creative and entrepreneurial potential.
-        </p>
-        <p className="mb-5">
-          Through workshops, mentorship, and youth leadership development programs, Sol helps build confidence
-          in students to think outside the box and turn their ideas into action.
-        </p>
         <p>
-          She supports the foundation&apos;s mission to bridge the gap between traditional classroom learning
-          and real-world experiences, helping young people grow into active contributors to their communities.
+          Sol Sanchez is an entrepreneur at a very young age. She co-owns La Pulpería HN504
+          in Springfield, Virginia, and founded Sol&apos;s Digital Co., a digital branding agency.
+          She began with Future Entrepreneurs of America Foundation as a volunteer translator
+          and now leads the organization&apos;s youth e-newsletter on financial literacy and
+          entrepreneurship and the youngest board member in the organization.
         </p>
       </>
     ),

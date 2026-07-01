@@ -136,14 +136,6 @@ export default function GalaModal({ onClose }: GalaModalProps) {
                 >
                   Get Tickets
                 </Link>
-                <Link
-                  href="/new-sponsor"
-                  id="gala-modal-sponsor-btn"
-                  className="btn btn-outline flex-1 py-4 h-auto rounded-2xl text-lg font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
-                  onClick={onClose}
-                >
-                  Sponsorship Info
-                </Link>
               </div>
 
             </div>

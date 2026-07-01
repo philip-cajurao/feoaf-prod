@@ -7,6 +7,7 @@ import Hero from "./components/HeroDefault";
 import GalaSection from "./components/GalaSection";
 import UpcomingEvents from "./components/UpcomingEvents";
 import { Metadata } from "next";
+import UpcomingEvents from "./components/UpcomingEvents";
 import RecentSponsors from "./components/RecentSponsors";
 import ServicesCard from "./components/ProgramsCard";
 import Popup from "./components/Popup";

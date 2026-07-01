@@ -178,7 +178,7 @@ function Hero() {
               Empowering the Next Generation of Entrepreneurs
             </h2>
             <p className="text-sm opacity-60 mt-1 max-w-lg">
-              From ideas to real businesses — FEOAF equips youth ages 9–18 with the skills and confidence to lead.
+              From ideas to real businesses, Future Entrepreneurs of America equips youth ages 9–18 with the skills and confidence to lead.
             </p>
           </div>
           <Link href="/join" className="shrink-0 btn btn-accent font-bold px-8">

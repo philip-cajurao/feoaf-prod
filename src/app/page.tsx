@@ -1,5 +1,11 @@
+// ── HERO VERSION SWITCH ──────────────────────────────────────────────────────
+// Gala promo (current/temporary):
 import Hero from "./components/Hero";
+// Original design (rollback): swap the two lines below to revert
+// import Hero from "./components/HeroDefault";
+// ─────────────────────────────────────────────────────────────────────────────
 import { Metadata } from "next";
+import UpcomingEvents from "./components/UpcomingEvents";
 import RecentSponsors from "./components/RecentSponsors";
 import ServicesCard from "./components/ProgramsCard";
 import Popup from "./components/Popup";
@@ -107,6 +113,7 @@ export default function Home() {
         </div>
       </div> */}
       <Hero />
+      <UpcomingEvents />
 
       {/* Sections */}
       <div>

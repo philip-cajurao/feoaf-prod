@@ -13,16 +13,16 @@ export default function BootcampsPage() {
       title: "Youth Bootcamps",
       // Gallery images allocated explicitly for 2025
       gallery: [
-        { src: "/events/summer_bootcamp_2025/IMG_0082-1.JPEG", alt: "Students presenting ideas" },
-        { src: "/events/summer_bootcamp_2025/IMG_0084.JPEG", alt: "Youth Bootcamp group photo" },
-        { src: "/events/summer_bootcamp_2025/IMG_0089.JPEG", alt: "Working on business concepts" },
-        { src: "/events/summer_bootcamp_2025/IMG_5541.JPEG", alt: "Interactive bootcamp session" },
-        { src: "/events/summer_bootcamp_2025/IMG_5549.JPEG", alt: "Student presentation" },
-        { src: "/events/summer_bootcamp_2025/IMG_5550.JPEG", alt: "Collaborative teamwork" },
-        { src: "/events/summer_bootcamp_2025/IMG_5551.JPEG", alt: "Pitch showcase" },
-        { src: "/events/summer_bootcamp_2025/IMG_5556.JPEG", alt: "Students receiving awards" },
-        { src: "/events/summer_bootcamp_2025/summer_bootcamp_image_1.JPEG", alt: "Group brainstorming" },
-        { src: "/events/summer_bootcamp_2025/summer_bootcamp_image_2.JPEG", alt: "Award recognition ceremony" },
+        { src: "/events/summer_bootcamp/2025/IMG_0082-1.JPEG", alt: "Students presenting ideas" },
+        { src: "/events/summer_bootcamp/2025/IMG_0084.JPEG", alt: "Youth Bootcamp group photo" },
+        { src: "/events/summer_bootcamp/2025/IMG_0089.JPEG", alt: "Working on business concepts" },
+        { src: "/events/summer_bootcamp/2025/IMG_5541.JPEG", alt: "Interactive bootcamp session" },
+        { src: "/events/summer_bootcamp/2025/IMG_5549.JPEG", alt: "Student presentation" },
+        { src: "/events/summer_bootcamp/2025/IMG_5550.JPEG", alt: "Collaborative teamwork" },
+        { src: "/events/summer_bootcamp/2025/IMG_5551.JPEG", alt: "Pitch showcase" },
+        { src: "/events/summer_bootcamp/2025/IMG_5556.JPEG", alt: "Students receiving awards" },
+        { src: "/events/summer_bootcamp/2025/summer_bootcamp_image_1.JPEG", alt: "Group brainstorming" },
+        { src: "/events/summer_bootcamp/2025/summer_bootcamp_image_2.JPEG", alt: "Award recognition ceremony" },
       ]
     },
     /* FUTURE BOOTCAMPS CAN BE ADDED HERE:

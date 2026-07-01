@@ -8,8 +8,7 @@ export default function GalaSection() {
     <section className="py-16 px-4 sm:px-6 border-t border-b border-base-300" aria-label="Gala Event Info">
       {/* Card wrapper matching the popup layout - backgrounds removed, border & shadow kept */}
       <div 
-        className="w-full max-w-6xl rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row mx-auto items-stretch border border-base-200"
-        style={{ boxShadow: '0 10px 30px -10px rgba(0,0,0,0.15)' }}
+        className="w-full max-w-6xl rounded-3xl overflow-hidden flex flex-col md:flex-row mx-auto items-stretch border border-base-200"
       >
         
         {/* Flyer panel (left) - background removed */}

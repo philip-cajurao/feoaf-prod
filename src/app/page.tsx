@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 // import Hero from "./components/HeroDefault";
 // ─────────────────────────────────────────────────────────────────────────────
 import { Metadata } from "next";
+import UpcomingEvents from "./components/UpcomingEvents";
 import RecentSponsors from "./components/RecentSponsors";
 import ServicesCard from "./components/ProgramsCard";
 import Popup from "./components/Popup";
@@ -112,6 +113,7 @@ export default function Home() {
         </div>
       </div> */}
       <Hero />
+      <UpcomingEvents />
 
       {/* Sections */}
       <div>

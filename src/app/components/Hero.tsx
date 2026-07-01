@@ -66,7 +66,7 @@ function Hero() {
         </div>
 
         {/* Dark gradient overlay — heavier at top & bottom for legibility */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/85 via-black/60 to-black/90" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/90 via-black/80 to-black/95" />
 
         {/* Gala advertisement — centred on the hero */}
         <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center text-white px-6 py-6">

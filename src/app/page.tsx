@@ -1,4 +1,9 @@
+// ── HERO VERSION SWITCH ──────────────────────────────────────────────────────
+// Gala promo (current/temporary):
 import Hero from "./components/Hero";
+// Original design (rollback): swap the two lines below to revert
+// import Hero from "./components/HeroDefault";
+// ─────────────────────────────────────────────────────────────────────────────
 import { Metadata } from "next";
 import RecentSponsors from "./components/RecentSponsors";
 import ServicesCard from "./components/ProgramsCard";

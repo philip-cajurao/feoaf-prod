@@ -16,7 +16,7 @@ const programs = [
   {
     title: "Youth Entrepreneurship Bootcamps",
     description: "Kids showcase their products and services in a festival type event. There would be various event vendors and would be expecting around 500 attendees.",
-    image: "/events/summer_bootcamp_2025/IMG_0084.JPEG",
+    image: "/events/summer_bootcamp/2025/IMG_0084.JPEG",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
@@ -36,7 +36,7 @@ const programs = [
   {
     title: "Community Outreach Programs",
     description: "It’s a community event wherein we invite our sponsors to mingle and socialize with our community and have some fun in a little “Community Auction Fundraising”",
-    image: "/events/outreach images/DSC08222.JPG",
+    image: "/events/outreach images/2025/DSC08222.JPG",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />

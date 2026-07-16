@@ -154,6 +154,26 @@ const boardBios: Record<string, BoardMemberBio> = {
       </p>
     ),
   },
+  "steffi": {
+    name: "Steffi",
+    role: "Board Member",
+    image: "/board/steffi.png",
+    content: (
+      <>
+        <p className="mb-5">
+          Steffi is a middle school educator, mentor, and yearbook adviser whose
+          passion for helping students unlock their creativity extends from the
+          writing classroom to aspiring entrepreneurs. She is thrilled to join
+          the team as a coach and mentor and looks forward to helping big dreams
+          take a step closer to reality.
+        </p>
+        <p>
+          Additionally, she is a Pampered Chef consultant and mom to two of
+          wonderful young men.
+        </p>
+      </>
+    ),
+  },
   "sol-sanchez": {
     name: "Sol Sanchez",
     role: "Youth Program Leader",

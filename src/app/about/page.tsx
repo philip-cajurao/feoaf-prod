@@ -64,6 +64,13 @@ const boardMembers = [
     role: "Board Member",
     image: "/board/lydia-lui.jpeg",
     description: "A member of the US National Defense Corps and active community leader in the DMV area. Lydia balances her passion for community service with her entrepreneurship in the jewelry and beauty industries through Atomy."
+  },
+  {
+    name: "Steffi",
+    slug: "steffi",
+    role: "Board Member",
+    image: "/board/steffi.png",
+    description: "Steffi is a middle school educator, mentor, and yearbook adviser whose passion for helping students unlock their creativity extends from the writing classroom to aspiring entrepreneurs. She is thrilled to join the team as a coach and mentor and looks forward to helping big dreams take a step closer to reality. Additionally, she is a Pampered Chef consultant and mom to two of wonderful young men."
   }
 ];
 
@@ -141,7 +148,7 @@ export default function About() {
             {/* Board Members */}
             <div className="mb-20">
               <h4 className="text-xl font-bold text-accent uppercase tracking-widest text-center mb-10">Board Members</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {boardMembers.map((member, index) => (
                   <Link 
                     href={`/about/board/${member.slug}`}

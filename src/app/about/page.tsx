@@ -5,7 +5,7 @@ import Image from "next/image";
 import CompanyStory from "../components/CompanyStory";
 import MissionVision from "../components/MissionVision";
 import StoryBanner from "../components/banners/StoryBanner";
-import { Lightbulb, Rocket, Target, TrendingUp, Users, Briefcase } from "lucide-react";
+import { Lightbulb, Rocket, TrendingUp, Users, Briefcase } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About | Future Entrepreneurs Of America Foundation",
@@ -64,6 +64,13 @@ const boardMembers = [
     role: "Board Member",
     image: "/board/lydia-lui.jpeg",
     description: "A member of the US National Defense Corps and active community leader in the DMV area. Lydia balances her passion for community service with her entrepreneurship in the jewelry and beauty industries through Atomy."
+  },
+  {
+    name: "Steffi",
+    slug: "steffi",
+    role: "Board Member",
+    image: "/board/steffi.png",
+    description: "Steffi is a middle school educator, mentor, and yearbook adviser whose passion for helping students unlock their creativity extends from the writing classroom to aspiring entrepreneurs. She is thrilled to join the team as a coach and mentor and looks forward to helping big dreams take a step closer to reality. Additionally, she is a Pampered Chef consultant and mom to two of wonderful young men."
   }
 ];
 
@@ -72,7 +79,6 @@ const BackgroundIcons = () => (
     <Rocket size={120} className="absolute top-20 left-10 text-blue-500 rotate-12" />
     <Lightbulb size={150} className="absolute top-80 right-20 text-yellow-500 -rotate-12" />
     <TrendingUp size={180} className="absolute top-[800px] left-32 text-emerald-500" />
-    <Target size={140} className="absolute top-[1300px] right-32 text-rose-500" />
     <Users size={160} className="absolute bottom-[600px] left-20 text-indigo-500" />
     <Briefcase size={130} className="absolute bottom-40 right-10 text-teal-500 rotate-6" />
   </div>
@@ -141,7 +147,7 @@ export default function About() {
             {/* Board Members */}
             <div className="mb-20">
               <h4 className="text-xl font-bold text-accent uppercase tracking-widest text-center mb-10">Board Members</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {boardMembers.map((member, index) => (
                   <Link 
                     href={`/about/board/${member.slug}`}

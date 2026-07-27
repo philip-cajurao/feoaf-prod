@@ -48,7 +48,7 @@ export default function Events() {
             <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Christian Center of World Restoration Outreach</h3>
             <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">A community-focused initiative bridging the gap between local resources and youth potential, fostering growth through faith and entrepreneurship.</p>
             <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
-              <Image src="/events/outreach images/DSC08222.JPG" alt="CCWRC" fill className="object-cover" />
+              <Image src="/events/outreach images/2025/DSC08222.JPG" alt="CCWRC" fill className="object-cover" />
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export default function Events() {
             <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Summer Bootcamp</h3>
             <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">An intensive experience where successful business owners, bankers, and community leaders train kids in entrepreneurship and professional skills.</p>
             <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
-              <Image src="/events/summer_bootcamp_2025/summer_bootcamp_image_1.JPEG" alt="Summer Bootcamp" fill className="object-cover" />
+              <Image src="/events/summer_bootcamp/2025/summer_bootcamp_image_1.JPEG" alt="Summer Bootcamp" fill className="object-cover" />
             </div>
           </div>
 

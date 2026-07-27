@@ -12,10 +12,10 @@ export default function OutreachPage() {
       title: "Community Outreach",
       // Gallery images allocated for Community Outreach
       gallery: [
-        { src: "/events/outreach images/DSC08222.JPG", alt: "Christian Center of World Restoration Outreach", sizes: "(max-width: 640px) 100vw, 66vw" },
-        { src: "/events/outreach images/DSC08223.JPG", alt: "Outreach Team Gathering", sizes: "(max-width: 640px) 100vw, 33vw" },
-        { src: "/events/outreach images/DSC08233.JPG", alt: "Outreach Event Group", sizes: "(max-width: 640px) 100vw, 33vw" },
-        { src: "/events/outreach images/IMG_3795.JPEG", alt: "Community Outreach Team", sizes: "(max-width: 640px) 100vw, 66vw" },
+        { src: "/events/outreach images/2025/DSC08222.JPG", alt: "Christian Center of World Restoration Outreach", sizes: "(max-width: 640px) 100vw, 66vw" },
+        { src: "/events/outreach images/2025/DSC08223.JPG", alt: "Outreach Team Gathering", sizes: "(max-width: 640px) 100vw, 33vw" },
+        { src: "/events/outreach images/2025/DSC08233.JPG", alt: "Outreach Event Group", sizes: "(max-width: 640px) 100vw, 33vw" },
+        { src: "/events/outreach images/2025/IMG_3795.JPEG", alt: "Community Outreach Team", sizes: "(max-width: 640px) 100vw, 66vw" },
       ]
     }
   ];

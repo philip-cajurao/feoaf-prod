@@ -1,5 +1,11 @@
+// ── HERO VERSION SWITCH ──────────────────────────────────────────────────────
+// Gala promo (current/temporary):
 import Hero from "./components/Hero";
+// Original design (rollback): swap the two lines below to revert
+// import Hero from "./components/HeroDefault";
+// ─────────────────────────────────────────────────────────────────────────────
 import { Metadata } from "next";
+import UpcomingEvents from "./components/UpcomingEvents";
 import RecentSponsors from "./components/RecentSponsors";
 import ServicesCard from "./components/ProgramsCard";
 import Popup from "./components/Popup";
@@ -72,7 +78,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative bg-base-200">
-      <Popup />
+      {/* <Popup /> */}
 
       {/* <div className="hero bg-base-200 h-[calc(100svh-4rem)]">
         <div className="hero-content flex-col lg:flex-row gap-x-16">
@@ -107,6 +113,7 @@ export default function Home() {
         </div>
       </div> */}
       <Hero />
+      <UpcomingEvents />
 
       {/* Sections */}
       <div>

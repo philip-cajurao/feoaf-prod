@@ -5,7 +5,7 @@ import Image from "next/image";
 import CompanyStory from "../components/CompanyStory";
 import MissionVision from "../components/MissionVision";
 import StoryBanner from "../components/banners/StoryBanner";
-import { Lightbulb, Rocket, Target, TrendingUp, Users, Briefcase } from "lucide-react";
+import { Lightbulb, Rocket, TrendingUp, Users, Briefcase } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About | Future Entrepreneurs Of America Foundation",
@@ -79,7 +79,6 @@ const BackgroundIcons = () => (
     <Rocket size={120} className="absolute top-20 left-10 text-blue-500 rotate-12" />
     <Lightbulb size={150} className="absolute top-80 right-20 text-yellow-500 -rotate-12" />
     <TrendingUp size={180} className="absolute top-[800px] left-32 text-emerald-500" />
-    <Target size={140} className="absolute top-[1300px] right-32 text-rose-500" />
     <Users size={160} className="absolute bottom-[600px] left-20 text-indigo-500" />
     <Briefcase size={130} className="absolute bottom-40 right-10 text-teal-500 rotate-6" />
   </div>

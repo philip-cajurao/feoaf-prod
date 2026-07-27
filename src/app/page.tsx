@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative bg-base-200">
-      <Popup />
+      {/* <Popup /> */}
 
       {/* <div className="hero bg-base-200 h-[calc(100svh-4rem)]">
         <div className="hero-content flex-col lg:flex-row gap-x-16">

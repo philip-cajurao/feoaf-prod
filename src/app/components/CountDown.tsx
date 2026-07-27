@@ -266,7 +266,7 @@ export default function CountDown() {
                         <div className="w-full flex-1 relative bg-base-100">
                             <div className="md:absolute md:inset-0 p-8 md:p-12 flex flex-col overflow-y-auto">
                                 <div>
-                                    <div className="badge badge-accent badge-lg h-auto py-2 px-4 whitespace-normal text-center font-bold uppercase tracking-wider mb-4 border-none text-white shadow-md">
+                                    <div className="badge badge-accent badge-lg font-bold uppercase tracking-wider mb-4 border-none text-white shadow-md">
                                         {selectedEvent.month} {selectedEvent.date}, {selectedEvent.year}
                                     </div>
 

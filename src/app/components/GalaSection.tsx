@@ -106,7 +106,7 @@ export default function GalaSection() {
               Get Tickets
             </Link>
             <Link
-              href="/new-sponsor"
+              href="/gala"
               id="gala-sponsorship-btn"
               className="btn btn-outline font-bold px-8"
             >

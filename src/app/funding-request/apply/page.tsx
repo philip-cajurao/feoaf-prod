@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import BackButton from "../../components/BackButton";
+import GhlForm from "@/app/components/GhlForm";
 
 export const metadata: Metadata = {
     title: "Apply | Youth Business Loan Program",
@@ -8,32 +8,11 @@ export const metadata: Metadata = {
 
 export default function LoanApplication() {
     return (
-        <div className="h-auto relative overflow-hidden">
-            <div className="relative md:fixed m-8 z-50">
-                <BackButton href="/funding-request" />
-            </div>
-
-
-            <iframe
-                src="https://api.leadconnectorhq.com/widget/form/rEDUgUKRVlSmu2XOvhN6"
-                className="my-16 h-[calc(100svh-4rem)] h-auto overflow-y-hidden"
-                style={{ overflowY: "hidden" }}
-                id="inline-rEDUgUKRVlSmu2XOvhN6"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Youth Business Loan Application"
-                data-layout-iframe-id="inline-rEDUgUKRVlSmu2XOvhN6"
-                data-form-id="rEDUgUKRVlSmu2XOvhN6"
-                width="100%"
-                loading="lazy"
-                title="Youth Business Loan Application"
-            >
-            </iframe>
-        </div>
+        <GhlForm
+            formId="rEDUgUKRVlSmu2XOvhN6"
+            title="Youth Business Loan Application"
+            backHref="/funding-request"
+            iframeClassName="my-16 h-[calc(100svh-4rem)] h-auto overflow-y-hidden"
+        />
     );
 }

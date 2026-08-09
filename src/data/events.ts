@@ -42,14 +42,14 @@ export const UPCOMING_EVENTS: EventData[] = [
     },
     { 
         id: "annual-gala",
-        title: "The FEOAF Gala", 
+        title: "A Black-Tie Gala Event: Celebrating Tomorrow's Leaders", 
         date: "17", 
         month: "Oct",
         year: "2026",
-        time: "6:30PM - 11PM",
-        location: "Heritage Hunt Country Club, 6901 Arthur Hills Drive, Gainesville, VA 20155",
-        description: "The FEOAF Gala is our premier annual fundraising event that supports programs designed to nurture young entrepreneurs. Funds raised will directly support youth entrepreneurship bootcamps, scholarships, mentorship programs, and educational initiatives that help young people turn ideas into opportunities.\n\nYour participation helps create opportunities for youth to learn leadership, financial literacy, innovation, and real-world business skills.",
+        time: "6:30 PM - 11:00 PM",
+        location: "Heritage Hunt Golf & Country Club, 6901 Arthur Hills Dr, Gainesville, VA 20155",
+        description: "Future Entrepreneurs of America Foundation presents A Black-Tie Gala Event: Celebrating Tomorrow's Leaders.\n\nJoin us for an elegant evening featuring gourmet dinner, silent auction, live music, dancing, and youth entrepreneur pitch showcases. Sponsorship opportunities range from $250 to $10,000.\n\nSponsorship Deadline: August 27, 2026.",
         flyerUrl: galaImage.src,
-        registrationUrl: "https://givebutter.com/c/X0GXZ6?source=qr&version=1" 
+        registrationUrl: "/gala" 
     }
 ];

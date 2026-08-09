@@ -50,6 +50,11 @@ export default function Drawer({
             </Link>
           </li>
           <li>
+            <Link className="py-4 text-xl font-bold text-amber-400" href="/gala">
+              Gala 2026 ✨
+            </Link>
+          </li>
+          <li>
             <Link className="py-4 text-xl" href="/sponsors">
               Sponsors
             </Link>

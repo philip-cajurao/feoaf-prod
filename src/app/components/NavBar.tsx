@@ -80,6 +80,12 @@ function NavBar() {
             </Link>
           </li>
           <li className="px-3">
+            <Link className="h-full flex items-center gap-1.5 text-amber-400 font-bold" href="/gala">
+              <span>Gala 2026</span>
+              <span className="px-1.5 py-0.5 text-[10px] font-black bg-amber-400 text-slate-950 rounded uppercase">Oct 17</span>
+            </Link>
+          </li>
+          <li className="px-3">
             <Link className="h-full flex items-center" href="/sponsors">
               Sponsors
             </Link>

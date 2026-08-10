@@ -1,6 +1,4 @@
-// 1. Import the image at the top
 import galaImage from "@/app/assets/events/GALA.jpg";
-import summerBootCamp from "@/app/assets/events/summerBootCamp.png";
 
 export interface EventData {
     id: string;
@@ -28,18 +26,6 @@ export const UPCOMING_EVENTS: EventData[] = [
     //     flyerUrl: pickleball.src,
     //     registrationUrl: "https://givebutter.com/c/Feoaf" 
     // },
-    { 
-        id: "summer-bootcamp",
-        title: "Entrepreneurship Summer Bootcamp", 
-        date: "15-19", 
-        month: "June",
-        year: "2026",
-        time: "9AM - 2PM",
-        location: "The Waverly Club, 15401 Fog Mountain Cir, Haymarket, VA 20169",
-        description: "The FEOAF Summer Bootcamp is a fun, hands-on program where youth learn entrepreneurship, financial literacy, and leadership skills. Participants will develop business ideas, learn marketing and money management, and present their ideas in a Kid's Shark Tank showcase.\n\n• FEOAF Summer Initiative: Advanced Skills Bootcamp: June 15, 16 and 19 @ 9am-2pm\n• FEOAF Foundations: Summer Beginner Bootcamp: June 17, 18 and 19 @ 9am-2pm",
-        flyerUrl: summerBootCamp.src,
-        registrationUrl: "https://givebutter.com/summer-bootcamp-beginners-class-o6stme" 
-    },
     { 
         id: "annual-gala",
         title: "A Black-Tie Gala Event: Celebrating Tomorrow's Leaders", 

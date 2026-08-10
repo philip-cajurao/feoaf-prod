@@ -161,7 +161,7 @@ export default function CountDown() {
                     </div>
 
                     {/* Event Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full items-stretch">
+                    <div className={`grid grid-cols-1 ${UPCOMING_EVENTS.length > 1 ? 'md:grid-cols-2' : 'max-w-2xl mx-auto'} gap-10 w-full items-stretch`}>
                         {UPCOMING_EVENTS.map((event) => (
                             <div
                                 key={event.id}

@@ -4,23 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, MapPin } from "lucide-react";
 
-import summerBootCamp from "../assets/events/summerBootCamp.png";
 import galaImage from "../assets/events/GALA.jpg";
 
 export default function UpcomingEvents() {
   const upcomingEvents = [
-    {
-      id: "summer-bootcamp",
-      title: "Entrepreneurship Summer Bootcamp",
-      date: "15-19",
-      month: "June",
-      year: "2026",
-      time: "9AM - 2PM",
-      location: "The Waverly Club, 15401 Fog Mountain Cir, Haymarket, VA 20169",
-      description: "The FEOAF Summer Bootcamp is a fun, hands-on program where youth learn entrepreneurship, financial literacy, and leadership skills.",
-      flyerUrl: summerBootCamp.src,
-      registrationUrl: "/register/bootcamp"
-    },
     {
       id: "annual-gala",
       title: "The FEOAF Gala",
@@ -48,7 +35,7 @@ export default function UpcomingEvents() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className={`grid grid-cols-1 ${upcomingEvents.length > 1 ? 'md:grid-cols-2' : 'max-w-md mx-auto'} gap-8`}>
           {upcomingEvents.map((event) => (
             <Link
               key={event.id}

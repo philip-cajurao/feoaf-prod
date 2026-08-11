@@ -508,12 +508,12 @@ export default function GalaLandingPage() {
                 </div>
                 <div className="flex items-center gap-3 shrink-0">
                   <span className="text-lg sm:text-xl font-black text-accent">{ad.price}</span>
-                  <button
-                    onClick={() => setSelectedPackage({ id: ad.option, name: `Program Book Sponsor: ${ad.option}`, price: ad.price, benefits: [`Program Book Sponsor placement: ${ad.option}`] })}
+                  <Link
+                    href="/gala/program-book-sponsor"
                     className="btn btn-accent btn-sm text-neutral font-black uppercase tracking-wide rounded-lg px-4"
                   >
                     Select
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}

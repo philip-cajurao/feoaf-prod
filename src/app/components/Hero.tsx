@@ -128,19 +128,32 @@ function Hero() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="relative z-20 shrink-0 flex flex-col items-center pb-4 sm:pb-6 pointer-events-none">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-6">
-            Scroll to explore
-          </p>
-          <div className="animate-bounce p-2 bg-white/10 rounded-full backdrop-blur-md">
-            <ChevronDown className="w-5 h-5 text-white" />
-          </div>
+        {/* Scroll indicator / Button to explore */}
+        <div className="relative z-20 shrink-0 flex flex-col items-center pb-4 sm:pb-6">
+          <a
+            href="#events"
+            aria-label="Scroll to explore next section"
+            className="group flex flex-col items-center cursor-pointer transition-transform hover:scale-110 active:scale-95"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("events");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-3 group-hover:text-white transition-colors">
+              Scroll to explore
+            </p>
+            <div className="animate-bounce p-2 bg-white/10 group-hover:bg-accent/30 rounded-full backdrop-blur-md transition-colors shadow-lg">
+              <ChevronDown className="w-5 h-5 text-white group-hover:text-accent transition-colors" />
+            </div>
+          </a>
         </div>
       </section>
 
-      {/* ── ORG TAGLINE STRIP — replaces the old hero text, sits below ──────── */}
-      <div className="border-b border-base-300 py-10 px-6">
+      {/* ── ORG TAGLINE STRIP — sits below hero ──────── */}
+      <div className="border-b border-base-300 bg-base-100/60 py-10 px-6">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold italic text-base-content leading-snug">
@@ -150,7 +163,7 @@ function Hero() {
               From ideas to real businesses, Future Entrepreneurs of America equips youth ages 9–18 with the skills and confidence to lead.
             </p>
           </div>
-          <Link href="/join" className="shrink-0 btn btn-accent font-bold px-8">
+          <Link href="/join" className="shrink-0 btn btn-accent font-bold px-8 shadow-md hover:scale-105 transition-transform">
             Join Now
           </Link>
         </div>

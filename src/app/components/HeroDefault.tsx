@@ -94,13 +94,26 @@ function HeroDefault() {
         </div>
 
         {/* Scroll indicator — pinned to the bottom of the flex column, never overlaps */}
-        <div className="relative z-20 shrink-0 flex flex-col items-center pb-4 sm:pb-6 pointer-events-none">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-8">
-            Join our Upcoming Events Below
-          </p>
-          <div className="animate-bounce p-2 bg-white/10 rounded-full backdrop-blur-md">
-            <ChevronDown className="w-5 h-5 text-white" />
-          </div>
+        <div className="relative z-20 shrink-0 flex flex-col items-center pb-4 sm:pb-6">
+          <a
+            href="#explore"
+            aria-label="Scroll to explore next section"
+            className="group flex flex-col items-center cursor-pointer transition-transform hover:scale-110 active:scale-95"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("explore");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-6 group-hover:text-white transition-colors">
+              Join our Upcoming Events Below
+            </p>
+            <div className="animate-bounce p-2 bg-white/10 group-hover:bg-accent/30 rounded-full backdrop-blur-md transition-colors shadow-lg">
+              <ChevronDown className="w-5 h-5 text-white group-hover:text-accent transition-colors" />
+            </div>
+          </a>
         </div>
       </section>
     </div>

@@ -10,12 +10,53 @@ export default function OutreachPage() {
       id: "outreach",
       year: "2026",
       title: "Community Outreach",
+      partners: [
+        "Christian Center",
+        "Haymarket Outreach Program",
+        "Fil-Am Church Outreach",
+      ],
       // Gallery images allocated for Community Outreach
       gallery: [
-        { src: "/events/outreach images/2025/DSC08222.JPG", alt: "Christian Center of World Restoration Outreach", sizes: "(max-width: 640px) 100vw, 66vw" },
-        { src: "/events/outreach images/2025/DSC08223.JPG", alt: "Outreach Team Gathering", sizes: "(max-width: 640px) 100vw, 33vw" },
-        { src: "/events/outreach images/2025/DSC08233.JPG", alt: "Outreach Event Group", sizes: "(max-width: 640px) 100vw, 33vw" },
-        { src: "/events/outreach images/2025/IMG_3795.JPEG", alt: "Community Outreach Team", sizes: "(max-width: 640px) 100vw, 66vw" },
+        { 
+          src: "/events/outreach images/DSC08222.JPG", 
+          alt: "Christian Center Outreach - Youth Program", 
+          sizes: "(max-width: 640px) 100vw, 66vw" 
+        },
+        { 
+          src: "/events/outreach images/IMG_3778.JPEG", 
+          alt: "Community Outreach Leadership Team", 
+          sizes: "(max-width: 640px) 100vw, 33vw" 
+        },
+        { 
+          src: "/events/outreach images/IMG_3338.JPEG", 
+          alt: "Interactive Workshop Activity", 
+          sizes: "(max-width: 640px) 100vw, 33vw" 
+        },
+        { 
+          src: "/events/outreach images/DSC08233.JPG", 
+          alt: "Outreach Speaker & Presentation", 
+          sizes: "(max-width: 640px) 100vw, 33vw" 
+        },
+        { 
+          src: "/events/outreach images/haymarket outreach.JPG", 
+          alt: "Haymarket Outreach Program Gathering", 
+          sizes: "(max-width: 640px) 100vw, 66vw" 
+        },
+        { 
+          src: "/events/outreach images/IMG_2430-1.JPEG", 
+          alt: "Fil-Am Church & Community Outreach Team", 
+          sizes: "(max-width: 640px) 100vw, 66vw" 
+        },
+        { 
+          src: "/events/outreach images/IMG_3795.JPEG", 
+          alt: "Community Outreach Presentation & Audience", 
+          sizes: "(max-width: 640px) 100vw, 66vw" 
+        },
+        { 
+          src: "/events/outreach images/DSC_7713.JPG", 
+          alt: "Student Project Showcase & Presentation", 
+          sizes: "(max-width: 640px) 100vw, 33vw" 
+        },
       ]
     }
   ];
@@ -45,6 +86,23 @@ export default function OutreachPage() {
                   Year {event.year}
                 </span>
                 <h2 className="text-3xl font-black tracking-wide">{event.title}</h2>
+
+                {/* Partners Caption */}
+                <div className="mt-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-accent mb-2">
+                    Partnered With Us
+                  </p>
+                  <div className="flex flex-wrap gap-2.5">
+                    {event.partners.map((partner) => (
+                      <span
+                        key={partner}
+                        className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-sm font-bold bg-base-200 text-neutral border border-base-300 shadow-xs"
+                      >
+                        {partner}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               {/* Mosaic Photo Grid Collage */}
@@ -56,9 +114,17 @@ export default function OutreachPage() {
                   } else if (idx === 1) {
                     spanClass = "sm:col-span-1 sm:row-span-1";
                   } else if (idx === 2) {
-                    spanClass = "row-span-2 sm:col-span-1 sm:row-span-2";
+                    spanClass = "sm:col-span-1 sm:row-span-1";
                   } else if (idx === 3) {
+                    spanClass = "sm:col-span-1 sm:row-span-2";
+                  } else if (idx === 4) {
                     spanClass = "sm:col-span-2 sm:row-span-1";
+                  } else if (idx === 5) {
+                    spanClass = "sm:col-span-2 sm:row-span-1";
+                  } else if (idx === 6) {
+                    spanClass = "sm:col-span-2 sm:row-span-1";
+                  } else if (idx === 7) {
+                    spanClass = "sm:col-span-1 sm:row-span-1";
                   }
                   return (
                     <div 

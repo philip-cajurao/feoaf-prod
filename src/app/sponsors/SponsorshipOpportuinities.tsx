@@ -140,58 +140,9 @@ const annualTiers = [
   },
 ];
 
-const singleEventTiers = [
-  {
-    name: "Platinum Sponsorship",
-    slug: "platinum-sponsor",
-    price: "$1,000",
-    features: [
-      "Everything in Gold Sponsorship package",
-      "Opportunity to speak in front and talk about your business",
-      "Opportunity to have a picture with the kids of FEOAF",
-      "4 VIP Event Tickets",
-    ],
-  },
-  {
-    name: "Gold Sponsorship",
-    slug: "gold-sponsor",
-    price: "$500",
-    features: [
-      "Everything in Bronze Sponsorship Package",
-      "A table to display your items and marketing materials",
-      "2 VIP Event Tickets",
-    ],
-  },
-  {
-    name: "Bronze Sponsorship",
-    slug: "bronze-sponsor",
-    price: "$250",
-    features: [
-      "Mentioned in all marketing materials including social media, event flyers, and take home brochures",
-      "Recognition in the actual program",
-      "1 VIP Event Ticket",
-    ],
-  },
-  {
-    name: "Community Friends",
-    slug: "community-support",
-    price: "Any Amount",
-    features: [
-      "A thank you mention of your name/business during the event",
-      "We are always grateful for any amount that you can help us make the event possible for the kids",
-    ],
-  },
-];
-
 const CheckIcon = () => (
   <svg className="h-5 w-5 shrink-0 mr-3 mt-0.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-  </svg>
-);
-
-const StarIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-accent shrink-0 mt-1 mr-2">
-    <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
   </svg>
 );
 
@@ -253,103 +204,61 @@ function SponsorshipOpportunitiesInner() {
 
       {/* TAB CONDITION 1: PARTNER WITH US */}
       {activeTab === "packages" && (
-        <>
-          {/* Single Event Sponsorships */}
-          <section className="py-20 bg-neutral/98 text-neutral-content">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <p className="font-bold text-xs sm:text-sm text-accent uppercase tracking-[0.2em] mb-2 drop-shadow-md">
-                  Sponsorship Packages
-                </p>
-                <h2 className="text-2xl sm:text-5xl font-bold tracking-tight text-white">
-                  Event Only Sponsorship
-                </h2>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                {singleEventTiers.map((tier, idx) => (
-                  <div key={idx} className="card rounded-xl bg-white text-base-content shadow-xl border-t-[10px] border-accent border-x-2 border-b-2 border-neutral-focus hover:-translate-y-2 transition-transform duration-300 h-full">
-                    <div className="card-body p-8">
-                      <h3 className="card-title text-2xl font-black uppercase leading-tight">
-                        {tier.name}
-                      </h3>
-                      <div className="my-4">
-                        <p className="text-4xl font-black text-accent">{tier.price}</p>
-                        <p className="text-xs text-base-content/60 font-bold uppercase mt-1">One-time payment</p>
-                      </div>
-                      <div className="divider before:bg-base-content/20 after:bg-base-content/20 my-2"></div>
-                      <ul className="space-y-4 flex-1">
-                        {tier.features.map((feature, fIdx) => (
-                          <li key={fIdx} className="text-sm font-bold flex items-start leading-snug">
-                            <StarIcon />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="card-actions mt-8">
-                        <Link href={`/sponsors/sponsorships/single/${tier.slug}`} className="btn btn-block btn-neutral rounded-md font-bold text-white uppercase border-2 border-white/10">
-                          Select Package
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Annual Sponsorship */}
-          <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div className="text-center mb-24">
+        <section className="py-20 sm:py-24 bg-neutral/98 text-neutral-content">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16 sm:mb-20">
               <p className="font-bold text-xs sm:text-sm text-accent uppercase tracking-[0.2em] mb-2 drop-shadow-md">
                 Sponsorship Packages
               </p>
-              <h2 className="text-2xl sm:text-5xl font-bold tracking-tight text-neutral">
-                Annual Sponsorship
+              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase">
+                Annual <span className="text-accent">Sponsorship</span>
               </h2>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+            <div className="flex flex-wrap justify-center gap-8 items-stretch">
               {annualTiers.map((tier, idx) => (
                 <div
                   key={idx}
-                  className={`card rounded-xl h-full relative transition-all duration-300 ${tier.highlight
-                    ? "bg-neutral/98 text-white shadow-2xl border-none scale-100 lg:scale-105 z-10"
-                    : "bg-white text-base-content border-2 border-neutral/30 shadow-2xl hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(var(--tw-colors-accent),0.5)]"
-                    }`}
+                  className={`card rounded-2xl w-full max-w-sm basis-full md:basis-[calc(50%-1.5rem)] lg:basis-[calc(33.333%-1.5rem)] flex flex-col relative transition-all duration-300 ${
+                    tier.highlight
+                      ? "bg-white text-neutral border-4 border-accent shadow-[0_0_30px_rgba(255,204,0,0.25)] scale-100 lg:scale-105 z-10"
+                      : "bg-white text-base-content border-2 border-white/20 shadow-xl hover:-translate-y-2 hover:shadow-2xl"
+                  }`}
                 >
                   {tier.highlight && (
                     <div className="absolute top-0 inset-x-0 flex justify-center -translate-y-1/2">
-                      <span className="badge badge-accent border-none font-black py-4 px-6 uppercase tracking-widest shadow-lg text-neutral">
+                      <span className="badge badge-accent border-none font-black py-4 px-6 uppercase tracking-widest shadow-lg text-neutral text-xs">
                         Premier Choice
                       </span>
                     </div>
                   )}
 
-                  <div className={`card-body p-8 lg:p-10 flex flex-col ${tier.highlight ? 'pt-12' : ''}`}>
-                    <div className="mb-6 border-b-2 border-current pb-6 opacity-80">
-                      <h3 className={`card-title text-2xl font-black mb-2 uppercase italic ${tier.highlight ? 'text-white' : 'text-neutral'}`}>
+                  <div className={`card-body p-8 lg:p-10 flex flex-col flex-1 ${tier.highlight ? "pt-10" : ""}`}>
+                    <div className="mb-6 border-b border-base-200 pb-6">
+                      <h3 className="card-title text-2xl font-black mb-2 uppercase italic text-neutral">
                         {tier.name}
                       </h3>
-                      <p className={`text-sm tracking-wider font-bold min-h-[2.5rem] ${tier.highlight ? 'text-white/80' : 'text-base-content/80'}`}>
+                      <p className="text-sm tracking-wider font-bold min-h-[2.5rem] text-base-content/70">
                         {tier.tagline}
                       </p>
                     </div>
 
                     <div className="mb-8 flex items-baseline">
-                      <span className={`text-5xl font-black ${tier.highlight ? 'text-accent' : 'text-neutral'}`}>
+                      <span className={`text-4xl sm:text-5xl font-black ${tier.highlight ? "text-accent" : "text-neutral"}`}>
                         {tier.price}
                       </span>
-                      <span className={`font-black ml-2 uppercase text-sm ${tier.highlight ? 'text-white/60' : 'text-base-content/60'}`}>
-                        {tier.period}
-                      </span>
+                      {tier.period && (
+                        <span className="font-bold ml-2 uppercase text-sm text-base-content/60">
+                          {tier.period}
+                        </span>
+                      )}
                     </div>
 
                     <ul className="space-y-4 mb-10 flex-1">
                       {tier.features.map((feature, fIdx) => (
                         <li key={fIdx} className="flex items-start">
                           <CheckIcon />
-                          <span className={`text-sm leading-snug font-bold ${tier.highlight ? 'text-white/90' : 'text-base-content/90'}`}>
+                          <span className="text-sm leading-snug font-bold text-base-content/90">
                             {feature}
                           </span>
                         </li>
@@ -359,10 +268,11 @@ function SponsorshipOpportunitiesInner() {
                     <div className="card-actions mt-auto">
                       <Link
                         href={`/sponsors/sponsorships/annual/${tier.slug}`}
-                        className={`btn btn-block rounded-md font-black uppercase text-base h-14 ${tier.highlight
-                          ? "btn-accent shadow-[0_0_15px_rgba(var(--tw-colors-accent),0.4)] text-neutral hover:scale-[1.02]"
-                          : "btn-outline btn-neutral text-neutral shadow-md hover:bg-accent hover:text-neutral hover:scale-[1.02]"
-                          }`}
+                        className={`btn btn-block rounded-lg font-black uppercase text-base h-12 sm:h-14 transition-all ${
+                          tier.highlight
+                            ? "btn-accent text-neutral shadow-lg hover:brightness-105 hover:scale-[1.02]"
+                            : "btn-neutral text-white border-2 border-white/10 hover:bg-accent hover:text-neutral hover:border-accent hover:scale-[1.02]"
+                        }`}
                       >
                         Choose Plan
                       </Link>
@@ -371,8 +281,8 @@ function SponsorshipOpportunitiesInner() {
                 </div>
               ))}
             </div>
-          </section>
-        </>
+          </div>
+        </section>
       )}
 
       {/* TAB CONDITION 2: SPONSORS */}

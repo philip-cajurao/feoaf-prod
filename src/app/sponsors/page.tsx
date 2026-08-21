@@ -5,6 +5,8 @@ import SponsorBanner from "../components/banners/SponsorBanner";
 import SponsorshipOpportunities from "./SponsorshipOpportuinities";
 import DonateQR from "../components/DonateQR";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Sponsors | Future Entrepreneurs Of America Foundation",
   description:

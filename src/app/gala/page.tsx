@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import GalaVideoTeaserDesign2 from "../components/GalaVideoTeaserDesign2";
 
 const GALA_PHOTOS = [
   { url: "/events/gala/2025/_DSC6430.JPG", alt: "Black-Tie Gala Evening Showcase" },
@@ -344,6 +345,15 @@ export default function GalaLandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ─── SECTION 2.5: PROMOTIONAL VIDEO & EVENT PREVIEW (Option 2 Design) ─── */}
+      <GalaVideoTeaserDesign2
+        id="gala-teaser"
+        theme="dark"
+        showTicketCta={true}
+        detailsLinkHref="#sponsorship-packages"
+        detailsLinkLabel="View Sponsorship Packages"
+      />
 
       {/* ─── SECTION 3: PAST GALA HIGHLIGHTS ─── dark neutral band */}
       <section className="w-full bg-neutral text-neutral-content py-20 px-4 sm:px-6 flex flex-col items-center gap-10 fade-in">

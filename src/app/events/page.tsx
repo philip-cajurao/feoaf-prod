@@ -2,6 +2,7 @@
 
 import EventsBanner from "../components/banners/EventsBanner";
 import Image from "next/image";
+import Link from "next/link";
 import CountDown from "../components/CountDown";
 
 // Import your assets for use in the static list
@@ -42,14 +43,18 @@ export default function Events() {
 
           <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
 
-          {/* 2. CCWRC Outreach */}
+          {/* 2. Outreach Programs */}
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-bold text-accent uppercase tracking-wider">February 2026</span>
-            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Christian Center of World Restoration Outreach</h3>
+            <Link href="/outreach" className="group mt-0.5 inline-block">
+              <h3 className="text-base font-black text-neutral leading-snug group-hover:text-accent transition-colors">
+                Outreach Programs
+              </h3>
+            </Link>
             <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">A community-focused initiative bridging the gap between local resources and youth potential, fostering growth through faith and entrepreneurship.</p>
-            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
-              <Image src="/events/outreach images/2025/DSC08222.JPG" alt="CCWRC" fill className="object-cover" />
-            </div>
+            <Link href="/outreach" className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4 group block">
+              <Image src="/events/outreach images/2025/DSC08222.JPG" alt="Outreach Programs" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+            </Link>
           </div>
 
           <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />

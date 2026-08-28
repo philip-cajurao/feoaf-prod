@@ -7,7 +7,7 @@ import Image from "next/image";
 
 // --- Static Asset Imports ---
 import fhGrowthFundLogo from "@/app/assets/partners/fhGrowthFund.png";
-import fortuneLogo from "@/app/assets/sponsors/fts-full-black.png";
+import clearSkyLogo from "@/app/assets/sponsors/clear-sky-sports-angels.png";
 import qr from "../assets/qr/donateQR.png";
 
 // --- Data Definitions ---
@@ -164,8 +164,7 @@ function SponsorshipOpportunitiesInner() {
   // Reconfigured partners object array to support typography logos dynamically
   const partners = [
     { name: "FH Growth Fund", logo: fhGrowthFundLogo, isPlaceholder: false, url: "https://invest.fortunehomesteam.com/" },
-    { name: "Roberts", logo: null, isPlaceholder: true },
-    { name: "Fortune Tech Solutions", logo: fortuneLogo, isPlaceholder: false, url: "https://www.fortunetechsolutions.net/" }
+    { name: "Clear Sky Sports Angels", logo: clearSkyLogo, isPlaceholder: false },
   ];
 
   return (
@@ -297,8 +296,8 @@ function SponsorshipOpportunitiesInner() {
                 </svg>
               </div>
 
-              <h2 className="text-3xl font-extrabold sm:text-5xl tracking-tight uppercase mb-4">
-                <span className="text-accent">Our</span> <span className="text-white"> Sponsors</span>
+              <h2 className="text-3xl font-extrabold sm:text-5xl tracking-tight uppercase mb-4 text-white">
+                Sponsors
               </h2>
 
               <p className="text-white/70 mb-16 font-bold leading-relaxed max-w-2xl mx-auto text-lg">

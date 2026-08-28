@@ -24,9 +24,6 @@ export default function SponsorBanner() {
           PROUDLY SUPPORTED BY
         </p>
         <div className="flex items-baseline justify-center">
-          <span className="font-bold text-4xl sm:text-5xl text-white mr-3 drop-shadow-md">
-            Our
-          </span>
           <h1 className="font-black text-4xl sm:text-5xl text-accent uppercase tracking-tight drop-shadow-md">
             Sponsors
           </h1>

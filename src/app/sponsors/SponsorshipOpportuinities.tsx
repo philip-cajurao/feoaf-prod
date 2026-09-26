@@ -8,6 +8,10 @@ import Image from "next/image";
 // --- Static Asset Imports ---
 import fhGrowthFundLogo from "@/app/assets/partners/fhGrowthFund.png";
 import clearSkyLogo from "@/app/assets/sponsors/clear-sky-sports-angels.png";
+import princeWilliamLogo from "@/app/assets/sponsors/prince-william.jpg";
+import sisonHomesLogo from "@/app/assets/sponsors/sison-homes.png";
+import thaiHealingArtsLogo from "@/app/assets/sponsors/thai-healing-arts-massage.png";
+import theBrandysGroupLogo from "@/app/assets/sponsors/the-brandys-group.png";
 import qr from "../assets/qr/donateQR.png";
 
 // --- Data Definitions ---
@@ -165,6 +169,10 @@ function SponsorshipOpportunitiesInner() {
   const partners = [
     { name: "FH Growth Fund", logo: fhGrowthFundLogo, isPlaceholder: false, url: "https://invest.fortunehomesteam.com/" },
     { name: "Clear Sky Sports Angels", logo: clearSkyLogo, isPlaceholder: false },
+    { name: "Prince William Economic Development", logo: princeWilliamLogo, isPlaceholder: false, url: "https://pwcded.org/" },
+    { name: "Sison Homes & Associates", logo: sisonHomesLogo, isPlaceholder: false, url: "https://sisonhomes.com/" },
+    { name: "Thai Healing Arts Massage", logo: thaiHealingArtsLogo, isPlaceholder: false, url: "https://www.thaihealingartsmassage.com/" },
+    { name: "The Brandys Group LLC", logo: theBrandysGroupLogo, isPlaceholder: false },
   ];
 
   return (

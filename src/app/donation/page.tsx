@@ -15,11 +15,11 @@ export default function Donation() {
       </h2>
       <p className="max-w-2xl mx-auto text-justify">
         On behalf of everyone at <span className="font-bold">Future Entrepreneurs of America Foundation</span>,
-        Inc., we extend our deepest gratitude for your generous support.
+         we extend our deepest gratitude for your generous support.
         <br />
         <br /> Your donation plays a vital role in empowering the next
         generation of entrepreneurs. Because of your kindness, we are able to
-        provide aspiring young leaders with the tools, mentorship, and
+        provide aspiring young leaders with the tools, guidance, and
         opportunities they need to turn their ideas into impact.
         <br />
         <br />

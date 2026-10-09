@@ -16,6 +16,8 @@ export interface GhlFormProps {
   iframeClassName?: string;
   /** Optional data-height attribute for GHL widget sizing */
   dataHeight?: string;
+  /** Optional introductory content rendered above the form */
+  children?: React.ReactNode;
 }
 
 export default function GhlForm({
@@ -26,6 +28,7 @@ export default function GhlForm({
   containerClassName = "h-auto relative overflow-hidden",
   iframeClassName = "my-20 h-auto overflow-y-hidden",
   dataHeight,
+  children,
 }: GhlFormProps) {
   const iframeId = `inline-${formId}`;
   const iframeSrc = `https://api.leadconnectorhq.com/widget/form/${formId}`;
@@ -37,6 +40,8 @@ export default function GhlForm({
           <BackButton href={backHref} />
         </div>
       )}
+
+      {children}
 
       <iframe
         className={iframeClassName}

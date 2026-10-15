@@ -6,10 +6,11 @@ import DonateQR from "./DonateQR";
 
 // --- SPONSOR IMPORTS ---
 import fhc from "../assets/sponsors/FHC-black.png";
-import pmi from "../assets/sponsors/pmi-fairfax-black.png";
 import fts from "../assets/sponsors/fts-full-black.png";
 import fhgf from "../assets/sponsors/fht-growth-fund.png";
 import gtsc from "../assets/sponsors/GTSC-talentsolutions.png";
+import reStreetSmart from "../assets/partners/re-street-smart.png";
+import fiveStars from "../assets/partners/five-stars-production.png";
 
 export default function RecentSponsors({ showQR = true, fadeTop = false }: { showQR?: boolean; fadeTop?: boolean }) {
   return (
@@ -84,9 +85,12 @@ export default function RecentSponsors({ showQR = true, fadeTop = false }: { sho
           <Link href="https://fortunehomesconstruction.com/" rel="noopener noreferrer" target="_blank" className="hover:scale-[1.03] transition-transform duration-300 bg-white p-6 rounded-2xl shadow-md border border-base-300 flex items-center justify-center h-36 w-full max-w-[256px] sm:w-64 hover:border-accent/60 hover:shadow-lg">
             <Image alt="Fortune Homes Construction logo" src={fhc} className="max-h-full w-auto object-contain" />
           </Link>
-          <Link href="https://www.fairfaxpropertymanagementinc.com/" rel="noopener noreferrer" target="_blank" className="hover:scale-[1.03] transition-transform duration-300 bg-white p-6 rounded-2xl shadow-md border border-base-300 flex items-center justify-center h-36 w-full max-w-[256px] sm:w-64 hover:border-accent/60 hover:shadow-lg">
-            <Image alt="PMI of Fairfax logo" src={pmi} className="max-h-full w-auto object-contain" />
+          <Link href="https://restreetsmart.com/" rel="noopener noreferrer" target="_blank" className="hover:scale-[1.03] transition-transform duration-300 bg-white p-6 rounded-2xl shadow-md border border-base-300 flex items-center justify-center h-36 w-full max-w-[256px] sm:w-64 hover:border-accent/60 hover:shadow-lg">
+            <Image alt="RE StreetSmart logo" src={reStreetSmart} className="max-h-full w-auto object-contain" />
           </Link>
+          <div className="hover:scale-[1.03] transition-transform duration-300 bg-black p-6 rounded-2xl shadow-md border border-base-300 flex items-center justify-center h-36 w-full max-w-[256px] sm:w-64 hover:border-accent/60 hover:shadow-lg">
+            <Image alt="Five Stars Production logo" src={fiveStars} className="max-h-full w-auto object-contain" />
+          </div>
           <Link href="https://www.fortunetechsolutions.net/" rel="noopener noreferrer" target="_blank" className="hover:scale-[1.03] transition-transform duration-300 bg-white p-6 rounded-2xl shadow-md border border-base-300 flex items-center justify-center h-36 w-full max-w-[256px] sm:w-64 hover:border-accent/60 hover:shadow-lg">
             <Image alt="Fortune Tech Solutions logo" src={fts} className="max-h-full w-auto object-contain" />
           </Link>

@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 // --- Static Asset Imports ---
 import fhGrowthFundLogo from "@/app/assets/partners/fhGrowthFund.png";
@@ -12,7 +12,16 @@ import princeWilliamLogo from "@/app/assets/sponsors/prince-william.jpg";
 import sisonHomesLogo from "@/app/assets/sponsors/sison-homes.png";
 import thaiHealingArtsLogo from "@/app/assets/sponsors/thai-healing-arts-massage.png";
 import theBrandysGroupLogo from "@/app/assets/sponsors/the-brandys-group.png";
+import ggLiveLogo from "@/app/assets/sponsors/g&g-live-production.png";
 import qr from "../assets/qr/donateQR.png";
+
+export interface SponsorItem {
+  name: string;
+  logo?: StaticImageData | string;
+  isPlaceholder?: boolean;
+  placeholderLetter?: string;
+  url?: string;
+}
 
 // --- Data Definitions ---
 
@@ -166,13 +175,15 @@ function SponsorshipOpportunitiesInner() {
   };
 
   // Reconfigured partners object array to support typography logos dynamically
-  const partners = [
+  const partners: SponsorItem[] = [
     { name: "FH Growth Fund", logo: fhGrowthFundLogo, isPlaceholder: false, url: "https://invest.fortunehomesteam.com/" },
     { name: "Clear Sky Sports Angels", logo: clearSkyLogo, isPlaceholder: false },
     { name: "Prince William Economic Development", logo: princeWilliamLogo, isPlaceholder: false, url: "https://pwcded.org/" },
     { name: "Sison Homes & Associates", logo: sisonHomesLogo, isPlaceholder: false, url: "https://sisonhomes.com/" },
     { name: "Thai Healing Arts Massage", logo: thaiHealingArtsLogo, isPlaceholder: false, url: "https://www.thaihealingartsmassage.com/" },
     { name: "The Brandys Group LLC", logo: theBrandysGroupLogo, isPlaceholder: false },
+    { name: "G&G Live Production", logo: ggLiveLogo, isPlaceholder: false, url: "https://ggliveproduction.com/" },
+    { name: "Chenault Insurance Services", isPlaceholder: true, placeholderLetter: "CIS" },
   ];
 
   return (
@@ -319,8 +330,10 @@ function SponsorshipOpportunitiesInner() {
                       <div className="w-16 h-16 relative bg-white rounded-lg overflow-hidden shrink-0 shadow-sm flex items-center justify-center select-none">
                         {partner.isPlaceholder ? (
                           /* High-contrast geometric letter tile layout matching your brand styles */
-                          <div className="w-full h-full bg-neutral text-accent font-black text-2xl flex items-center justify-center tracking-tighter">
-                            R
+                          <div className={`w-full h-full bg-neutral text-accent font-black flex items-center justify-center tracking-tighter ${
+                            (partner.placeholderLetter || "").length > 2 ? "text-xl" : "text-2xl"
+                          }`}>
+                            {partner.placeholderLetter || partner.name.charAt(0)}
                           </div>
                         ) : (
                           <Image

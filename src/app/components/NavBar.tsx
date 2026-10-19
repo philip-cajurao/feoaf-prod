@@ -53,7 +53,7 @@ function NavBar() {
           </label>
         </div>
 
-        <ul className="flex flex-nowrap px-1 hidden md:flex">
+        <ul className="flex flex-nowrap px-1 hidden md:flex h-full">
           <li className="px-3">
             <Link className="h-full flex items-center" href="/">
               Home
@@ -85,10 +85,39 @@ function NavBar() {
               <span className="px-1.5 py-0.5 text-[10px] font-black bg-amber-400 text-slate-950 rounded uppercase">Oct 17</span>
             </Link>
           </li>
-          <li className="px-3">
-            <Link className="h-full flex items-center" href="/sponsors">
+          {/* Sponsors dropdown — opens on hover or keyboard focus (CSS only) */}
+          <li className="px-3 relative group">
+            <Link
+              className="h-full flex items-center gap-1"
+              href="/sponsors"
+              aria-haspopup="true"
+            >
               Sponsors
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={3}
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
             </Link>
+
+            <div className="absolute right-0 top-full pt-1 invisible opacity-0 -translate-y-2 scale-95 origin-top-right group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:scale-100 transition-all duration-300 ease-out">
+              <ul className="w-52 bg-neutral text-neutral-content rounded-lg shadow-2xl shadow-black/50 border border-accent/60 border-t-2 border-t-accent p-2">
+                <li>
+                  <Link
+                    href="/sponsors/sponsor-a-kid"
+                    className="block rounded-md px-4 py-2.5 font-semibold transition-all duration-300 ease-out hover:bg-accent hover:text-black hover:pl-6 focus-visible:bg-accent focus-visible:text-black focus-visible:outline-none"
+                  >
+                    Sponsor a Kid
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </li>
           {/* <li>
             <Link href="/contacts">Contact Us</Link>

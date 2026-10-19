@@ -58,6 +58,16 @@ export default function Drawer({
             <Link className="py-4 text-xl" href="/sponsors">
               Sponsors
             </Link>
+            <ul>
+              <li>
+                <Link
+                  className="py-3 text-lg transition-all duration-300 ease-out hover:bg-accent hover:text-black hover:pl-6"
+                  href="/sponsors/sponsor-a-kid"
+                >
+                  Sponsor a Kid
+                </Link>
+              </li>
+            </ul>
           </li>
           {/* <li className="absolute bottom-2 left-2">
             <ThemeController />

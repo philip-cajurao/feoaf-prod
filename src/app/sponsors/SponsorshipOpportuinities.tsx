@@ -4,6 +4,9 @@ import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image, { type StaticImageData } from "next/image";
+import { sponsorAKidMessage } from "@/data/sponsorAKid";
+import GhlForm from "@/app/components/GhlForm";
+
 
 // --- Static Asset Imports ---
 import fhGrowthFundLogo from "@/app/assets/partners/fhGrowthFund.png";
@@ -165,9 +168,16 @@ function SponsorshipOpportunitiesInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
-  const activeTab: "sponsors" | "packages" = tabParam === "packages" ? "packages" : "sponsors";
+  // "Partner with Us" (packages) is listed first and is the default view so visitors see the annual sponsorship options immediately.
+  const tabs = [
+    { id: "packages", label: "Partner with Us" },
+    { id: "sponsor-a-kid", label: "Sponsor a Kid" },
+    { id: "sponsors", label: "Sponsors" },
+  ] as const;
+  type TabId = (typeof tabs)[number]["id"];
+  const activeTab: TabId = tabs.find((t) => t.id === tabParam)?.id ?? "packages";
 
-  const setActiveTab = (tab: "sponsors" | "packages") => {
+  const setActiveTab = (tab: TabId) => {
     // Use replace so switching tabs doesn't add browser history entries
     const params = new URLSearchParams(searchParams.toString());
     params.set("tab", tab);
@@ -187,36 +197,24 @@ function SponsorshipOpportunitiesInner() {
   ];
 
   return (
-    <div className="text-base-content bg-base-200 font-sans min-h-screen">
+    <div className="text-base-content bg-base-200 font-sans">
       
       {/* Dynamic Tab Navigation Bar Container */}
-      <div className={`pt-28 pb-8 flex justify-center ${activeTab === "sponsors" ? "bg-neutral" : "bg-neutral/98"}`}>
-        <div className="tabs tabs-boxed bg-black/30 border border-white/10 p-1.5 rounded-xl flex gap-1">
-          
-          {/* Sponsors Tab */}
-          <button 
-            onClick={() => setActiveTab("sponsors")}
-            className={`tab tab-md sm:tab-lg font-black uppercase tracking-widest px-8 h-12 !rounded-lg transition-all duration-150 ${
-              activeTab === "sponsors" 
-                ? "tab-active !bg-accent !text-black shadow-md" 
-                : "!text-white/60 bg-transparent"
-            }`}
-          >
-            Sponsors
-          </button>
-
-          {/* Partner with Us Tab */}
-          <button 
-            onClick={() => setActiveTab("packages")}
-            className={`tab tab-md sm:tab-lg font-black uppercase tracking-widest px-8 h-12 !rounded-lg transition-all duration-150 ${
-              activeTab === "packages" 
-                ? "tab-active !bg-accent !text-black shadow-md" 
-                : "!text-white/60 bg-transparent"
-            }`}
-          >
-            Partner with Us
-          </button>
-
+      <div className={`pt-10 pb-8 px-2 sm:px-4 flex justify-center ${activeTab === "sponsors" ? "bg-neutral" : "bg-neutral/98"}`}>
+        <div className="tabs tabs-boxed bg-black/30 border border-white/10 p-1 sm:p-1.5 rounded-xl flex flex-nowrap justify-center gap-1 max-w-full">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`tab tab-xs sm:tab-lg text-[10px] sm:text-base font-black uppercase tracking-wider sm:tracking-widest px-2.5 sm:px-8 h-9 sm:h-12 whitespace-nowrap !rounded-lg transition-all duration-150 ${
+                activeTab === tab.id
+                  ? "tab-active !bg-accent !text-black shadow-md"
+                  : "!text-white/60 bg-transparent"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -303,7 +301,33 @@ function SponsorshipOpportunitiesInner() {
         </section>
       )}
 
-      {/* TAB CONDITION 2: SPONSORS */}
+      {/* TAB CONDITION 2: SPONSOR A KID */}
+      {activeTab === "sponsor-a-kid" && (
+        <section className="py-20 sm:py-24 bg-neutral/98 text-neutral-content">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="font-bold text-xs sm:text-sm text-accent uppercase tracking-[0.2em] mb-2 drop-shadow-md">
+              Recurring Giving
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase mb-8">
+              Sponsor a <span className="text-accent">Kid</span>
+            </h2>
+            <p className="text-base sm:text-lg leading-relaxed text-white/80 mb-10">
+              {sponsorAKidMessage}
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <GhlForm
+              formId="LulkzPfRY2SVuV8HQF6a"
+              title="Sponsor A Kid"
+              showBackButton={false}
+              containerClassName="w-full relative overflow-hidden"
+              iframeClassName="w-full min-h-[700px] h-auto overflow-y-hidden"
+            />
+          </div>
+        </section>
+      )}
+
+      {/* TAB CONDITION 3: SPONSORS */}
       {activeTab === "sponsors" && (
         <>
           <section className="py-24 bg-neutral text-neutral-content relative overflow-hidden">
@@ -384,6 +408,9 @@ function SponsorshipOpportunitiesInner() {
           </section>
         </>
       )}
+
+
+
 
       {/* Global Programs You Support Section */}
       <section className="py-24 bg-base-200 relative overflow-hidden">

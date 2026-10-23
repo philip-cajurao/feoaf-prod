@@ -26,8 +26,9 @@ export default function Sponsors() {
   return (
     <div className="relative bg-base-200">
       <SponsorBanner />
-      <RecentSponsors showQR={false} />
+      {/* Annual packages (default tab) come first so visitors see how to contribute right away */}
       <SponsorshipOpportunities />
+      <RecentSponsors showQR={false} />
       <div className="py-16 bg-neutral">
         <DonateQR />
       </div>

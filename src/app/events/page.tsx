@@ -1,14 +1,37 @@
 "use client"
 
+import { useState, useEffect } from "react";
 import EventsBanner from "../components/banners/EventsBanner";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import CountDown from "../components/CountDown";
 
 // Import your assets for use in the static list
+import galaImage from "@/app/assets/events/GALA.jpg";
 import pickleball from "@/app/assets/events/pickleball.jpg";
 
 export default function Events() {
+  const [fullscreenImage, setFullscreenImage] = useState<{
+    src: string | StaticImageData;
+    alt: string;
+  } | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setFullscreenImage(null);
+    };
+    if (fullscreenImage) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [fullscreenImage]);
+
   return (
     <div className="flex flex-col justify-center relative">
       <EventsBanner />
@@ -31,19 +54,43 @@ export default function Events() {
         {/* Simple Event List */}
         <div className="w-full max-w-2xl flex flex-col gap-12">
 
-          {/* 1. Pickleball Tournament */}
+          {/* 1. Celebrating Tomorrow's Leaders Gala 2026 */}
           <div className="flex flex-col items-center text-center">
-            <span className="text-xs font-bold text-accent uppercase tracking-wider">April 18, 2026</span>
-            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Dink For a Cause — Pickleball Tournament</h3>
-            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">Thank you to everyone who joined us at Dill Dinkers at Manassas Mall for a day of fun, networking, and impact.</p>
-            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
-              <Image src={pickleball} alt="Pickleball" fill className="object-cover" />
-            </div>
+            <span className="text-xs font-bold text-accent uppercase tracking-wider">October 17, 2026</span>
+            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">
+              Celebrating Tomorrow&apos;s Leaders Gala 2026
+            </h3>
+            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">
+              Thank you to all the sponsors, mentors, families, and guests who joined us at Heritage Hunt Golf &amp; Country Club for an unforgettable evening celebrating our young entrepreneurs.
+            </p>
+            <button
+              type="button"
+              onClick={() => setFullscreenImage({ src: galaImage, alt: "Celebrating Tomorrow's Leaders Gala 2026" })}
+              className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4 group cursor-pointer block"
+            >
+              <Image src={galaImage} alt="Celebrating Tomorrow's Leaders Gala 2026" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+            </button>
           </div>
 
           <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
 
-          {/* 2. Outreach Programs */}
+          {/* 2. Pickleball Tournament */}
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs font-bold text-accent uppercase tracking-wider">April 18, 2026</span>
+            <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Dink For a Cause — Pickleball Tournament</h3>
+            <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">Thank you to everyone who joined us at Dill Dinkers at Manassas Mall for a day of fun, networking, and impact.</p>
+            <button
+              type="button"
+              onClick={() => setFullscreenImage({ src: pickleball, alt: "Dink For a Cause — Pickleball Tournament" })}
+              className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4 group cursor-pointer block"
+            >
+              <Image src={pickleball} alt="Pickleball" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+            </button>
+          </div>
+
+          <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
+
+          {/* 3. Outreach Programs */}
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-bold text-accent uppercase tracking-wider">February 2026</span>
             <Link href="/outreach" className="group mt-0.5 inline-block">
@@ -59,7 +106,7 @@ export default function Events() {
 
           <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
 
-          {/* 3. Spring Gala — with playable YouTube embeds */}
+          {/* 4. Spring Gala — with playable YouTube embeds */}
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-bold text-accent uppercase tracking-wider">April 2025</span>
             <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Spring Gala Event</h3>
@@ -89,31 +136,82 @@ export default function Events() {
 
           <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
 
-          {/* 4. Summer Bootcamp */}
+          {/* 5. Summer Bootcamp */}
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-bold text-accent uppercase tracking-wider">June 2025</span>
             <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Summer Bootcamp</h3>
             <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">An intensive experience where successful business owners, bankers, and community leaders train kids in entrepreneurship and professional skills.</p>
-            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
-              <Image src="/events/summer_bootcamp/2025/summer_bootcamp_image_1.JPEG" alt="Summer Bootcamp" fill className="object-cover" />
-            </div>
+            <button
+              type="button"
+              onClick={() =>
+                setFullscreenImage({
+                  src: "/events/summer_bootcamp/2025/summer_bootcamp_image_1.JPEG",
+                  alt: "Summer Bootcamp",
+                })
+              }
+              className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4 group cursor-pointer block"
+            >
+              <Image src="/events/summer_bootcamp/2025/summer_bootcamp_image_1.JPEG" alt="Summer Bootcamp" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+            </button>
           </div>
 
           <div className="w-16 h-0.5 bg-accent/25 rounded-full mx-auto" />
 
-          {/* 5. Annual Holiday Event */}
+          {/* 6. Annual Holiday Event */}
           <div className="flex flex-col items-center text-center">
             <span className="text-xs font-bold text-accent uppercase tracking-wider">2024 – 2026 Tradition</span>
             <h3 className="text-base font-black text-neutral leading-snug mt-0.5">Annual Holiday Event</h3>
             <p className="text-sm text-base-content/50 mt-1 leading-relaxed max-w-xl">The year-end celebration where kids recognize their accomplishments. Includes the signature &quot;SHARKTANK&quot; competition where sponsors participate as judges.</p>
-            <div className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4">
-              <Image src="/events/holiday/IMG_4627.jpg" alt="Holiday Event" fill className="object-cover" />
-            </div>
+            <button
+              type="button"
+              onClick={() =>
+                setFullscreenImage({
+                  src: "/events/holiday/IMG_4627.jpg",
+                  alt: "Annual Holiday Event",
+                })
+              }
+              className="relative w-full sm:w-80 aspect-video rounded-xl shadow-sm overflow-hidden mt-4 group cursor-pointer block"
+            >
+              <Image src="/events/holiday/IMG_4627.jpg" alt="Holiday Event" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+            </button>
           </div>
 
         </div>
 
       </div>
+
+      {/* ─── FULLSCREEN IMAGE MODAL ─── */}
+      {fullscreenImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8 bg-black/90 backdrop-blur-sm cursor-pointer"
+          onClick={() => setFullscreenImage(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setFullscreenImage(null)}
+            className="btn btn-circle btn-sm sm:btn-md fixed top-5 right-5 z-[110] border border-white/20 bg-black/60 text-white hover:bg-black font-bold"
+            aria-label="Close fullscreen image"
+          >
+            ✕
+          </button>
+          <div
+            className="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={typeof fullscreenImage.src === "string" ? fullscreenImage.src : fullscreenImage.src.src}
+              alt={fullscreenImage.alt}
+              className="max-h-[85vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl"
+            />
+            {fullscreenImage.alt && (
+              <p className="text-white text-xs sm:text-sm font-semibold mt-3 text-center bg-black/60 px-4 py-1.5 rounded-full border border-white/20">
+                {fullscreenImage.alt}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

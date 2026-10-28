@@ -1,5 +1,3 @@
-import galaImage from "@/app/assets/events/GALA.jpg";
-
 export interface EventData {
     id: string;
     title: string;
@@ -9,33 +7,21 @@ export interface EventData {
     time: string;
     location: string;
     description: string;
-    flyerUrl: string; 
-    registrationUrl: string; // <-- Added this property
+    flyerUrl: string;
+    registrationUrl: string;
 }
 
 export const UPCOMING_EVENTS: EventData[] = [
-    // { 
-    //     id: "pickleball-tournament",
-    //     title: "Dink For a Cause - Pickleball Tournament", 
-    //     date: "18", 
-    //     month: "April",
-    //     year: "2026",
-    //     time: "2PM - 6PM",
-    //     location: "Dill Dinkers in Manassas Mall, 9071 Center St, #53, Manassas, VA 20110",
-    //     description: "Together we can play, have fun, and create opportunities for the next generation.",
-    //     flyerUrl: pickleball.src,
-    //     registrationUrl: "https://givebutter.com/c/Feoaf" 
-    // },
-    { 
-        id: "annual-gala",
-        title: "A Black-Tie Gala Event: Celebrating Tomorrow's Leaders", 
-        date: "17", 
-        month: "Oct",
+    {
+        id: "holiday-party",
+        title: "Holiday Party",
+        date: "TBA",
+        month: "TBA",
         year: "2026",
-        time: "6:30 PM - 11:00 PM",
-        location: "Heritage Hunt Golf & Country Club, 6901 Arthur Hills Dr, Gainesville, VA 20155",
-        description: "Future Entrepreneurs of America Foundation presents A Black-Tie Gala Event: Celebrating Tomorrow's Leaders.\n\nJoin us for an elegant evening featuring gourmet dinner, silent auction, live music, dancing, and youth entrepreneur pitch showcases. Sponsorship opportunities range from $250 to $10,000.\n\nSponsorship Deadline: August 27, 2026.",
-        flyerUrl: galaImage.src,
-        registrationUrl: "/gala" 
+        time: "TBA",
+        location: "TBA",
+        description: "Join us for our year-end Holiday Party celebration where we recognize the accomplishments of our young entrepreneurs, enjoy festive activities, and celebrate a wonderful year of growth and community impact.\n\nStay tuned—full event details and registration will be announced soon!",
+        flyerUrl: "/events/holiday/IMG_4627.jpg",
+        registrationUrl: ""
     }
 ];

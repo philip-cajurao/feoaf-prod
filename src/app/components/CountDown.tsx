@@ -267,7 +267,9 @@ export default function CountDown() {
                             <div className="md:absolute md:inset-0 p-8 md:p-12 flex flex-col overflow-y-auto">
                                 <div>
                                     <div className="badge badge-accent badge-lg font-bold uppercase tracking-wider mb-4 border-none text-white shadow-md">
-                                        {selectedEvent.month} {selectedEvent.date}, {selectedEvent.year}
+                                        {selectedEvent.month === "TBA" && selectedEvent.date === "TBA"
+                                            ? `Date TBA • ${selectedEvent.year}`
+                                            : `${selectedEvent.month} ${selectedEvent.date === "TBA" ? "" : `${selectedEvent.date}, `}${selectedEvent.year}${selectedEvent.date === "TBA" ? " • Date TBA" : ""}`}
                                     </div>
 
                                     <h3 className="text-3xl sm:text-4xl font-extrabold text-base-content leading-tight mb-6">
@@ -294,12 +296,20 @@ export default function CountDown() {
 
                                 {/* --- REGISTER BUTTON (Updated to use dynamic URL) --- */}
                                 <div className="mt-auto pt-6 border-t border-base-200">
-                                    {/* Make sure 'registrationUrl' is added to your EventData interface and data objects */}
-                                    <Link href={selectedEvent.registrationUrl || "#"} target="_blank" className="w-full">
-                                        <button className="btn btn-accent w-full py-4 h-auto rounded-2xl text-lg font-bold text-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                                            Register Now
+                                    {selectedEvent.registrationUrl ? (
+                                        <Link href={selectedEvent.registrationUrl} target="_blank" className="w-full">
+                                            <button className="btn btn-accent w-full py-4 h-auto rounded-2xl text-lg font-bold text-white shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                                                Register Now
+                                            </button>
+                                        </Link>
+                                    ) : (
+                                        <button
+                                            disabled
+                                            className="btn btn-disabled w-full py-4 h-auto rounded-2xl text-lg font-bold"
+                                        >
+                                            Registration Opening Soon
                                         </button>
-                                    </Link>
+                                    )}
                                 </div>
                             </div>
                         </div>

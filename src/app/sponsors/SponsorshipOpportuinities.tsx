@@ -16,6 +16,7 @@ import sisonHomesLogo from "@/app/assets/sponsors/sison-homes.png";
 import thaiHealingArtsLogo from "@/app/assets/sponsors/thai-healing-arts-massage.png";
 import theBrandysGroupLogo from "@/app/assets/sponsors/the-brandys-group.png";
 import ggLiveLogo from "@/app/assets/sponsors/g&g-live-production.png";
+import hujakaSecretLogo from "@/app/assets/sponsors/hujaka-secret.png";
 import qr from "../assets/qr/donateQR.png";
 
 export interface SponsorItem {
@@ -171,7 +172,7 @@ function SponsorshipOpportunitiesInner() {
   // "Partner with Us" (packages) is listed first and is the default view so visitors see the annual sponsorship options immediately.
   const tabs = [
     { id: "packages", label: "Partner with Us" },
-    { id: "sponsor-a-kid", label: "Sponsor a Kid" },
+    { id: "sponsor-a-kid", label: "Sponsor a Child" },
     { id: "sponsors", label: "Sponsors" },
   ] as const;
   type TabId = (typeof tabs)[number]["id"];
@@ -194,6 +195,7 @@ function SponsorshipOpportunitiesInner() {
     { name: "The Brandys Group LLC", logo: theBrandysGroupLogo, isPlaceholder: false },
     { name: "G&G Live Production", logo: ggLiveLogo, isPlaceholder: false, url: "https://ggliveproduction.com/" },
     { name: "Chenault Insurance Services", isPlaceholder: true, placeholderLetter: "CIS" },
+    { name: "Hujaka Secret", logo: hujakaSecretLogo, isPlaceholder: false },
   ];
 
   return (
@@ -301,7 +303,7 @@ function SponsorshipOpportunitiesInner() {
         </section>
       )}
 
-      {/* TAB CONDITION 2: SPONSOR A KID */}
+      {/* TAB CONDITION 2: SPONSOR A CHILD */}
       {activeTab === "sponsor-a-kid" && (
         <section className="py-20 sm:py-24 bg-neutral/98 text-neutral-content">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -309,7 +311,7 @@ function SponsorshipOpportunitiesInner() {
               Recurring Giving
             </p>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase mb-8">
-              Sponsor a <span className="text-accent">Kid</span>
+              Sponsor a <span className="text-accent">Child</span>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-white/80 mb-10">
               {sponsorAKidMessage}
@@ -318,7 +320,7 @@ function SponsorshipOpportunitiesInner() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <GhlForm
               formId="LulkzPfRY2SVuV8HQF6a"
-              title="Sponsor A Kid"
+              title="Sponsor A Child"
               showBackButton={false}
               containerClassName="w-full relative overflow-hidden"
               iframeClassName="w-full min-h-[700px] h-auto overflow-y-hidden"
@@ -466,4 +468,4 @@ export default function SponsorshipOpportunities() {
       <SponsorshipOpportunitiesInner />
     </Suspense>
   );
-}
+}

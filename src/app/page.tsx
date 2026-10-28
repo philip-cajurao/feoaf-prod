@@ -1,11 +1,13 @@
 // ── HERO VERSION SWITCH ──────────────────────────────────────────────────────
-// Gala promo (current/temporary):
-import Hero from "./components/Hero";
-// Original design (rollback): swap the two lines below to revert
-// import Hero from "./components/HeroDefault";
+// Gala promo (temporary):
+// import Hero from "./components/Hero";
+// Original design (current):
+import Hero from "./components/HeroDefault";
 // ─────────────────────────────────────────────────────────────────────────────
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import sponsorAChildQR from "./assets/qr/sponsorAChildQR.png";
 import UpcomingEvents from "./components/UpcomingEvents";
 import RecentSponsors from "./components/RecentSponsors";
 import ServicesCard from "./components/ProgramsCard";
@@ -117,6 +119,45 @@ export default function Home() {
 
       <UpcomingEvents />
 
+      {/* ── SPONSOR A CHILD / QR CODE SECTION ── */}
+      <section className="bg-base-100 py-16 sm:py-20 px-6 border-t border-b border-base-300">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-neutral text-neutral-content rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+            {/* Text Content */}
+            <div className="flex-1 text-center md:text-left space-y-4">
+              <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-accent">
+                Sponsor A Child
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-snug">
+                Help a young dreamer build confidence, learn business skills, and turn ideas into opportunities.
+              </h2>
+              <div className="h-1 w-20 bg-accent rounded-full mx-auto md:mx-0" />
+              <p className="text-lg sm:text-xl font-bold text-accent pt-1">
+                Your support helps shape tomorrow’s leaders!
+              </p>
+            </div>
+
+            {/* Sponsor A Child QR Code */}
+            <div className="shrink-0 flex flex-col items-center gap-3">
+              <Link
+                href="/sponsors/sponsor-a-kid"
+                className="w-44 h-44 sm:w-48 sm:h-48 bg-white rounded-2xl p-3 flex items-center justify-center shadow-xl border-4 border-accent relative overflow-hidden hover:scale-105 transition-transform"
+              >
+                <Image
+                  src={sponsorAChildQR}
+                  alt="Sponsor A Child QR Code"
+                  fill
+                  className="object-contain p-2"
+                />
+              </Link>
+              <span className="text-xs font-semibold uppercase tracking-wider text-white/60">
+                Scan to Sponsor A Child
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sections */}
       <div>
         <div className="py-24 max-w-7xl mx-auto px-10">
@@ -202,8 +243,6 @@ export default function Home() {
             </div>
           </div>
         </div> */}
-
-        
 
         <div className="py-24 overflow-hidden">
           <div className="grid place-items-center mb-16">

@@ -25,7 +25,7 @@ export default function Popup() {
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Sponsor a Future Entrepreneur</h2>
-                        <p>Sponsor a Kid. Inspire a Dream. Build a Future</p>
+                        <p>Sponsor a Child. Inspire a Dream. Build a Future</p>
                         <div className="card-actions justify-between modal-action">
                             <form method="dialog">
                                 <button className="btn btn-link no-underline text-neutral decoration-transparent">Close</button>

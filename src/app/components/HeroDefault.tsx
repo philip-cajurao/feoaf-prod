@@ -96,12 +96,12 @@ function HeroDefault() {
         {/* Scroll indicator — pinned to the bottom of the flex column, never overlaps */}
         <div className="relative z-20 shrink-0 flex flex-col items-center pb-4 sm:pb-6">
           <a
-            href="#explore"
+            href="#events"
             aria-label="Scroll to explore next section"
             className="group flex flex-col items-center cursor-pointer transition-transform hover:scale-110 active:scale-95"
             onClick={(e) => {
               e.preventDefault();
-              const el = document.getElementById("explore");
+              const el = document.getElementById("events") || document.getElementById("explore");
               if (el) {
                 el.scrollIntoView({ behavior: "smooth" });
               }

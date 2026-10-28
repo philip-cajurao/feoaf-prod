@@ -4,21 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, MapPin } from "lucide-react";
 
-import galaImage from "../assets/events/GALA.jpg";
-
 export default function UpcomingEvents() {
   const upcomingEvents = [
     {
-      id: "annual-gala",
-      title: "The FEOAF Gala",
-      date: "17",
-      month: "Oct",
+      id: "holiday-party",
+      title: "Holiday Party",
+      date: "TBA",
+      month: "TBA",
       year: "2026",
-      time: "6:30PM - 11PM",
-      location: "Heritage Hunt Country Club, 6901 Arthur Hills Drive, Gainesville, VA 20155",
-      description: "The FEOAF Gala is our premier annual fundraising event that supports programs designed to nurture young entrepreneurs.",
-      flyerUrl: galaImage.src,
-      registrationUrl: "https://givebutter.com/c/X0GXZ6?source=qr&version=1"
+      time: "TBA",
+      location: "TBA",
+      description: "Join us for our year-end Holiday Party celebration where we recognize the accomplishments of our young entrepreneurs, enjoy festive activities, and celebrate a wonderful year of growth.",
+      flyerUrl: "/events/holiday/IMG_4627.jpg",
+      registrationUrl: "/events"
     }
   ];
 

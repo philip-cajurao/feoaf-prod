@@ -152,21 +152,18 @@ export default function CountDown() {
                         <h2 className="text-6xl sm:text-7xl font-black text-neutral uppercase tracking-tighter leading-none mb-4">
                             Upcoming <span className="text-accent">Events</span>
                         </h2>
-                        <div className="h-2 w-28 bg-accent rounded-full mx-auto mb-6" />
-                        <p className="text-base-content/60 text-lg sm:text-xl max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2">
-                            <span className="text-2xl hidden sm:inline-block">🚀</span>
-                            <span>Click any event below to get <span className="text-accent font-bold underline decoration-wavy underline-offset-4">details</span> and REGISTER!</span>
-                            <span className="text-2xl">👇</span>
-                        </p>
+                        <div className="h-2 w-28 bg-accent rounded-full mx-auto" />
                     </div>
 
                     {/* Event Cards */}
                     <div className={`grid grid-cols-1 ${UPCOMING_EVENTS.length > 1 ? 'md:grid-cols-2' : 'max-w-2xl mx-auto'} gap-10 w-full items-stretch`}>
                         {UPCOMING_EVENTS.map((event) => (
-                            <div
+                            <Link
                                 key={event.id}
-                                onClick={() => setSelectedEvent(event)}
-                                className="group cursor-pointer h-full"
+                                href={event.registrationUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group cursor-pointer h-full block"
                             >
                                 {/* Card — accent top border + shadow + lift on hover */}
                                 <div className="relative bg-base-100 rounded-3xl overflow-hidden border border-base-200 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 flex flex-col h-full" style={{boxShadow: '0 4px 24px -4px rgba(0,0,0,0.10)'}}>
@@ -219,7 +216,7 @@ export default function CountDown() {
                                         {/* Full-width Register button */}
                                         <div className="mt-auto pt-3">
                                             <div className="w-full bg-accent text-neutral font-black text-base uppercase tracking-widest py-4 rounded-2xl flex items-center justify-center gap-2 shadow-md group-hover:shadow-lg group-hover:brightness-105 transition-all duration-200">
-                                                View Details &amp; Register
+                                                Register
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                                 </svg>
@@ -228,7 +225,7 @@ export default function CountDown() {
                                     </div>
 
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

@@ -9,14 +9,13 @@ export default function UpcomingEvents() {
     {
       id: "holiday-party",
       title: "Holiday Party",
-      date: "TBA",
-      month: "TBA",
+      date: "6",
+      month: "Dec",
       year: "2026",
-      time: "TBA",
-      location: "TBA",
-      description: "Join us for our year-end Holiday Party celebration where we recognize the accomplishments of our young entrepreneurs, enjoy festive activities, and celebrate a wonderful year of growth.",
+      time: "1:00 PM - 4:00 PM",
+      location: "Springhill Suites, 7921 Gateway Promenade Pl, Gainesville, VA 20155",
       flyerUrl: "/events/holiday/IMG_4627.jpg",
-      registrationUrl: "/events"
+      registrationUrl: "https://www.zeffy.com/en-US/ticketing/future-entrepreneurs-holiday-party--2026"
     }
   ];
 
@@ -37,7 +36,9 @@ export default function UpcomingEvents() {
           {upcomingEvents.map((event) => (
             <Link
               key={event.id}
-              href="/events"
+              href={event.registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex flex-col h-full max-w-sm mx-auto bg-white rounded-2xl overflow-hidden border border-black/50 transition-all hover:border-accent hover:shadow-none shadow-2xl cursor-pointer"
             >
               {/* Image Wrapper */}
@@ -60,7 +61,7 @@ export default function UpcomingEvents() {
                   {event.title}
                 </h3>
 
-                <div className="space-y-2 mb-4 text-sm opacity-80">
+                <div className="space-y-2 text-sm opacity-80">
                   <div className="flex items-start gap-2">
                     <Clock className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                     <span>{event.time}</span>
@@ -70,10 +71,6 @@ export default function UpcomingEvents() {
                     <span className="line-clamp-2">{event.location}</span>
                   </div>
                 </div>
-
-                <p className="text-sm opacity-70 line-clamp-3 flex-grow">
-                  {event.description}
-                </p>
               </div>
             </Link>
           ))}

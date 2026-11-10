@@ -15,13 +15,13 @@ export const UPCOMING_EVENTS: EventData[] = [
     {
         id: "holiday-party",
         title: "Holiday Party",
-        date: "TBA",
-        month: "TBA",
+        date: "6",
+        month: "Dec",
         year: "2026",
-        time: "TBA",
-        location: "TBA",
-        description: "Join us for our year-end Holiday Party celebration where we recognize the accomplishments of our young entrepreneurs, enjoy festive activities, and celebrate a wonderful year of growth and community impact.\n\nStay tuned—full event details and registration will be announced soon!",
+        time: "1:00 PM - 4:00 PM",
+        location: "Springhill Suites, 7921 Gateway Promenade Pl, Gainesville, VA 20155",
+        description: "",
         flyerUrl: "/events/holiday/IMG_4627.jpg",
-        registrationUrl: ""
+        registrationUrl: "https://www.zeffy.com/en-US/ticketing/future-entrepreneurs-holiday-party--2026"
     }
 ];
